@@ -22,6 +22,7 @@ description: The official libGDX Wiki!
 github_username:  libgdx
 
 baseurl: "/wiki"
+url: https://crykn.github.io # temporary
 repository: crykn/wiki
 
 markdown: CommonMarkGhPages
