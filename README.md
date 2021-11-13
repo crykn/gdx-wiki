@@ -1,4 +1,4 @@
-# libGDX Wiki 
+# libGDX Wiki
 This is a first draft at porting the libGDX Wiki to a Jekyll blog. It can be seen live at: https://crykn.github.io/
 
 ## How does it work?
