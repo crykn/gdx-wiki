@@ -6,8 +6,6 @@ redirect_from:
 title: "Importing & Running a Project"
 ---
 
-{% include breadcrumbs.html %}
-
 Next up, you need to import your project into your IDE.
 
 {% include setup_flowchart.html current='2' %}

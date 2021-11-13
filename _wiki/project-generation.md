@@ -6,8 +6,6 @@ redirect_from:
 title: "Creating a Project"
 ---
 
-{% include breadcrumbs.html %}
-
 To setup your first project and download the necessary dependencies, libGDX offers a setup tool.
 
 {% include setup_flowchart.html current='1' %}

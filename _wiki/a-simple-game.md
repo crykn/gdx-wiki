@@ -6,8 +6,6 @@ redirect_from:
 title: "A Simple Game"
 ---
 
-{% include breadcrumbs.html %}
-
 Before diving into the APIs provided by libGDX, let's create **a very simple "game"**, that touches each module provided by the framework, to get a feeling for things. We'll introduce a few different concepts without going into unnecessary detail.
 
 {% include setup_flowchart.html current='3' %}
