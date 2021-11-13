@@ -2,11 +2,11 @@
 [Wiki Style Guide](/wiki/wiki-style-guide)
 
 ## Getting Started
-* [Setting Up a Dev Environment](/wiki/setup/)
-* [Creating Your First libGDX Project](/wiki/project-generation/)
-* [Importing & Running It](/wiki/import-and-running/)
-* [A Simple Game](/wiki/a-simple-game/)
-* [Extending the Simple Game](/wiki/simple-game-extended/)
+* [Setting Up a Dev Environment](/wiki/setup)
+* [Creating Your First libGDX Project](/wiki/project-generation)
+* [Importing & Running It](/wiki/import-and-running)
+* [A Simple Game](/wiki/a-simple-game)
+* [Extending the Simple Game](/wiki/simple-game-extended)
 
 ## Developer's Guide
 <details><summary>The Application Framework</summary>
