@@ -1,6 +1,6 @@
 ---
 title: Orthographic camera
-permalink: /orthographic-camera
+permalink: /wiki/orthographic-camera
 ---
 This page presents the [OrthographicCamera](https://libgdx.badlogicgames.com/nightlies/docs/api/com/badlogic/gdx/graphics/OrthographicCamera.html) class and usage. 
 The orthographic camera is to be used in 2D environments only as it implements a parallel (orthographic) projection and there will be no scale factor for the final image regardless where the objects are placed in the world.
@@ -384,7 +384,7 @@ The main application to bootstrap the listener is a simple LWJGL application.
 
 The result is the following application:
 
-![images/orthographic-camera.png](/wiki/assets/images/orthographic-camera.png)
+![images/orthographic-camera.png](/assets/wiki/images/orthographic-camera.png)
 
 Most of the time, one should not need to access the internals of a camera as the most common use-cases are covered by the following methods:
 

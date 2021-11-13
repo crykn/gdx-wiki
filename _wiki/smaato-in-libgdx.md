@@ -1,6 +1,6 @@
 ---
 title: Smaato in libGDX
-permalink: /smaato-in-libgdx
+permalink: /wiki/smaato-in-libgdx
 ---
 # Summary #
 

@@ -1,6 +1,6 @@
 ---
 title: Querying and Configuring Graphics (monitors, display modes, vsync, display cutouts)
-permalink: /querying-and-configuring-graphics-(monitors,-display-modes,-vsync,-display-cutouts)
+permalink: /wiki/querying-and-configuring-graphics
 ---
 # Configuration & querying
 libGDX has an elaborate API that lets you query monitors and display modes, and toggle vertical synchronization (vsync). This can be done either when configuring your application, or at runtime. **Note: Display mode changes are not supported by Android, iOS or HTML5.**
@@ -212,7 +212,7 @@ config.setWindowListener(new Lwjgl3WindowListener() {
       // the window is visible again, start-up background work, unmute
       // audio, etc.
    }
- 
+
    @Override
    public void focusLost() {
       // the window lost focus, pause the game
@@ -225,7 +225,7 @@ config.setWindowListener(new Lwjgl3WindowListener() {
 
    @Override
    public boolean windowIsClosing() {
-      // if there's unsaved stuff, we may not want to close 
+      // if there's unsaved stuff, we may not want to close
       // the window, but ask the user to save her work
       if(isStuffUnsaved) {
          // tell our app listener to show a save dialog

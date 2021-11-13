@@ -1,6 +1,6 @@
 ---
 title: OpenGL (ES) Support
-permalink: /opengl-(es)-support
+permalink: /wiki/opengl-es-support
 ---
 # What is what (GL, GL ES, GLSL)?
 
@@ -19,7 +19,9 @@ GLSL (or GLSL ES for mobile and web) is the language used for shaders. Its versi
 
 <details>
   <summary><b><i>GLSL - click to expand</i></b></summary>
-  
+
+<br/>
+<div markdown="1">
 | Open GL Version | GLSL Version |
 | --- | --- |
 | 2.0 | 110 |
@@ -37,22 +39,27 @@ GLSL (or GLSL ES for mobile and web) is the language used for shaders. Its versi
 | 4.6 | 460 |
 
 For some advice on porting shaders from version 120 to 330+, see [here](https://github.com/mattdesl/lwjgl-basics/wiki/GLSL-Versions#version-330).
-  
+</div>
+
 </details>
 
 <details>
-  <summary><b><I>GLSL ES - click to expand</i></b></summary>
-  
+  <summary><b><i>GLSL ES - click to expand</i></b></summary>
+
+<br/>
+<div markdown="1">
 | OpenGL ES Version | GLSL EL Version | Based on GLSL Version (OpenGL) |
 | --- | --- | --- |
 | 2.0 | 100 | 120 (2.1) |
 | 3.0 | 300 es | 330 (3.3) |
-  
+
+</div>
+
 </details>
 
 ## Platform specificities
 ### Desktop (Windows, Mac, Linux)
-On Desktop, libGDX is mapping all its graphics calls to OpenGL. 
+On Desktop, libGDX is mapping all its graphics calls to OpenGL.
 
 **GL ES 2.0** is roughly based on Open GL 2.0, however, there are some incompatibilities that weren't resolved until Open GL 4.1. To mimic GL ES 2.0, libGDX does not request any specific OpenGL version, so the driver will be more forgiving.
 
@@ -60,7 +67,7 @@ On Desktop, libGDX is mapping all its graphics calls to OpenGL.
 
 ### Android
 On Android Open GL ES 2.0 and 3.0 can be used. To prevent your application from being shown to unsupported devices in the Play Store, add one of the following lines to your Android Manifest:
-- OpenGL ES 2: `<uses-feature android:glEsVersion="0x00020000" android:required="true" />` 
+- OpenGL ES 2: `<uses-feature android:glEsVersion="0x00020000" android:required="true" />`
 - OpenGL ES 3: `<uses-feature android:glEsVersion="0x00030000" android:required="true" />`
 
 ### iOS
@@ -73,7 +80,7 @@ On Web, the graphic stuff is handled by WebGL. Web only supports GL ES 2.0.
 OpenGL ES 2.0 requires the specification of precision modifiers for attributes, uniforms and locals. Desktop OpenGL does not support this. You will have to guard against that in your fragment shader with something similar to this code snippet:
 
 ```java
-#ifdef GL_ES 
+#ifdef GL_ES
 #define LOW lowp
 #define MED mediump
 #define HIGH highp

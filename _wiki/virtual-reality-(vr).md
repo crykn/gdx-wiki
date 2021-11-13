@@ -1,6 +1,6 @@
 ---
 title: Virtual Reality (VR)
-permalink: /virtual-reality-(vr)
+permalink: /wiki/virtual-reality-(vr)
 ---
 libGDX can be used to render to virtual reality headsets using LWJGL's OpenVR (HTC Vive) and OVR (Oculus) modules.
 

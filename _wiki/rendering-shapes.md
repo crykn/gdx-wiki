@@ -1,6 +1,6 @@
 ---
 title: Rendering shapes
-permalink: /rendering-shapes
+permalink: /wiki/rendering-shapes
 ---
 [ShapeRenderer API](http://libgdx.badlogicgames.com/nightlies/docs/api/com/badlogic/gdx/graphics/glutils/ShapeRenderer.html) (Javadoc provides an example in the top level!)
 

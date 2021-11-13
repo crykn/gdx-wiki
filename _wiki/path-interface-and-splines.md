@@ -1,6 +1,6 @@
 ---
 title: Path interface and Splines
-permalink: /path-interface-and-splines
+permalink: /wiki/path-interface-and-splines
 ---
 # Introduction
 

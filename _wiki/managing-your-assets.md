@@ -1,6 +1,6 @@
 ---
 title: Managing your assets
-permalink: /managing-your-assets
+permalink: /wiki/managing-your-assets
 ---
 ### Why would I want to use the AssetManager
 

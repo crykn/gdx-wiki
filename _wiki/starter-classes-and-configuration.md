@@ -1,6 +1,6 @@
 ---
 title: Starter classes and configuration
-permalink: /starter-classes-and-configuration
+permalink: /wiki/starter-classes-and-configuration
 ---
 * [Desktop (LWJGL3)](#desktop-lwjgl3)
 * [Desktop (LWJGL)](#desktop-lwjgl)
@@ -16,9 +16,12 @@ permalink: /starter-classes-and-configuration
 
 For each target platform, a starter class has to be written. This class instantiates a back-end specific `Application` implementation and the `ApplicationListener` that implements the application logic. The starter classes are platform dependent, let's have a look at how to instantiate and configure these for each back-end.
 
-This article assumes you have followed the instruction in [Project Setup](https://libgdx.com/dev/project-generation/), [Importing & Running a Project](https://libgdx.com/dev/import-and-running/) and therefore have imported the generated core, desktop, Android and HTML5 projects into Eclipse.
+This article assumes you have followed the instruction in [Project Setup](/wiki/project-generation/), [Importing & Running a Project](/wiki/import-and-running/) and therefore have imported the generated core, desktop, Android and HTML5 projects into Eclipse.
 
 # Desktop (LWJGL3) #
+
+Since libGDX version 1.10.1, this has been the default desktop backend. You can find more information [here](/news/2021/07/devlog-7-lwjgl3).
+{: .notice--info}
 
 Opening the `DesktopLauncher.java` class in `my-gdx-game` shows the following:
 
@@ -33,7 +36,7 @@ public class DesktopLauncher {
       Lwjgl3ApplicationConfiguration config = new Lwjgl3ApplicationConfiguration();
       config.setTitle("my-gdx-game");
       config.setWindowedMode(480, 320);
-		
+
       new Lwjgl3Application(new MyGdxGame(), config);
    }
 }
@@ -41,7 +44,7 @@ public class DesktopLauncher {
 
 First an [Lwjgl3ApplicationConfiguration](https://github.com/libgdx/libgdx/blob/master/backends/gdx-backend-lwjgl3/src/com/badlogic/gdx/backends/lwjgl3/Lwjgl3ApplicationConfiguration.java) is instantiated. This class lets one specify various configuration settings, such as the initial screen resolution, whether to use OpenGL ES 2.0 or 3.0 and so on. Refer to the Javadocs of this class for more information.
 
-Once the configuration object is set, an `Lwjgl3Application` is instantiated. The `MyGdxGame()` class is the ApplicationListener implementing the game logic. 
+Once the configuration object is set, an `Lwjgl3Application` is instantiated. The `MyGdxGame()` class is the ApplicationListener implementing the game logic.
 
 From there on a window is created and the ApplicationListener is invoked as described in [The Life-Cycle](/wiki/the-life-cycle)
 
@@ -53,7 +56,7 @@ From there on a window is created and the ApplicationListener is invoked as desc
    ```
    A third approach is to just programatically restart the JVM if the argument is not present (see [here](https://github.com/crykn/guacamole/blob/master/gdx-desktop/src/main/java/de/damios/guacamole/gdx/StartOnFirstThreadHelper.java#L69) for a simple example). Lastly, if you want to deploy your game by packaging a JRE with it (which is the recommended way to distribute your later game), jpackage or packr allow you to set the JVM arguments.
 
-2. If you are using **gdx-tools** and the lwjgl3 backend in the same project, you need to modify your gdx-tools dependency like this: 
+2. If you are using **gdx-tools** and the lwjgl3 backend in the same project, you need to modify your gdx-tools dependency like this:
    ```
    compile ("com.badlogicgames.gdx:gdx-tools:$gdxVersion") {
       exclude group: 'com.badlogicgames.gdx', module: 'gdx-backend-lwjgl'
@@ -63,11 +66,9 @@ From there on a window is created and the ApplicationListener is invoked as desc
 
 # Desktop (LWJGL) #
 
-In version 1.10.1, libGDX switched its default desktop backend to LWJGL 3. If you want to upgrade, please take a look [here](https://gist.github.com/crykn/eb37cb4f7a03d006b3a0ecad27292a2d).
+In version 1.10.1, libGDX switched its default desktop backend to LWJGL 3. If you want to upgrade, please take a look [here](/news/2021/07/devlog-7-lwjgl3#how-can-i-migrate).
+{: .notice--warning}
 
-<details>
-  <summary><b><i>Click here to show the old LWJGL backend instructions</b></i></summary>
-  
 Opening the `DesktopLauncher.java` class in `my-gdx-game` shows the following:
 
 ```java
@@ -83,7 +84,7 @@ public class DesktopLauncher {
       cfg.useGL30 = false;
       cfg.width = 480;
       cfg.height = 320;
-		
+
       new LwjglApplication(new MyGdxGame(), cfg);
    }
 }
@@ -91,17 +92,15 @@ public class DesktopLauncher {
 
 First an [LwjglApplicationConfiguration](https://github.com/libgdx/libgdx/tree/master/backends/gdx-backend-lwjgl/src/com/badlogic/gdx/backends/lwjgl/LwjglApplicationConfiguration.java) is instantiated. This class lets one specify various configuration settings, such as the initial screen resolution, whether to use OpenGL ES 2.0 or 3.0 (Experimental) and so on. Refer to the [Javadocs](https://libgdx.badlogicgames.com/nightlies/docs/api/com/badlogic/gdx/backends/lwjgl/LwjglApplicationConfiguration.html) of this class for more information.
 
-Once the configuration object is set, an `LwjglApplication` is instantiated. The `MyGdxGame()` class is the ApplicationListener implementing the game logic. 
+Once the configuration object is set, an `LwjglApplication` is instantiated. The `MyGdxGame()` class is the ApplicationListener implementing the game logic.
 
-From there on a window is created and the ApplicationListener is invoked as described in [The Life-Cycle](/wiki/the-life-cycle)
+From there on a window is created and the ApplicationListener is invoked as described in [The Life-Cycle](the-life-cycle)
 
-#### Common issues:
+### Common issues:
 
 - When using a JDK of version 8 or later, an **"illegal reflective access"** warning is shown. This is nothing to be worried about. If it bothers you, downgrade the used JDK or switch to the LWJGL 3 backend.
 
 - If an error like **`Process 'command 'C:/.../java.exe'' finished with non-zero exit value -1`** is shown, this can safely be ignored. A workaround is disabling forceExit: `config.forceExit = false;`.
-  
-</details>
 
 # Android #
 
@@ -121,9 +120,9 @@ public class MainActivity extends AndroidApplication {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        
+
         AndroidApplicationConfiguration cfg = new AndroidApplicationConfiguration();
-        
+
         initialize(new MyGdxGame(), cfg);
     }
 }
@@ -225,21 +224,21 @@ If an application needs to be able to write to the external storage of a device 
 	<uses-permission android:name="android.permission.VIBRATE"/>
 ```
 
-Users are generally suspicious of applications with many permissions, so choose these wisely. 
+Users are generally suspicious of applications with many permissions, so choose these wisely.
 
-For wake locking to work, `AndroidApplicationConfiguration.useWakeLock` needs to be set to true. 
+For wake locking to work, `AndroidApplicationConfiguration.useWakeLock` needs to be set to true.
 
-If a game doesn't need accelerometer or compass access, it is advised to disable these by setting the 
+If a game doesn't need accelerometer or compass access, it is advised to disable these by setting the
 `useAccelerometer` and `useCompass` fields of `AndroidApplicationConfiguration` to false.
- 
+
 If your game needs the gyroscope sensor, you have to set `useGyroscope` to true in `AndroidApplicationConfiguration` (It's disabled by default, to save energy).
 
 Please refer to the [Android Developer's Guide](http://developer.android.com/guide/index.html) for more information on how to set other attributes like icons for your application.
 
 ## Live Wallpapers ##
-A libGDX core application can also be used as an Android [Live Wallpaper](http://android-developers.blogspot.co.at/2010/02/live-wallpapers.html). 
-The project setup is very similar to an Android game, but `AndroidLiveWallpaperService` is used in 
-place of `AndroidApplication`. Live Wallpapers are Android [Services](https://developer.android.com/guide/components/services), 
+A libGDX core application can also be used as an Android [Live Wallpaper](http://android-developers.blogspot.co.at/2010/02/live-wallpapers.html).
+The project setup is very similar to an Android game, but `AndroidLiveWallpaperService` is used in
+place of `AndroidApplication`. Live Wallpapers are Android [Services](https://developer.android.com/guide/components/services),
 not Activities.
 
 **Note: Due to synchronization issues, you cannot combine games and live wallpapers in the same app. However, Live
@@ -253,15 +252,15 @@ public class MyLiveWallpaper extends AndroidLiveWallpaperService {
     @Override
     public void onCreateApplication() {
         AndroidApplicationConfiguration cfg = new AndroidApplicationConfiguration();
-                
+
         initialize(new MyGdxGame(), cfg);
     }
 }
 ```
 
 You can optionally subscribe to Live Wallpaper-specific events by implementing `AndroidWallpaperListener` with your
-`ApplicationListener` class. `AndroidWallpaperListener` is not available from the `core` module, so you can either 
-follow the strategy outlined in [Interfacing With Platform-Specific Code](/wiki/interfacing-with-platform-specific-code), or you can manage it just from the `android`
+`ApplicationListener` class. `AndroidWallpaperListener` is not available from the `core` module, so you can either
+follow the strategy outlined in [Interfacing With Platform-Specific Code](interfacing-with-platform-specific-code), or you can manage it just from the `android`
 module by subclassing your `ApplicationListener` like this:
 
 ```java
@@ -288,16 +287,16 @@ public class MyLiveWallpaper extends AndroidLiveWallpaperService {
     @Override
     public void onCreateApplication() {
         AndroidApplicationConfiguration cfg = new AndroidApplicationConfiguration();
-                
+
         initialize(new MyLiveWallpaperListener(), cfg);
     }
 }
 ```
 
-Coming in libGDX 1.9.12, or available from -SNAPSHOT now, you can also report the dominant colors of the wallpaper to 
-the OS. Starting with Android 8.1, this is used by some Android launchers and lock screens for styling, such as changing 
+Coming in libGDX 1.9.12, or available from -SNAPSHOT now, you can also report the dominant colors of the wallpaper to
+the OS. Starting with Android 8.1, this is used by some Android launchers and lock screens for styling, such as changing
 the text color of the clock. You can create a method like this to report the colors, and access it from the core module
-using the strategy from [Interfacing With Platform-Specific Code](/wiki/interfacing-with-platform-specific-code):
+using the strategy from [Interfacing With Platform-Specific Code](interfacing-with-platform-specific-code):
 
 ```java
 public void notifyColorsChanged (Color primaryColor, Color secondaryColor, Color tertiaryColor) {
@@ -308,8 +307,8 @@ public void notifyColorsChanged (Color primaryColor, Color secondaryColor, Color
 }
 ```
 
-In additional to the service class, you must also create an `xml` file in the Android `res/xml` directory to define 
-some Live Wallpaper properties: its thumbnail and description shown in the wallpaper picker, and an optional settings 
+In additional to the service class, you must also create an `xml` file in the Android `res/xml` directory to define
+some Live Wallpaper properties: its thumbnail and description shown in the wallpaper picker, and an optional settings
 Activity. Let's call this file `livewallpaper.xml`.
 
 ```xml
@@ -321,8 +320,8 @@ Activity. Let's call this file `livewallpaper.xml`.
     android:settingsActivity="com.mypackage.MyLiveWallpaperSettingsActivity"/>
 ```
 
-Finally, you'll need to add things to your `AndroidManifest.xml` files. Here's an example for a Live Wallpaper with a simple 
-settings Activity. The key elements here are the `uses-feature` and `service` blocks. The label and icon set on the 
+Finally, you'll need to add things to your `AndroidManifest.xml` files. Here's an example for a Live Wallpaper with a simple
+settings Activity. The key elements here are the `uses-feature` and `service` blocks. The label and icon set on the
 service appear in the Android application settings. The settings Activity and the Live Wallpaper service must both be set
 with `exported` true so they can be accessed by the Live Wallpaper picker.
 
@@ -332,7 +331,7 @@ with `exported` true so they can be accessed by the Live Wallpaper picker.
         package="com.mypackage">
     <uses-feature android:name="android.software.live_wallpaper" />
     <application android:icon="@drawable/icon" android:label="@string/app_name">
-        <activity android:name=".MyLiveWallpaperSettingsActivity" 
+        <activity android:name=".MyLiveWallpaperSettingsActivity"
             android:label="@string/app_name"
             android:exported="true" />
         <service android:name=".LiveWallpaper"
@@ -347,10 +346,10 @@ with `exported` true so they can be accessed by the Live Wallpaper picker.
                 android:resource="@xml/livewallpaper" />
         </service>				  	
     </application>
-</manifest> 
+</manifest>
 ```
 
-Live Wallpapers have some limitations concerning touch input. In general only one pointer will be reported. If you want 
+Live Wallpapers have some limitations concerning touch input. In general only one pointer will be reported. If you want
 full multi-touch events you can set the `AndroidApplicationConfiguration.getTouchEventsForLiveWallpaper` field to true.
 
 ## Screen Savers (aka Daydreams) ##
@@ -358,10 +357,10 @@ A libGDX core application can also be used as an Android [Screen Saver](http://d
 Screen Savers were once known as Daydreams, so many of the related classes have the term "Daydream" in their names. Screen
 Savers have no relation to Google's Daydream VR platform.
 
-The project setup is very similar to an Android game, but `AndroidDaydream` is used in  place of `AndroidApplication`. 
+The project setup is very similar to an Android game, but `AndroidDaydream` is used in  place of `AndroidApplication`.
 Screen Savers are Android [Services](https://developer.android.com/guide/components/services), not Activities.
 
-First, extend `AndroidDaydream` and override `onAttachedToWindow()` (instead of `onCreate()` like you 
+First, extend `AndroidDaydream` and override `onAttachedToWindow()` (instead of `onCreate()` like you
 would do with a game `Activity`). It must call through to `super`. You can also call `setInteractive()` from this method
 to enable/disable touch. A non-interactive Screen Saver immediately closes when the screen is touched.
 
@@ -378,7 +377,7 @@ public class MyScreenSaver extends AndroidDaydream {
 }
 ```
 
-In additional to the service class, you must also create an `xml` file in the Android `res/xml` directory to define 
+In additional to the service class, you must also create an `xml` file in the Android `res/xml` directory to define
 the only Screensaver setting: an optional settings Activity. Let's call this file `screensaver.xml`.
 
 ```xml
@@ -387,8 +386,8 @@ the only Screensaver setting: an optional settings Activity. Let's call this fil
     android:settingsActivity="com.badlogic.gdx.tests.android/.MyScreenSaverSettingsActivity" />
 ```
 
-Finally, you'll need to add things to your `AndroidManifest.xml` files. Here's an example for a Screen Saver with a simple 
-settings Activity. Note that a settings Activity is optional. The key element is the `service` block. The settings Activity 
+Finally, you'll need to add things to your `AndroidManifest.xml` files. Here's an example for a Screen Saver with a simple
+settings Activity. Note that a settings Activity is optional. The key element is the `service` block. The settings Activity
 and the Screen Saver service must both be set with `exported` true so they can be accessed by the Screen Saver picker.
 
 ```xml
@@ -396,7 +395,7 @@ and the Screen Saver service must both be set with `exported` true so they can b
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
         package="com.mypackage">
     <application android:icon="@drawable/icon" android:label="@string/app_name">
-        <activity android:name=".MyScreenSaverSettingsActivity" 
+        <activity android:name=".MyScreenSaverSettingsActivity"
             android:label="@string/app_name"
             android:exported="true" />
         <service android:name=".MyScreenSaver"
@@ -411,7 +410,7 @@ and the Screen Saver service must both be set with `exported` true so they can b
                 android:resource="@xml/screensaver" />
         </service>			  	
     </application>
-</manifest> 
+</manifest>
 ```
 
 # iOS/Robovm #
@@ -444,7 +443,7 @@ public class GwtLauncher extends GwtApplication {
 The main entry-point is composed of two methods, `GwtApplication.getConfig()` and `GwtApplication.createApplicationListener()`. The former has to return a [GwtApplicationConfiguration](https://github.com/libgdx/libgdx/tree/master/backends/gdx-backends-gwt/src/com/badlogic/gdx/backends/gwt/GwtApplicationConfiguration.java) instance, which specifies various configuration settings for the HTML5 application. The `GwtApplication.createApplicatonListener()` method returns the `ApplicationListener` to run.
 
 ### Module Files ###
-GWT needs the actual Java code for each jar/project that is referenced. Additionally, each of these jars/projects needs to have one module definition file, having the suffix gwt.xml. 
+GWT needs the actual Java code for each jar/project that is referenced. Additionally, each of these jars/projects needs to have one module definition file, having the suffix gwt.xml.
 
 In the example project setup, the module file of the html5 project looks like this:
 
@@ -483,7 +482,7 @@ This feature is experimental, use at your own risk.
 
 ### Loading Screen ###
 
-A libGDX HTML5 application preloads all assets found in the `gdx.assetpath`. During this loading process, a loading screen is displayed which is implemented via GWT widget. If you want to customize this loading screen, you can simply overwrite the `GwtApplication.getPreloaderCallback()` method (`GwtLauncher` in the above example). 
+A libGDX HTML5 application preloads all assets found in the `gdx.assetpath`. During this loading process, a loading screen is displayed which is implemented via GWT widget. If you want to customize this loading screen, you can simply overwrite the `GwtApplication.getPreloaderCallback()` method (`GwtLauncher` in the above example).
 
 From 1.9.10 on, the following code changes the colors of the progress bar and the displayed logo to a file placed within your webapp folder:
 

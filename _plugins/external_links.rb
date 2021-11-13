@@ -1,5 +1,7 @@
 # jekyll-external-links by Ribose Inc. (MIT License)
 # https://github.com/riboseinc/jekyll-external-links/blob/master/lib/jekyll-external-links/external_links.rb
+#
+# Modified to only change wiki pages
 
 require 'nokogiri'
 require 'uri'
@@ -47,12 +49,14 @@ def mark_links_in_page_or_document(page_or_document)
   ]
 
   unless page_or_document.respond_to?(:asset_file?) and page_or_document.asset_file?
-    page_or_document.output = process_content(
-      site_hostname,
-      page_or_document.output,
-      marker_html,
-      link_selector,
-      unmarked_link_selectors)
+    if page_or_document.path.include?("wiki")
+      page_or_document.output = process_content(
+        site_hostname,
+        page_or_document.output,
+        marker_html,
+        link_selector,
+        unmarked_link_selectors)
+      end
   end
 end
 

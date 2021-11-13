@@ -1,6 +1,6 @@
 ---
 title: Back and menu key catching
-permalink: /back-and-menu-key-catching
+permalink: /wiki/back-and-menu-key-catching
 ---
 When a user presses the back button on an Android device, this usually kills the currently running activity. Games might chose to display a confirmation dialog before letting the user exit. For that to work one needs to catch the back key so it is not passed on to the operating system:
 

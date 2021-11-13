@@ -1,6 +1,6 @@
 ---
 title: Networking
-permalink: /networking
+permalink: /wiki/networking
 ---
 libGDX includes some classes for cross-platform network operations. These classes are more commonly known as [Gdx.net](http://libgdx.badlogicgames.com/nightlies/docs/api/com/badlogic/gdx/Net.html) [(source)](https://github.com/libgdx/libgdx/blob/master/gdx/src/com/badlogic/gdx/Net.java)
 

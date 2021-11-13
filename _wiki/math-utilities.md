@@ -1,6 +1,6 @@
 ---
 title: Math utilities
-permalink: /math-utilities
+permalink: /wiki/math-utilities
 ---
 # Introduction #
 

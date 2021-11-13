@@ -1,6 +1,6 @@
 ---
 title: Models
-permalink: /models
+permalink: /wiki/models
 ---
 A model represents a 3D asset consisting of a hierarchy of nodes, where each node is a combination of a geometry (mesh) and material. Optionally a model can also contain information about [animation and/or skinning](https://github.com/libgdx/libgdx/wiki/3D-animations-and-skinning).
 

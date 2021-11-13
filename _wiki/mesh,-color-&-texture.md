@@ -1,6 +1,6 @@
 ---
 title: Mesh, color & texture
-permalink: /mesh,-color-&-texture
+permalink: /wiki/mesh,-color-&-texture
 ---
 ## Outdated ##
 Refer to this page: https://github.com/libgdx/libgdx/wiki/3D-Graphics

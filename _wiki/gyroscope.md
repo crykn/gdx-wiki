@@ -1,6 +1,6 @@
 ---
 title: Gyroscope
-permalink: /gyroscope
+permalink: /wiki/gyroscope
 ---
 Some Android devices have a gyroscope sensor that provides information about the rate of rotation in rad/s around a device's x, y, and z axis.
 

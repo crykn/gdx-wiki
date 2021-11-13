@@ -1,6 +1,6 @@
 ---
 title: Screen & viewport
-permalink: /screen-&-viewport
+permalink: /wiki/screen-&-viewport
 ---
 # fixme: weird image issues.
 
@@ -10,7 +10,7 @@ For every application that uses graphics, a **viewport** needs to be defined. Th
 
 The following image shows a typical 3D scene with a perspective projection.
 
-![images/screen-and-viewport1.png](/wiki/assets/images/screen-and-viewport1.png)
+![images/screen-and-viewport1.png](/assets/wiki/images/screen-and-viewport1.png)
 
 The eye is where the camera is and the *viewport* is the plane where all the objects found in the *view frustum* are projected to.
 
@@ -23,8 +23,8 @@ When the human eye looks at a scene, objects in the distance appear smaller than
 
 The following diagram shows the orthogonal projection.
 
-![images/screen-and-viewport2.png](/wiki/assets/images/screen-and-viewport2.png)
+![images/screen-and-viewport2.png](/assets/wiki/images/screen-and-viewport2.png)
 
 For examples on how to work with the viewport, refer to [this page](/wiki/projection,-viewport,-&-camera) where the notions are presented extensively with great examples.
 
-To learn how to use the [Orthographic Camera](/wiki/orthographic-camera) for simple 2D worlds.
+To learn how to use the [Orthographic Camera](orthographic-camera) for simple 2D worlds.

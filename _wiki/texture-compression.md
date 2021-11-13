@@ -1,6 +1,6 @@
 ---
 title: Texture Compression
-permalink: /texture-compression
+permalink: /wiki/texture-compression
 ---
 If you need texture compression, offline mipmap generation, or cubemaps, the default texture formats like PNG won't be sufficient. Luckily libGDX provides 2 options for this ETC1 files and KTX/ZKTX textures.
 

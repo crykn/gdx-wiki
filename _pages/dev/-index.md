@@ -1,0 +1,55 @@
+---
+permalink: /dev/
+redirect_from:
+  - /dev/tutorials/
+title: "Source & Documentation"
+classes: wide
+header:
+  overlay_color: "#000"
+  overlay_filter: "0.4"
+  overlay_image: /assets/images/dev.jpeg
+  caption: "Photo credit: [**Fotis Fotopoulos**](https://unsplash.com/photos/DuHKoV44prg)"
+  actions:
+    - label: "Setup a Project"
+      url: "/dev/setup/"
+    - label: "GitHub"
+      url: "https://github.com/libgdx/libgdx"
+    - label: "Wiki"
+      url: "/wiki/"
+
+excerpt: "libGDX is hosted on GitHub, where all team members collaborate. Fork, star and contribute to our project!"
+
+sidebar:
+  nav: "dev"
+---
+
+# How to get started with libGDX?
+libGDX offers a [setup tool](/dev/project-generation/), which automatically creates a project and downloads everything necessary.
+{: .notice--primary}
+
+To get started, please take a look at our **[Setup Instructions](/dev/setup/)** page, which walks you through the process of creating your very first libGDX project using our setup tool. After that, we highly recommend our **[A Simple Game](/dev/simple-game/)** and [Extending the Simple Game](/dev/simple-game-extended/) pages. If you're completely new to game dev and have never developed a game before, this (even more straight-forward) [tutorial](https://colourtann.github.io/HelloLibgdx/) by tann is also worth a look as an alternative.
+
+From then on, our [wiki](/wiki/) is your best companion: it provides extensive documentation on nearly every feature offered by libGDX. For any further questions, our official [Discord server](/community/) is good starting point.
+
+If you want to inspect some open source libGDX games for reference, this [wiki article](/wiki/external-tutorials#some-simple-open-source-projects-for-reference) is the right place to start looking. The official libGDX organisation on GitHub also offers a few [demo projects](/wiki/running-demos).
+
+<br/>
+
+# Documentation
+The libGDX codebase is documented in two ways:
+- In our [Wiki](/wiki/)
+- And via [Javadocs](https://libgdx.badlogicgames.com/ci/nightlies/docs/api/)
+
+<br/>
+
+# Tools & Libraries
+There are different tools and libraries that make the development process for libGDX easier. See our **[Tools List](/dev/tools/)** for some of the most commonly used tools.
+
+A curated list of our favourite libraries can be found at **[Awesome-libGDX](https://github.com/rafaskb/awesome-libgdx#readme)**. On our Discord server we also have an extensive collection of libGDX-centered libraries that are currently work in progress.
+
+<br/>
+
+# Contributing to libGDX
+Contributing to libGDX can come in a few different forms: you can [report issues](/dev/issues/), help out on our [Discord](/community/), pledge to the [Patreon page](/funding/), or [submit code and documentation back to the project](/dev/contributing/) on GitHub.
+
+If you want to contribute to the code base of libGDX, please review our [contributing guidelines](/dev/contributing/). After that, you need to get libGDX set up on your local machine. Instructions for that can be found [here](/dev/from_source/).

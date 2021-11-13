@@ -1,6 +1,6 @@
 ---
 title: Shaders
-permalink: /shaders
+permalink: /wiki/shaders
 ---
 If you want to work with OpenGL ES 2.0, you should know some shader basics. libGDX comes with a standard shader that will take care of rendering things via SpriteBatch. However, if you'd like to render a Mesh in OpenGL ES 2.0 you will have to supply a valid shader yourself. Basically, in OpenGL ES 2.0, everything is rendered with shaders. That's why it's called a programmable pipeline.
 The thought of dabbling around in shaders might scare some people away from using ES 2.0, but it's well worth reading up on it as shaders allow you to do some pretty incredible things. And understanding the basics is actually quite straightforward.

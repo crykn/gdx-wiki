@@ -1,6 +1,6 @@
 ---
 title: Building Native Libraries
-permalink: /building-native-libraries
+permalink: /wiki/building-native-libraries
 ---
 This document is just a draft with some instructions to build libgdx's native libraries.
 

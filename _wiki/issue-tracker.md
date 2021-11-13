@@ -1,12 +1,12 @@
 ---
 title: Issue Tracker
-permalink: /issue-tracker
+permalink: /wiki/issue-tracker
 ---
 If you have been sent to this page it is because you have posted something on the libGDX issue tracker that is not an issue. We handle thousands of issues and cannot burn our time explaining to each person how an issue tracker works. Instead we send you here, which explains your options.
 
 ## What do I do now? ##
 
-If you need help, we have an extensive guide called [Getting Help](/wiki/getting-help). Read it. If you have questions you need to ask, the fastest way to get help is our official [Discord server](https://libgdx.com/community/discord/).
+If you need help, we have an extensive guide called [Getting Help](getting-help). Read it. If you have questions you need to ask, the fastest way to get help is our official [Discord server](https://libgdx.com/community/discord/).
 
 ## Why are you doing this to me? ##
 

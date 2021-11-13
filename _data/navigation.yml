@@ -1,5 +1,47 @@
 main:
-  - title: "Back to Main Page"
-    url: https://libgdx.com
+  - title: "News"
+    url: /news/
+  - title: "Features"
+    url: /features/
+  - title: "Showcase"
+    url: /showcase/
+  - title: "Documentation"
+    url: /dev/
+  - title: "Community"
+    url: /community/
+wiki:
+  - title: "Back to Main Site"
+    url: /
   - title: "Wiki Home"
-    url: https://libgdx.com/wiki/
+    url: /wiki/
+dev:
+  - title: "Documentation"
+    children:
+      - title: "Getting Started"
+      - url: /dev/setup/
+      - title: "Wiki"
+        url: /wiki/
+      - title: "Javadocs"
+        url: https://libgdx.badlogicgames.com/ci/nightlies/docs/api/
+      - title: "Versions"
+        url: /dev/versions/
+  - title: "Tools & Frameworks"
+    children:
+      - title: "Awesome-libGDX"
+        url: https://github.com/rafaskb/awesome-libgdx#readme
+      - title: "Tools"
+        url: /dev/tools/
+  - title: "Contributing to libGDX"
+    children:
+      - title: "Contributing Guidelines"
+        url: /dev/contributing/
+      - title: "Reporting an Issue"
+        url: /dev/issues/
+      - title: "Roadmap"
+        url: /roadmap/
+      - title: "Working from Source"
+        url: /dev/from-source/
+      - title: "Building the Natives"
+        url: /dev/natives/
+      - title: "Funding"
+        url: /funding/

@@ -1,6 +1,6 @@
 ---
 title: Preferences
-permalink: /preferences
+permalink: /wiki/preferences
 ---
 Preferences are a simple way to store small data for your application, e.g. user settings, small game state saves and so on. Preferences work like a hash map, using strings as keys, and various primitive types as values. *Preferences are also the only way to date to write persistent data when your application is run in the browser*.
 

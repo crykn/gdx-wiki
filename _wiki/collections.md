@@ -1,6 +1,6 @@
 ---
 title: Collections
-permalink: /collections
+permalink: /wiki/collections
 ---
 # Lists #
 

@@ -1,6 +1,6 @@
 ---
 title: Universal Tween Engine
-permalink: /universal-tween-engine
+permalink: /wiki/universal-tween-engine
 ---
 # Information
 

@@ -1,6 +1,6 @@
 ---
 title: Creating a Separate Assets Project in Eclipse
-permalink: /creating-a-separate-assets-project-in-eclipse
+permalink: /wiki/creating-a-separate-assets-project-in-eclipse
 ---
 This will walk you through step by step on how to setup a separate project to manage your assets in Eclipse, and is a great solution if you like to keep your assets separate from your code projects. Doing so will allow you to manage them in source control differently or not at all. Additionally, you can have a nice clean separate builder for your assets project should your game be involved enough.\*
 

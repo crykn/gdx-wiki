@@ -1,6 +1,6 @@
 ---
 title: Profiling
-permalink: /profiling
+permalink: /wiki/profiling
 ---
 This article describes the little helpers and utilities that might come in handy in case you are running into performance problems and need to start profiling your game.
 

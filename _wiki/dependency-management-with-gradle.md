@@ -1,6 +1,6 @@
 ---
 title: Dependency management with Gradle
-permalink: /dependency-management-with-gradle
+permalink: /wiki/dependency-management-with-gradle
 ---
 ## Contents
 

@@ -1,6 +1,6 @@
 ---
 title: Updating LibGDX
-permalink: /updating-libgdx
+permalink: /wiki/updating-libgdx
 ---
 * [**Switching libGDX Versions**](#switching-libgdx-versions)
 * [**Gradle Wrapper and Updating it**](#gradle-wrapper-and-updating-it)

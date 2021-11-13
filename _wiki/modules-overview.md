@@ -1,6 +1,6 @@
 ---
 title: Modules overview
-permalink: /modules-overview
+permalink: /wiki/modules-overview
 ---
 ## Introduction ##
 
@@ -14,7 +14,7 @@ libGDX comprises several modules that provide services for each step of a typica
 
 The following diagram shows the modules in a simple game architecture:
 
-![images/modules-overview.png](/wiki/assets/images/modules-overview.png)
+![images/modules-overview.png](/assets/wiki/images/modules-overview.png)
 
 The following part briefly describes each module providing the most common use cases for each.
 

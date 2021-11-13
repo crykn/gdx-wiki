@@ -1,6 +1,6 @@
 ---
 title: Box2d
-permalink: /box2d
+permalink: /wiki/box2d
 ---
 # Setting up Box2D with libGDX #
 

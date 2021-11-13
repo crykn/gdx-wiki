@@ -1,6 +1,6 @@
 ---
 title: Querying
-permalink: /querying
+permalink: /wiki/querying
 ---
 The `Application` interface provides various methods to query properties of the run-time environment.
 

@@ -1,6 +1,6 @@
 ---
 title: 2D ParticleEffects
-permalink: /2d-particleeffects
+permalink: /wiki/2d-particleeffects
 ---
 * [Basic ParticleEffect usage](#basic-particleeffect-usage)
 * [Efficiently using ParticleEffects](#efficiency)

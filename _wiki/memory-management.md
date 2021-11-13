@@ -1,6 +1,6 @@
 ---
 title: Memory management
-permalink: /memory-management
+permalink: /wiki/memory-management
 ---
 Games are resource heavy applications. Images and sound effects can take up a considerable amount of RAM. Also, most of these resources are not managed by the Java garbage collector. Instead they are managed by native drivers. Having the garbage collector decide when to release a 5 megabyte texture from video ram wouldn't be a too bright idea either.
 

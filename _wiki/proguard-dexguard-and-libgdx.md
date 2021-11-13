@@ -1,6 +1,6 @@
 ---
 title: ProGuard DexGuard and libGDX
-permalink: /proguard-dexguard-and-libgdx
+permalink: /wiki/proguard-dexguard-and-libgdx
 ---
 [ProGuard](http://www.saikoa.com/proguard) and the newer [R8](https://developer.android.com/studio/build/shrink-code) are optimizers and obfuscators for Java and Android applications. You can use these tools with your libGDX application to make it harder for 3rd parties to decompile your app, reduce your apps size and even increase the runtime speed by ahead-of-time optimizations like inlining.
 

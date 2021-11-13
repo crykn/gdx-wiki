@@ -1,6 +1,6 @@
 ---
 title: Firebase in libGDX
-permalink: /firebase-in-libgdx
+permalink: /wiki/firebase-in-libgdx
 ---
 If you are interested in using [Firebase](https://firebase.google.com) with libGDX, take a look at mk-5's [gdx-fireapp](https://github.com/mk-5/gdx-fireapp).
 

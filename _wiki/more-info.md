@@ -1,12 +1,12 @@
 ---
 title: More Info
-permalink: /more-info
+permalink: /wiki/more-info
 ---
 If you have been sent to this page it is because you failed to provide enough information for us to take action on your issue. We handle hundreds of issues and cannot burn our time explaining to each person how to properly post an issue. Instead we send you here, which explains what you need to do.
 
 ## What do I do now? ##
 
-We have an extensive guide called [Getting Help](/wiki/getting-help). Read it. Yes, the whole thing. 99% of the time you will need to post an [executable example](https://github.com/libgdx/libgdx/wiki/Getting-Help#executable-example-code).
+We have an extensive guide called [Getting Help](getting-help). Read it. Yes, the whole thing. 99% of the time you will need to post an [executable example](https://github.com/libgdx/libgdx/wiki/Getting-Help#executable-example-code).
 
 If your issue has been closed, don't take it personal or be offended. Instead, remedy the problem by adding the necessary information to your issue and it will be re-opened. Do not file another separate issue for the same problem.
 

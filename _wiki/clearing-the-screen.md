@@ -1,6 +1,6 @@
 ---
 title: Clearing the screen
-permalink: /clearing-the-screen
+permalink: /wiki/clearing-the-screen
 ---
 To clear the screen in libGDX is not unlike clearing the screen in a regular OpenGL application. The only difference is in how one accesses the OpenGL context.
 

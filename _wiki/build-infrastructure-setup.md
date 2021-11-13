@@ -1,6 +1,6 @@
 ---
 title: Build Infrastructure Setup
-permalink: /build-infrastructure-setup
+permalink: /wiki/build-infrastructure-setup
 ---
 Our build infrastructure has the responsibility of building libGDX for all supported platforms (Windows, Linux, Mac OS X, Android, iOS, HTML). On top of the boring old Java code, we also need to compile the native code for each platform and architecture (32-, 64-bit if available).
 

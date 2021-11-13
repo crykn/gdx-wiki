@@ -1,6 +1,6 @@
 ---
 title: Material and environment
-permalink: /material-and-environment
+permalink: /wiki/material-and-environment
 ---
 In practice, when rendering, you are specifying what (the shape) to render and how (the material) to render. The shape is specified using the Mesh (or more commonly the MeshPart), which defines the vertices attributes for the shader. The material is most commonly used to specify the uniform values for the shader.
 

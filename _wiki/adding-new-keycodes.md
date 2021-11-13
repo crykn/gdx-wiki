@@ -1,6 +1,6 @@
 ---
 title: Adding new Keycodes
-permalink: /adding-new-keycodes
+permalink: /wiki/adding-new-keycodes
 ---
 ## Short info on how to add new keycodes:
 

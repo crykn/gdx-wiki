@@ -1,6 +1,6 @@
 ---
 title: Sound effects
-permalink: /sound-effects
+permalink: /wiki/sound-effects
 ---
 Sound effects are small audio samples, usually no longer than a few seconds, that are played back on specific game events such as a character jumping or shooting a gun.
 
@@ -51,6 +51,6 @@ sound.dispose();
 Accessing the sound after you disposed of it will result in undefined errors.
 
 ### Multiple sounds cause freezes on Android
-As stated on an [Audio](/wiki/audio) topic the Android has many issues with audio in general. One of them, is that waiting for sound ID might take quite a lot time.  The sounds in Libgdx are playing synchronously by default. It causes main loop to be frozen for significant time if you play a lot of sounds at once. Especially this issue noticeable on Android 10.
+As stated on an [Audio](audio) topic the Android has many issues with audio in general. One of them, is that waiting for sound ID might take quite a lot time.  The sounds in Libgdx are playing synchronously by default. It causes main loop to be frozen for significant time if you play a lot of sounds at once. Especially this issue noticeable on Android 10.
 
-The solution is to make them playing asynchronously. However it will cause inability to use sounds methods where ID is required. More info provided here - [Audio#audio-on-android](/wiki/audio#audio-on-android)
+The solution is to make them playing asynchronously. However it will cause inability to use sounds methods where ID is required. More info provided here - [Audio#audio-on-android](audio#audio-on-android)

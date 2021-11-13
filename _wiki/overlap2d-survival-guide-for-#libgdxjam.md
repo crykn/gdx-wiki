@@ -1,6 +1,6 @@
 ---
 title: Overlap2D survival guide for #libGDXJAM
-permalink: /overlap2d-survival-guide-for-#libgdxjam
+permalink: /wiki/overlap2d-survival-guide-for-#libgdxjam
 ---
 So you are planning to join #libGDXJAM and you are considering (or already decided upon) choosing Overlap2D editor as your primary weapon of choice. If so, read on!
 

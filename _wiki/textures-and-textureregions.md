@@ -1,8 +1,8 @@
 ---
 title: Textures and TextureRegions
-permalink: /textures-and-textureregions
+permalink: /wiki/textures-and-textureregions
 ---
-use a [Spritebatch, Textureregions, and Sprites](/wiki/spritebatch,-textureregions,-and-sprites)
+use a [Spritebatch, Textureregions, and Sprites](spritebatch,-textureregions,-and-sprites)
 
 # TextureRegion
 

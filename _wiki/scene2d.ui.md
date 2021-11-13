@@ -1,6 +1,6 @@
 ---
 title: Scene2d.ui
-permalink: /scene2d.ui
+permalink: /wiki/scene2d.ui
 ---
 ## Overview ##
 

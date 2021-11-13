@@ -1,6 +1,6 @@
 ---
 title: Quick start
-permalink: /quick-start
+permalink: /wiki/quick-start
 ---
 This is a series of articles, originally written by Xoppa. You can find the original versions here:
 

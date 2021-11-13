@@ -1,6 +1,6 @@
 ---
 title: Reading and writing JSON
-permalink: /reading-and-writing-json
+permalink: /wiki/reading-and-writing-json
 ---
  * [Overview](#overview)
  * [Writing Object Graphs](#writing-object-graphs)

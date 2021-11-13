@@ -1,5 +1,5 @@
 ---
 title: Using with Groovy
-permalink: /using-with-groovy
+permalink: /wiki/using-with-groovy
 ---
 Todo Use with groovy

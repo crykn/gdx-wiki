@@ -1,6 +1,6 @@
 ---
 title: Vibrator
-permalink: /vibrator
+permalink: /wiki/vibrator
 ---
 While not strictly an input device, it nevertheless is a kind of a peripheral. We felt it belonged in the input model.
 

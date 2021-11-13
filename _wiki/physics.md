@@ -1,6 +1,6 @@
 ---
 title: Physics
-permalink: /physics
+permalink: /wiki/physics
 ---
 # Libraries #
 

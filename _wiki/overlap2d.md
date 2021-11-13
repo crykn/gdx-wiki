@@ -1,6 +1,6 @@
 ---
 title: Overlap2D
-permalink: /overlap2d
+permalink: /wiki/overlap2d
 ---
 ## The original Overlap2D
 <img src="https://raw.githubusercontent.com/UnderwaterApps/overlap2d/master/overlap2d/assets/style/bglogo.png" width="110">

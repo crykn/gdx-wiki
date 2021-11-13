@@ -1,6 +1,6 @@
 ---
 title: My First Triangle (Example)
-permalink: /my-first-triangle-(example)
+permalink: /wiki/my-first-triangle-(example)
 ---
 Note: The following article is outdated and no longer works due to the exclusion of GL10 in the latest libGDX. Please use [the following instead](https://github.com/mattdesl/lwjgl-basics/wiki/LibGDX-Meshes-Lesson-1).
 

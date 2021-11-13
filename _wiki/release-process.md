@@ -1,6 +1,6 @@
 ---
 title: Release Process
-permalink: /release-process
+permalink: /wiki/release-process
 ---
 2. Setup pgp keys and settings.xml for Maven release, ask Mario
 1. Disable the libGDX project on the build server

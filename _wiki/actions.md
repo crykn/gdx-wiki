@@ -1,6 +1,6 @@
 ---
 title: Actions
-permalink: /actions
+permalink: /wiki/actions
 ---
 ### libGDX scene2d actions ###
 

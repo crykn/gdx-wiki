@@ -1,6 +1,6 @@
 ---
 title: External tutorials
-permalink: /external-tutorials
+permalink: /wiki/external-tutorials
 ---
 This page gives a list of some **external tutorials**, if our wiki here isn't enough for you. If you're looking for some **representative games** made with libGDX, have a look at our collection [here](https://libgdx.com/showcase/). If you're interested in some **tools and frameworks to use with libGDX**, [this curated list](https://github.com/rafaskb/awesome-libgdx) may be of help. We also have a list of useful resources on our discord server.
 

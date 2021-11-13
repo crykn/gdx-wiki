@@ -1,6 +1,6 @@
 ---
 title: jnigen
-permalink: /jnigen
+permalink: /wiki/jnigen
 ---
 jnigen is a small library that can be used with or without libGDX which allows C/C++ code to be written inline with Java source code. This increases the locality of code that conceptually belongs together (the Java native class methods and the actual implementation) and makes refactoring a lot easier compared to the usual [JNI](http://en.wikipedia.org/wiki/Java_Native_Interface) workflow. Arrays and direct buffers are converted for you, further reducing boilerplate. Building the natives for Windows, Linux, OS X, and Android is handled for you. jnigen also provides a mechanism for loading native libraries from a JAR at runtime, which avoids "java.library.path" troubles.
 
@@ -193,7 +193,7 @@ BuildExecutor.executeAnt("jni/build.xml", "-v", "pack-natives");
 
 A video of Mario showing off jnigen:
 
-![[images/lxCnueL.png]](/wiki/assets/[images/lxcnuel.png])(http://www.youtube.com/watch?v=N2EE_jlDfrM)
+![[images/lxCnueL.png]](/assets/wiki/[images/lxcnuel.png])(http://www.youtube.com/watch?v=N2EE_jlDfrM)
 
 [Jglfw](https://github.com/badlogic/jglfw/blob/master/jglfw/src/com/badlogic/jglfw/Glfw.java#L268) makes extensive use of jnigen and shows how easy it can be to wrap a native API for use in Java. Note the `/*JNI` comment is used to define includes, statics, and functions.
 

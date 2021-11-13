@@ -1,6 +1,6 @@
 ---
 title: File module
-permalink: /file-module
+permalink: /wiki/file-module
 ---
 The File module provides methods for easy file manipulation. It provides all the functionality needed for most common tasks.
 
@@ -138,7 +138,7 @@ public class FilesExampleDesktop {
 
 Sample result:
 
-![images/file-module.png](/wiki/assets/images/file-module.png)
+![images/file-module.png](/assets/wiki/images/file-module.png)
 
 The Android version is analogous.
 

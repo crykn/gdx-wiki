@@ -1,6 +1,6 @@
 ---
 title: Compass
-permalink: /compass
+permalink: /wiki/compass
 ---
 Some Android devices and iOS devices have an integrated magnetic field sensor that provides information on how the device is oriented with respect to the magnetic north pole.
 
@@ -28,6 +28,6 @@ The angles are given in degrees. Here's the interpretation of these values:
 
 Here's an illustration of the axis relative to the earth.
 
-![images/compass.png](/wiki/assets/images/compass.png)
+![images/compass.png](/assets/wiki/images/compass.png)
 
 [Prev](/wiki/accelerometer) | [Next](/wiki/vibrator)

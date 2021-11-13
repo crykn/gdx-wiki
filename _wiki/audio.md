@@ -1,6 +1,6 @@
 ---
 title: Audio
-permalink: /audio
+permalink: /wiki/audio
 ---
 # Introduction #
 

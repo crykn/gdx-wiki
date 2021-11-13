@@ -1,6 +1,6 @@
 ---
 title: Getting Help
-permalink: /getting-help
+permalink: /wiki/getting-help
 ---
 The [libGDX community](https://libgdx.com/community/) is glad to help you when you get stuck or encounter a bug, but we need your help to make it as easy to help you as possible.
 
@@ -170,7 +170,7 @@ public class BarebonesBatch extends ApplicationAdapter {
 
 ### <a id="barebones_Stage"></a>Barebones Stage ###
 
-This barebones application has a [scene2d]] Stage and uses [[scene2d.ui]] to draw a label and a button. It uses the [[Skin](/wiki/scene2d]]-stage-and-uses-[[scene2d.ui]]-to-draw-a-label-and-a-button.-it-uses-the-[[skin) from the `gdx-tests-lwjgl` project.
+This barebones application has a [scene2d]] Stage and uses [[scene2d.ui]] to draw a label and a button. It uses the [[Skin](scene2d]]-stage-and-uses-[[scene2d.ui]]-to-draw-a-label-and-a-button.-it-uses-the-[[skin) from the `gdx-tests-lwjgl` project.
 
 ```java
 import com.badlogic.gdx.*;

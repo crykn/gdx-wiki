@@ -1,6 +1,6 @@
 ---
 title: Running Demos
-permalink: /running-demos
+permalink: /wiki/running-demos
 ---
 libGDX comes with a few demos that you can play around with to get a feeling for how to do things. Note that many of these demos have been created during game jams and may not necessarily reflect best practices.
 

@@ -1,6 +1,6 @@
 ---
 title: Skin
-permalink: /skin
+permalink: /wiki/skin
 ---
  * [Overview](#overview)
  * [Resources](#resources)

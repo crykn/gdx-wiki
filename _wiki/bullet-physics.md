@@ -1,6 +1,6 @@
 ---
 title: Bullet physics
-permalink: /bullet-physics
+permalink: /wiki/bullet-physics
 ---
 Bullet is a 3D Collision Detection and Rigid Body Dynamics Library. The Library is Open Source and free for commercial use, under the zlib license ([more info](http://bulletphysics.org/mediawiki-1.5.8/index.php/LICENSE)).
 

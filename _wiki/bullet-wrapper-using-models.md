@@ -1,6 +1,6 @@
 ---
 title: Bullet Wrapper Using models
-permalink: /bullet-wrapper-using-models
+permalink: /wiki/bullet-wrapper-using-models
 ---
 ## <a id="Using_models"></a>Using models ##
 [`Model`](https://github.com/libgdx/libgdx/wiki/Models) and `ModelInstance` are typically used for the visual representation of objects. `btCollisionObject` or `btRigidBody` are used for the physical representation of these objects.
@@ -63,7 +63,7 @@ There are several more issues, e.g. a model typically contains more detail than 
 
 There are several ways to work around these problems, ranging from approximating a model using primitive shapes to using a dedicated model or sharing vertices between visual model and physics shape. The [Bullet manual](https://github.com/erwincoumans/bullet2/blob/master/Bullet_User_Manual.pdf?raw=true)
 provides a decision chart to help you decide which method you should choose:
-![images/bullet_shape_decision.png](/wiki/assets/images/bullet_shape_decision.png)
+![images/bullet_shape_decision.png](/assets/wiki/images/bullet_shape_decision.png)
 
 For the case of a static model, the Bullet wrapper provides a convenient method to create a collision shape of it:
 ```java

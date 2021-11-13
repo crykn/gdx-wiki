@@ -1,6 +1,6 @@
 ---
 title: Texture packer
-permalink: /texture-packer
+permalink: /wiki/texture-packer
 ---
  * [TexturePacker](#texturepacker)
    * [Running TexturePacker](#running-texturepacker)

@@ -1,6 +1,6 @@
 ---
 title: Java Development Kit   Selection
-permalink: /java-development-kit---selection
+permalink: /wiki/java-development-kit---selection
 ---
  * [Introduction](#introduction)
  * [Background](#background)

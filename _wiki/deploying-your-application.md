@@ -1,6 +1,6 @@
 ---
 title: Deploying your application
-permalink: /deploying-your-application
+permalink: /wiki/deploying-your-application
 ---
 ###  ###
 

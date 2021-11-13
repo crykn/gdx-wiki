@@ -1,6 +1,6 @@
 ---
 title: 3D animations and skinning
-permalink: /3d-animations-and-skinning
+permalink: /wiki/3d-animations-and-skinning
 ---
 A Model (and ModelInstance) can contain one or more animations. An animation is a sequence (keyframes) of transformations which are applied to one or more nodes of the model. Each animation is identified by it's name (id), which must be unique within the model. E.g. you might have character with an animation called "walk" and "attack". This page describes how to load and use animations within your application.
 

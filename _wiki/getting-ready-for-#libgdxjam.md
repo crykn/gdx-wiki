@@ -1,6 +1,6 @@
 ---
-title: Getting ready for #libGDXJAM
-permalink: /getting-ready-for-#libgdxjam
+title: "Getting ready for #libGDXJAM"
+permalink: /wiki/getting-ready-for-#libgdxjam
 ---
 The libGDX community is organizing [#libGDXJAM](https://twitter.com/hashtag/libGDXJam?src=hash), a game programming competition that will take place sometime in December, the final date is yet to be announced.
 
@@ -80,15 +80,15 @@ Make sure you have decided on:
 
 [BFXR](http://www.bfxr.net/): web based sound effect generator.
 
-![images/bfxr.png](/wiki/assets/images/bfxr.png)
+![images/bfxr.png](/assets/wiki/images/bfxr.png)
 
 [Audiotool](http://www.audiotool.com/): web based music synthesizer.
 
-![images/audiotool.png](/wiki/assets/images/audiotool.png)
+![images/audiotool.png](/assets/wiki/images/audiotool.png)
 
 [Audacity](http://audacity.sourceforge.net/): open source audio editor.
 
-![images/audacity.png](/wiki/assets/images/audacity.png)
+![images/audacity.png](/assets/wiki/images/audacity.png)
 
 Free sound effects and music:
 
@@ -98,27 +98,27 @@ Free sound effects and music:
 * [CC Mixter](http://dig.ccmixter.org/)
 * [Indie Game Music](http://www.indiegamemusic.com/)
 
-#### Graphics 
+#### Graphics
 
 [Gimp](http://www.gimp.org/): open source image editor.
 
-![images/gimp.png](/wiki/assets/images/gimp.png)
+![images/gimp.png](/assets/wiki/images/gimp.png)
 
 [Paint.NET](http://www.getpaint.net/index.html): open source image editor.
 
-![images/paint.net.jpg](/wiki/assets/images/paint.net.jpg)
+![images/paint.net.jpg](/assets/wiki/images/paint.net.jpg)
 
 [Inkscape](https://inkscape.org/en//): open source vector editor.
 
-![images/inkscape.png](/wiki/assets/images/inkscape.png)
+![images/inkscape.png](/assets/wiki/images/inkscape.png)
 
 [Spine](http://esotericsoftware.com/): skeletal 2D animation tool.
 
-![images/spine.png](/wiki/assets/images/spine.png)
+![images/spine.png](/assets/wiki/images/spine.png)
 
 [Blender](http://www.blender3d.org/): open source 3D editor.
 
-![images/blender.jpg](/wiki/assets/images/blender.jpg)
+![images/blender.jpg](/assets/wiki/images/blender.jpg)
 
 Free game art:
 
@@ -131,14 +131,14 @@ Free game art:
 
 [Tiled Map Editor](http://www.mapeditor.org/): open source tile based editor.
 
-![images/tiled.png](/wiki/assets/images/tiled.png)
+![images/tiled.png](/assets/wiki/images/tiled.png)
 
-[Overlap2D](https://github.com/UnderwaterApps/overlap2d): open source game editor. Make sure to check the [Overlap2D survival guide for #libGDXJAM](/wiki/overlap2d-survival-guide-for-#libgdxjam).
+[Overlap2D](https://github.com/UnderwaterApps/overlap2d): open source game editor. Make sure to check the [Overlap2D survival guide for #libGDXJAM](overlap2d-survival-guide-for-#libgdxjam).
 
-![images/overlap2d.png](/wiki/assets/images/overlap2d.png)
+![images/overlap2d.png](/assets/wiki/images/overlap2d.png)
 
 [BDX](https://github.com/GoranM/bdx/wiki): Open source 3D game engine integrated with Blender.		
-		
+
 ![](https://lh5.googleusercontent.com/-66Li4J9maL4/VP8ICZcGAxI/AAAAAAAABIo/Mth2R1Qo81w/w1038-h586-no/BlenderWithBDX2.png)
 
 ### Team structure

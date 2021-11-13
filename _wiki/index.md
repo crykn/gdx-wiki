@@ -1,16 +1,18 @@
 ---
 title: Home
-permalink: /
+permalink: /wiki/
 ---
+![logo](https://libgdx.com/assets/images/logo.png)
+
 **Welcome to our Wiki, a place for comprehensive documentation on the libGDX API and features.** This wiki is community driven, and can be edited by anyone. If you find information out of date or want to add some more in-depth explanations, you are very welcome to do the necessary changes after having had a look at our [Wiki Style Guide](/wiki/wiki-style-guide).  
 
 ## Getting Started
-#### If you want to get started coding with libGDX, head to the [Official documentation - here - ](https://libgdx.com/dev/setup/) to learn how to setup your environment and create/import your project.
-* [Setting Up a Dev Environment](https://libgdx.com/dev/setup/)
-* [Creating Your First libGDX Project](https://libgdx.com/dev/project_generation/)
-* [Importing & Running It](https://libgdx.com/dev/import_and_running/)
-* [A Simple Game](https://libgdx.com/dev/simple_game/)
-* [Extending the Simple Game](https://libgdx.com/dev/simple_game_extended/)
+#### If you want to get started coding with libGDX, head to the [Official documentation - here - ](/wiki/setup/) to learn how to setup your environment and create/import your project.
+* [Setting Up a Dev Environment](/wiki/setup/)
+* [Creating Your First libGDX Project](/wiki/project-generation/)
+* [Importing & Running It](/wiki/import-and-running/)
+* [A Simple Game](/wiki/a-simple-game/)
+* [Extending the Simple Game](/wiki/simple-game-extended/)
 
 ## Developer's Guide
 * [The Application Framework](/wiki/the-application-framework)
@@ -47,13 +49,13 @@ permalink: /
   * [Playing PCM Audio](/wiki/playing-pcm-audio)
   * [Recording PCM Audio](/wiki/recording-pcm-audio)
 * [Graphics](/wiki/graphics)
-  * [Querying and Configuring Graphics (monitors, display modes, vsync, display cutouts)](/wiki/querying-and-configuring-graphics-(monitors,-display-modes,-vsync,-display-cutouts))
+  * [Querying and Configuring Graphics (monitors, display modes, vsync, display cutouts)](/wiki/querying-and-configuring-graphics)
   * [Continuous and Non-Continuous Rendering](/wiki/continuous-and-non-continuous-rendering)
   * [Clearing the Screen](/wiki/clearing-the-screen)
   * [Taking a Screenshot](/wiki/taking-a-screenshot)
   * [Profiling](/wiki/profiling)
   * [Viewports](/wiki/viewports)
-  * [OpenGL (ES) Support](/wiki/opengl-(es)-support)
+  * [OpenGL (ES) Support](/wiki/opengl-es-support)
     * Configuration and Querying OpenGL ??
     * Direct Access ??
     * Utility Classes

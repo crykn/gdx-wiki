@@ -1,25 +1,20 @@
 ---
 title: Wiki Style Guide
-permalink: /wiki-style-guide
+permalink: /wiki/wiki-style-guide
 ---
-This page is a notice on how to edit libGDX wiki pages. Please read this before contributing to the libGDX wiki.
+This page gives some information on how to edit libGDX wiki pages. Please read this before contributing to the libGDX wiki! If you have any (additional) questions, please do not hesitate to ask! See our [Discord](https://libgdx.com/community/) for more information.
 
-
-## Questions ##
-
-If you have any questions about how to edit this wiki, please do not hesitate to ask! See our [Discord](https://libgdx.com/community/) for more information.
+## How to? ##
+Every wiki page has an "Edit on GitHub" button on top which redirects you to the GitHub Web Interface of the wiki repo. Use this for small fixes/typos. If you want to undertake more extensive changes, you should fork [the repo](https://github.com/libgdx/libgdx.github.io). The [wiki of our website repo](https://github.com/libgdx/libgdx.github.io/wiki) also offers some pointers on this.
 
 ## Style ##
-
-We use Markdown in this wiki. To learn your way around this, here is the official [Markdown Cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet).
+We use Markdown in this wiki. To learn your way around this, here is GitHub's very concise [Markdown Cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet). As our wiki is hosted via GitHub Pages, you can also use HTML, JS and CSS as well as Jekyll's Liquid Tags. To find out more about your options, take a look [here](https://github.com/libgdx/libgdx.github.io/wiki).
 
 ### Notable syntax ###
 
-* Wiki links are made using `[ [` and `] ]` (without the spaces) with a `|` (pipe) to separate text from link. For example:
+* Wiki links are made like this:
 
 `[link text to simple game](/wiki/a-simple-game)` renders this: [link text to simple game](/wiki/a-simple-game)  
-
-***Do NOT use conventional \[]() syntax for wiki-links.***
 
 ## Linking to code/docs ##
 Links are done as follows: `[ClassName](link to docs) [(code)](link to code)` for example:
@@ -56,19 +51,15 @@ without the escaped paren, a 404 is imminent!
 
 ## Videos ##
 
-Videos are not supported on GitHub :( so we use a small workaround by posting a screenshot of the video, which leads to a link to the youtube video. Here is the syntax:
+Videos can be included like this:
 
+```markdown
+{% include video id="3kPK_O6Q4wA" provider="youtube" %}
 ```
-<a href="http://www.youtube.com/watch?feature=player_embedded&v=YOUTUBE_VIDEO_ID_HERE
-" target="_blank"><img src="http://img.youtube.com/vi/YOUTUBE_VIDEO_ID_HERE/0.jpg"
-alt="IMAGE ALT TEXT HERE" width="480" height="360" border="10" /></a>
-```
-
-Lets hope Github eventually supports embedded videos!
 
 ## The Main Table Of Contents ##
 
-If you make a page, you will most likely want it to be displayed on the main libGDX wiki Table of contents and the sidebar Table of Contents. When you create an article, please create a second edit of the Home page with the appropriate positioning of your article. Mirror this change in the sidebar ToC, as to maintain likeness between the two.
+If you make a page, you will most likely want it to be displayed on the main libGDX wiki [Table of contents](https://github.com/libgdx/libgdx.github.io/blob/dev/_wiki/index.md) and the [sidebar Table of Contents](https://github.com/libgdx/libgdx.github.io/blob/dev/_includes/wiki_sidebar.md). When you create an article, please include the changes to the Home page with the appropriate positioning of your article. Mirror this change in the sidebar ToC, as to maintain likeness between the two.
 
 ### Non pages on the Table of Contents ###
 
@@ -77,30 +68,14 @@ The Table of contents contains a few pages that do not have a link, and are appe
 
 ## Tables of Contents per page ##
 
-Tables of contents have to be manually created on a per-page basis. For an example of how to do so outside of this section, please refer to our [box2d](/wiki/box2d) article.
+Tables of contents have to be manually created on a per-page basis. For an example of how to do so outside of this section, please refer to our [Box2d](/wiki/box2d) article.
 
-When creating headers in markdown, we specify using a number of octothorpes (`#`) that define the header level. When we create a header `## Comments and Questions/Concerns ##` in an article entitled `Help Me` the corresponding link would be `help-me#comments-and-questionsconcerns`
+When creating headers in markdown, we specify using a number of octothorpes (`#`) that define the header level. When we create a header `## Comments and Questions/Concerns` in an article entitled `Help Me` the corresponding link would be `help-me#comments-and-questionsconcerns`
 
-so when we go to make our table of contents, it would be in an unordered list, and using these qualified page fragment links. Please see the [box2d](/wiki/box2d) article for more information.
+so when we go to make our table of contents, it would be in an unordered list, and using these qualified page fragment links. Please see the [Box2d](/wiki/box2d) article for more information.
 
 ## Adding Images ##
 
-Images need to be added manually through a desktop interface (A.K.A. not through the github web interface). Images are stored in the `images/` of the libGDX wiki, which arent accessed through the libGDX wikis github interface. To add an image, you must clone the repo: `$ git clone https://github.com/libgdx/libgdx.wiki.git` add your images to the images folder using the appropriate naming scheme `my-page-name#` where # is the order of the picture displayed on the page (this can be ommitted if only one image is used in the page, but recommended). Images are linked to with the following syntax (assuming the image is stored in the `images/` directory) `[ [images/using-libgdx-with-intellij-idea01.png] ]` (without the spaces in between brackets) which will display:
+Images are stored in the [`assets/wiki/` directory](https://github.com/libgdx/libgdx.github.io/blob/dev/assets/wiki/) of the libGDX wiki. To add an image, you must fork and [clone the repo](https://docs.github.com/en/free-pro-team@latest/github/creating-cloning-and-archiving-repositories/cloning-a-repository). Then add your images to the images folder using the appropriate naming scheme `my-page-name#` where `#` is the order of the picture displayed on the page (this can be ommitted if only one image is used in the page, but recommended). Images are linked to with the following syntax (assuming the image is stored in the `/assets/wiki/images/` directory) `![image name](/assets/wiki/images/using-libgdx-with-intellij-idea01.png)` which will display:
 
-![images/using-libgdx-with-intellij-idea01.png](/wiki/assets/images/using-libgdx-with-intellij-idea01.png)
-
-
-## Large Multi-Page Edits ##
-
-Github's web interface is the only way that a non-contributor can easily edit a wiki. If a person is to make a large edit that spans multiple pages, it can be done via the web interface, but it is recommended to take the following steps:
-
-* Fork the repo
-* Clone your forked repo locally
-* Make necessary changes
-* Commit and push that to your forked repo
-* Message a libGDX maintainer (who has commit rights) on our [Discord](https://libgdx.com/community/) to clone your repo and push it themselves.
-
-Github does NOT have a robust pull request system for wiki changes, so this is the way it is for non-trivial changes to the wiki. If you have any problems, **PLEASE** contact support@github.com with your wishlist (hopefully something like "please make github wikis better! $IDEAS"). If you have a problem, it is necessary that you voice yourself to Github!
-
-### Small Typo Fixes ###
-Github wiki's diff system is not as robust as the diff system for code. If you make a tiny change, in the commit message please say "Fixed typo alpa -> alpha" or something of the sort.
+![image name](/assets/wiki/images/using-libgdx-with-intellij-idea01.png)

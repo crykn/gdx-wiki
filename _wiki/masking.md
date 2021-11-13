@@ -1,21 +1,25 @@
 ---
 title: Masking
-permalink: /masking
+permalink: /wiki/masking
 ---
 Masking is the technique of hiding portions of an image using the pixel information of another to decide whether a pixel of the original should or should not be shown. There’s more than one way to achieve this effect in libGDX.
 
 ## Table of Contents
-1. [Masking using glScissor](Masking#1-masking-using-glScissor-rectangle)
-2. [Masking using the ScissorStack](Masking#2-masking-using-the-scissorstack-rectangles)
-3. [Masking using the Depth Buffer](Masking#3-masking-using-the-depth-buffer-shapes)
-4. [Masking using Blending Function](Masking#4-masking-using-blending-function-shapes-or-textures)
-5. [Masking using Pixmaps](Masking#5-masking-using-pixmaps-shapes-or-textures)
-6. [Masking using Shaders](Masking#6-masking-using-shaders-textures)
-7. [Masking using the BlendFuncSeparate](Masking#7-masking-using-blendfuncseparate-removal)
-8. [Masking using Blending Function (Tinting)](Masking#8-masking-using-blending-function-tinting)
+1. [Masking using glScissor](masking#1-masking-using-glScissor-rectangle)
+2. [Masking using the ScissorStack](masking#2-masking-using-the-scissorstack-rectangles)
+3. [Masking using the Depth Buffer](masking#3-masking-using-the-depth-buffer-shapes)
+4. [Masking using Blending Function](masking#4-masking-using-blending-function-shapes-or-textures)
+5. [Masking using Pixmaps](masking#5-masking-using-pixmaps-shapes-or-textures)
+6. [Masking using Shaders](masking#6-masking-using-shaders-textures)
+7. [Masking using the BlendFuncSeparate](masking#7-masking-using-blendfuncseparate-removal)
+8. [Masking using Blending Function (Tinting)](masking#8-masking-using-blending-function-tinting)
+
 ## 1. Masking using glScissor (Rectangle)
+
 For the simplest of masking needs here’s a technique that allows us to create and apply a single rectangular mask using OpenGL's Scissor Test. The Scissor Test is a Per-Sample Processing operation that discards Fragments that fall outside of a certain rectangular portion of the screen.
+
 ### Step 1 - Preparations
+
 ```java
 private ShapeRenderer shapeRenderer;
 
@@ -29,7 +33,9 @@ public void create() {
     Gdx.gl.glLineWidth(2);
 }
 ```
+
 ### Step 2 - Drawing our masked elements
+
 ```java
 private void drawMasked() {
     /* To activate the scissor test, first enable the GL_SCISSOR_TEST enumerator.
@@ -53,7 +59,9 @@ private void drawMasked() {
     Gdx.gl.glDisable(GL20.GL_SCISSOR_TEST);
 }
 ```
+
 ### Step 3 - Drawing the contours for debugging purposes
+
 ```java
 private void drawContours() {
     shapeRenderer.set(ShapeType.Line);
@@ -67,7 +75,9 @@ private void drawContours() {
     shapeRenderer.rect(100, 100, 200, 200);
 }
 ```
+
 ### Result
+
 ```java
 @Override
 public void render() {
@@ -79,10 +89,15 @@ public void render() {
     shapeRenderer.end();
 }
 ```
+
 ![Circle masked by a rectangle](https://i.imgur.com/3VHdLDS.png)
+
 ## 2. Masking using the ScissorStack (Rectangles)
+
 A single rectangle could easily not be enough, here’s a technique that allows us to create and apply multiple rectangular masks using libGDX’s ScissorStack.
+
 ### Step 1 - Preparations
+
 ```java
 /* Some attributes we're gonna need. */
 private ShapeRenderer shapeRenderer;
@@ -102,7 +117,7 @@ public void create() {
     /* Increase the OpenGL line thickness for better visualization. */
     Gdx.gl.glLineWidth(2);
 
-    /* scissors1 and scissors2 store the results of calculateScissors(...). 
+    /* scissors1 and scissors2 store the results of calculateScissors(...).
      * clipBounds is used to define the x, y, width and height of the clipping rectangles. */
     scissors1 = new Rectangle();
     Rectangle clipBounds = new Rectangle(100, 100, 200, 200);
@@ -113,7 +128,9 @@ public void create() {
     ScissorStack.calculateScissors(camera, shapeRenderer.getTransformMatrix(), clipBounds, scissors2);
 }
 ```
+
 ### Step 2 - Drawing our masked elements
+
 ```java
 private void drawMasked() {
     /* Feed the ScissorStack and store whether it could push the scissors or not. */
@@ -138,10 +155,13 @@ private void drawMasked() {
     }
 }
 ```
+
 _It is also possible to push multiple rectangles. Only the pixels of the sprites or shapes that are within <b>all</b> of the rectangles will be rendered._
 
 _Also, if your camera moves, you'll need to recalculate the scissor area afterwards._
+
 ### Step 3 - Drawing the contours for debugging purposes
+
 ```java
 private void drawContours() {
     shapeRenderer.set(ShapeType.Line);
@@ -156,7 +176,9 @@ private void drawContours() {
     shapeRenderer.circle(100, 100, 100);
 }
 ```
+
 ### Result
+
 ```java
 @Override
 public void render() {
@@ -170,10 +192,15 @@ public void render() {
     shapeRenderer.end();
 }
 ```
+
 ![Circle masked by 2 rectangles](https://i.imgur.com/HEa7EQK.png)
+
 ## 3. Masking using the Depth Buffer (Shapes)
+
 Alright rectangles are great but our needs are greater what now. This upcoming technique allows us to create more diversely shaped masks using libGDX’s ShapeRenderer. You can use a SpriteBatch, but because the masks are built from the geometry of what you're drawing it will not work as you expect. Texture regions will render as rectangles no matter what the image looks like.
+
 ### Step 1 - Preparations
+
 ```java
 private ShapeRenderer shapeRenderer;
 
@@ -187,7 +214,9 @@ public void create() {
     Gdx.gl.glLineWidth(2);
 }
 ```
+
 ### Step 2 - Draw the mask elements to the depth buffer
+
 ```java
 private void drawMasks() {
     /* Clear our depth buffer info from previous frame. */
@@ -209,8 +238,11 @@ private void drawMasks() {
     shapeRenderer.flush();
 }
 ```
+
 When using a SpriteBatch write this line right after `SpriteBatch.begin()` : `Gdx.gl.glDepthMask(true);`
+
 ### Step 3 - Draw the masked elements
+
 ```java
 private void drawMasked() {
     /* Enable RGBA color writing. */
@@ -225,7 +257,9 @@ private void drawMasked() {
     shapeRenderer.flush();
 }
 ```
+
 ### Step 4 - Draw the contours for debugging purposes
+
 ```java
 private void drawContours() {
     /* Disable depth writing. */
@@ -243,7 +277,9 @@ private void drawContours() {
     shapeRenderer.circle(100, 100, 100);
 }
 ```
+
 ### Result
+
 ```java
 @Override
 public void render() {
@@ -258,10 +294,15 @@ public void render() {
     shapeRenderer.end();
 }
 ```
+
 ![Circle masked by another circle and a triangle](https://imgur.com/Pmlfn7M.png)
+
 ## 4. Masking using Blending Function (Shapes or Textures)
+
 For the demanding GDXer with complex masking needs, this technique allows us to have any mask imaginable and take the alpha channel into account for the first time! For this we’ll be using libGDX’s SpriteBatch.
+
 ### Step 1 - Preparations
+
 These are the images we're gonna use:
 | ![The mask](https://imgur.com/WPHeXdB.png) | ![The sprite](https://imgur.com/Gf2pQYJ.png) |
 | :-: | :-: |
@@ -271,6 +312,7 @@ The images in a black background for clarity:
 | ![The mask](https://imgur.com/rm13HUV.png) | ![The sprite](https://imgur.com/eGoidRi.png) |
 | :-: | :-: |
 | The mask | The sprite to mask |
+
 ```java
 /* Some attributes we're gonna need. */
 private SpriteBatch spriteBatch;
@@ -288,7 +330,9 @@ public void create() {
     maskedSprite.setColor(Color.RED);
 }
 ```
+
 ### Step 2 - Draw the mask elements to the frame buffer
+
 ```java
 private void drawMasks() {
     /* Disable RGB color writing, enable alpha writing to the frame buffer. */
@@ -310,7 +354,9 @@ private void drawMasks() {
     spriteBatch.flush();
 }
 ```
+
 ### Step 3 - Draw the masked elements
+
 ```java
 private void drawMasked() {
     /* Now that the buffer has our alpha, we simply draw the sprite with the mask applied. */
@@ -326,7 +372,9 @@ private void drawMasked() {
     spriteBatch.flush();
 }
 ```
+
 ### Step 4 - Draw the original sprites for debugging purposes
+
 ```java
 private void drawOriginals() {
     /* Switch to the default blend function */
@@ -337,7 +385,9 @@ private void drawOriginals() {
     spriteBatch.draw(maskedSprite, 256, 256);
 }
 ```
+
 ### Result
+
 ```java
 @Override
 public void render() {
@@ -352,10 +402,15 @@ public void render() {
     spriteBatch.end();
 }
 ```
+
 ![Masked sprite and original sprites](https://imgur.com/Lmqecgk.png)
+
 ## 5. Masking using Pixmaps (Shapes or Textures)
+
 This technique allows the mask to be any image or shape and takes the alpha channel into account. This time we'll be using the libGDX’s Pixmap class.
+
 ### Step 1 - Preparations
+
 ```java
 private ShapeRenderer shapeRenderer;
 private SpriteBatch spriteBatch;
@@ -388,7 +443,9 @@ public void create() {
     masked = new Texture(pixmap);
 }
 ```
+
 ### Step 2 - Applying the mask
+
 ```java
 private Pixmap applyMask(Pixmap source) {
     /* Create a Pixmap to store the mask information, at the end it will
@@ -423,19 +480,23 @@ private Pixmap applyMask(Pixmap source) {
     return result;
 }
 ```
+
 ### Step 3 - Drawing the original and masked images
+
 ```java
 private void drawImages() {
     /* Draw the original image for comparison. */
     spriteBatch.setColor(Color.WHITE);
     spriteBatch.draw(original, 0, size, size, size);
-    
+
     /* Draw the masked image in red. */
     spriteBatch.setColor(Color.RED);
     spriteBatch.draw(masked, 0, 0, size, size);
 }
 ```
+
 ### Step 4 - Drawing the contours of the mask for debugging purposes
+
 ```java
 private void drawContours() {
     /* Draw the contour of the circle and rectangle used as masks. */
@@ -444,7 +505,9 @@ private void drawContours() {
     shapeRenderer.rect(size / 2f, 0, size / 2f, size / 2f);
 }
 ```
+
 ### Result
+
 ```java
 @Override
 public void render() {
@@ -459,10 +522,15 @@ public void render() {
     shapeRenderer.end();
 }
 ```
+
 ![Original and masked images + contours](https://imgur.com/NWR32Oj.png)
+
 ## 6. Masking using Shaders (Textures)
+
 This technique allows the mask to be any image or shape and takes alpha channel into account. This time we'll be using the libGDX’s ShaderProgram class in conjunction with the Texture class.
+
 ### Step 1 - Preparations
+
 ```java
 private final int size = 300;
 private Texture texture;
@@ -490,7 +558,9 @@ public void create() {
     Gdx.gl.glLineWidth(2);
 }
 ```
+
 ### Step 2 - Defining our mask
+
 ```java
 private void defineMask() {
     /* The fragment shader simply multiplies the fragment's usual alpha with
@@ -526,7 +596,9 @@ private void defineMask() {
     Gdx.gl.glActiveTexture(GL20.GL_TEXTURE0);
 }
 ```
+
 ### Step 3 - Setting up the shader
+
 ```java
 private void setupShader() {
     /* It's nicer to keep shader programs as text files in the assets
@@ -559,7 +631,9 @@ private void setupShader() {
     spriteBatch1.setShader(shader);
 }
 ```
+
 **The vertex.glsl shader file:**
+
 ```glsl
 uniform mat4 u_projTrans;
 
@@ -577,7 +651,9 @@ void main()
     gl_Position = u_projTrans * a_position;
 }
 ```
+
 **The fragment.glsl shader file:**
+
 ```glsl
 #ifdef GL_ES
 precision mediump float;
@@ -597,7 +673,9 @@ void main()
     gl_FragColor = v_color * texColor;
 }
 ```
+
 ### Step 4 - Drawing the contours of the mask for debugging purposes
+
 ```java
 private void drawContours() {
     /* Draw the contour of the masks. */
@@ -606,7 +684,9 @@ private void drawContours() {
     shapeRenderer.circle(size / 2f, size * 0.75f, size / 4f);
 }
 ```
+
 ### Result
+
 ```java
 @Override
 public void render() {
@@ -628,10 +708,15 @@ public void render() {
     shapeRenderer.end();
 }
 ```
+
 ![Masked sprite and original sprites](https://imgur.com/h7fgM3Z.png)
+
 ## 7. Masking using BlendFuncSeparate (Removal)
+
 Ideal if you wanna use the mask to hide portions of the masked elements.
+
 ### Step 1 - Preparations
+
 ```java
 private ShapeRenderer shapeRenderer;
 private FrameBuffer frameBuffer;
@@ -648,7 +733,9 @@ public void create() {
     spriteBatch = new SpriteBatch();
 }
 ```
+
 ### Step 2 - Drawing the masked elements and the mask elements
+
 ```java
 private void drawCircles() {
     shapeRenderer.set(ShapeType.Filled);
@@ -675,7 +762,9 @@ private void drawCircles() {
      * Gdx.gl.glBlendFunc(GL20.GL_SRC_ALPHA, GL20.GL_ONE_MINUS_SRC_ALPHA); */
 }
 ```
+
 ### Step 3 - Drawing the contours for debugging purposes
+
 ```java
 private void drawContours() {
     shapeRenderer.set(ShapeType.Line);
@@ -690,7 +779,9 @@ private void drawContours() {
     shapeRenderer.circle(100, 200, 35);
 }
 ```
+
 ### Result
+
 ```java
 @Override
 public void render() {
@@ -712,10 +803,15 @@ public void render() {
     spriteBatch.end();
 }
 ```
+
 ![Masked sprite and original sprites](https://imgur.com/ZsA3PRq.png)
+
 ## 8. Masking using Blending Function (Tinting)
+
 Ideal if you wanna use the mask to tint or texture portions of the masked elements.
+
 ### Step 1 - Preparations
+
 ```java
 private ShapeRenderer shapeRenderer;
 private SpriteBatch spriteBatch;
@@ -747,7 +843,9 @@ public void create() {
     frameBuffer = new FrameBuffer(Pixmap.Format.RGBA8888, screenWidth, screenHeight, false);
 }
 ```
+
 ### Step 2 - Drawing the mask and masked elements
+
 ```java
 private void draw() {
     spriteBatch.begin();
@@ -767,7 +865,9 @@ private void draw() {
     Gdx.gl.glDisable(GL20.GL_BLEND);
 }
 ```
+
 ### Result
+
 ```java
 @Override
 public void render() {
@@ -786,4 +886,5 @@ public void render() {
     spriteBatch.end();
 }
 ```
+
 ![Masked sprite and original sprites](https://imgur.com/YsX0Rre.png)
