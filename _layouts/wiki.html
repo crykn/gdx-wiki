@@ -10,7 +10,7 @@ layout: default_wiki
     </h1>{% endif %}
 
     <div class="header-meta">
-      Last edited on !!!{% comment %}{{ page.path | file_date | date_to_long_string }}{% endcomment %} • <a href="{{ site.github.repository_url }}/commits/dev/{{ page.relative_path }}">View revision history</a> • <a href="{{ site.github.repository_url }}/edit/dev/{{ page.path }}">Edit on GitHub</a>
+      Last edited on {{ page.path | file_date | date_to_long_string }} • <a href="{{ site.github.repository_url }}/commits/dev/{{ page.relative_path }}">View revision history</a> • <a href="{{ site.github.repository_url }}/edit/dev/{{ page.path }}">Edit on GitHub</a>
     </div>
   </header>
   <article class="page h-entry" itemscope itemtype="https://schema.org/CreativeWork">
