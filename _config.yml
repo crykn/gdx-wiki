@@ -65,6 +65,7 @@ plugins:
   - jekyll-redirect-from
   - jekyll-remote-theme
   - jekyll-github-metadata
+  - jekyll-last-modified-at
 
 # Footer
 footer:
