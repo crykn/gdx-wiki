@@ -7,7 +7,7 @@ module Jekyll::CustomFilter
     begin
       File.mtime(input)
     rescue
-      "now" # default value
+      "1970-01-01T00:00:00Z" # default value
     end
   end
 end
