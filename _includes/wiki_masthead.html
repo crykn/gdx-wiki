@@ -1,4 +1,4 @@
-<!-- overrides: https://github.com/mmistakes/minimal-mistakes/blob/master/_includes/masthead.html -->
+<!-- overrides: _includes/masthead.html -->
 
 {% capture logo_path %}{{ site.logo }}{% endcapture %}
 {% capture logo_path_dark %}{{ site.logo_dark }}{% endcapture %}
@@ -25,7 +25,7 @@
           {% if site.subtitle %}<span class="site-subtitle">{{ site.subtitle }}</span>{% endif %}
         </a>
         <ul class="visible-links">
-          {%- for link in site.data.navigation.main -%}
+          {%- for link in site.data.navigation.wiki -%}
             <li class="masthead__menu-item">
               <a href="{{ link.url | relative_url }}"{% if link.description %} title="{{ link.description }}"{% endif %}>{{ link.title }}</a>
             </li>
