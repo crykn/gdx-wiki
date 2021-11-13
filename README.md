@@ -1,10 +1,10 @@
-# libGDX Wiki 
-This is a first draft at porting the libGDX Wiki to a Jekyll blog. It can be seen live at: https://crykn.github.io/
+# libGDX Wiki
+This is a first draft of porting the libGDX Wiki to a Jekyll blog. It can be seen live at: https://crykn.github.io/
 
 ## How does it work?
 - The wiki files were ported to Jekyll with a modified version of [Spaio's](https://github.com/Spaio/libgdx-wiki-on-pages) `WikiToPagesTranslator.java`, which can be found [here](https://gist.github.com/crykn/e58577f4290026247add420a43ab1cfe); for additional instructions, take a look at the comments at the top of the file
 - The website itself is a Jekyll blog that is deployed to GitHub Pages via GitHub Actions; see `.github/workflows/github-pages.yml`
-- The blog uses a modified version of the [Minimal Mistakes](https://github.com/mmistakes/minimal-mistakes) theme; see the `_sass/wiki.scss`; `_layouts/default_wiki.html`, `_layouts/wiki.html`
+- The blog uses a modified version of the [Minimal Mistakes](https://github.com/mmistakes/minimal-mistakes) theme; see `_sass/wiki.scss`; `_layouts/default_wiki.html`, `_layouts/wiki.html`
 
 ## ToDo
 - [ ] Improve sidebar layout & responsiveness

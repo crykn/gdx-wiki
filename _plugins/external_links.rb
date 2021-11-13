@@ -49,7 +49,7 @@ def mark_links_in_page_or_document(page_or_document)
   ]
 
   unless page_or_document.respond_to?(:asset_file?) and page_or_document.asset_file?
-    if page_or_document.path.include?("wiki")
+    if page_or_document.url.include?("wiki")
       page_or_document.output = process_content(
         site_hostname,
         page_or_document.output,
