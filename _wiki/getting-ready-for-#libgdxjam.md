@@ -1,6 +1,6 @@
 ---
 title: "Getting ready for #libGDXJAM"
-permalink: /wiki/getting-ready-for-#libgdxjam
+permalink: /wiki/getting-ready-for-libgdxjam
 ---
 The libGDX community is organizing [#libGDXJAM](https://twitter.com/hashtag/libGDXJam?src=hash), a game programming competition that will take place sometime in December, the final date is yet to be announced.
 
@@ -133,7 +133,7 @@ Free game art:
 
 ![images/tiled.png](/assets/wiki/images/tiled.png)
 
-[Overlap2D](https://github.com/UnderwaterApps/overlap2d): open source game editor. Make sure to check the [Overlap2D survival guide for #libGDXJAM](overlap2d-survival-guide-for-#libgdxjam).
+[Overlap2D](https://github.com/UnderwaterApps/overlap2d): open source game editor. Make sure to check the [Overlap2D survival guide for #libGDXJAM](/wiki/overlap2d-survival-guide-for-libgdxjam).
 
 ![images/overlap2d.png](/assets/wiki/images/overlap2d.png)
 
