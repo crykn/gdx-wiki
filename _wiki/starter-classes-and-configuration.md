@@ -94,7 +94,7 @@ First an [LwjglApplicationConfiguration](https://github.com/libgdx/libgdx/tree/m
 
 Once the configuration object is set, an `LwjglApplication` is instantiated. The `MyGdxGame()` class is the ApplicationListener implementing the game logic.
 
-From there on a window is created and the ApplicationListener is invoked as described in [The Life-Cycle](the-life-cycle)
+From there on a window is created and the ApplicationListener is invoked as described in [The Life-Cycle](/wiki/the-life-cycle)
 
 ### Common issues:
 
@@ -260,7 +260,7 @@ public class MyLiveWallpaper extends AndroidLiveWallpaperService {
 
 You can optionally subscribe to Live Wallpaper-specific events by implementing `AndroidWallpaperListener` with your
 `ApplicationListener` class. `AndroidWallpaperListener` is not available from the `core` module, so you can either
-follow the strategy outlined in [Interfacing With Platform-Specific Code](interfacing-with-platform-specific-code), or you can manage it just from the `android`
+follow the strategy outlined in [Interfacing With Platform-Specific Code](/wiki/interfacing-with-platform-specific-code), or you can manage it just from the `android`
 module by subclassing your `ApplicationListener` like this:
 
 ```java
