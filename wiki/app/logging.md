@@ -1,6 +1,5 @@
 ---
 title: Logging
-permalink: /wiki/logging
 ---
 The `Application` interface provides simple logging facilities that give granular control.
 

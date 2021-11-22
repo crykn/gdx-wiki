@@ -1,6 +1,5 @@
 ---
 title: ModelBuilder, MeshBuilder and MeshPartBuilder
-permalink: /wiki/modelbuilder,-meshbuilder-and-meshpartbuilder
 ---
 # ModelBuilder
 [ModelBuilder](http://libgdx.badlogicgames.com/nightlies/docs/api/com/badlogic/gdx/graphics/g3d/utils/ModelBuilder.html) [(code)](https://github.com/libgdx/libgdx/blob/master/gdx/src/com/badlogic/gdx/graphics/g3d/utils/ModelBuilder.java) is a utility class to create one or more [models](https://github.com/libgdx/libgdx/wiki/Models) on code. It allows you to include one or more [nodes](https://github.com/libgdx/libgdx/wiki/Models#nodes), each node consisting of one or more [parts](https://github.com/libgdx/libgdx/wiki/Models#nodepart). It does, however, not support building a node hierarchy (child nodes). Be aware that building a model on code can be a costly operation and might trigger the garbage collector.

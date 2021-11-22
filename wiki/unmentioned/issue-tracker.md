@@ -1,6 +1,5 @@
 ---
 title: Issue Tracker
-permalink: /wiki/issue-tracker
 ---
 If you have been sent to this page it is because you have posted something on the libGDX issue tracker that is not an issue. We handle thousands of issues and cannot burn our time explaining to each person how an issue tracker works. Instead we send you here, which explains your options.
 

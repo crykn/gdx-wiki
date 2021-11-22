@@ -1,6 +1,5 @@
 ---
 title: Table
-permalink: /wiki/table
 ---
 ## Overview
 

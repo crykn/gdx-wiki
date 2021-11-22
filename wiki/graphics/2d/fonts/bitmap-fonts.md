@@ -1,6 +1,5 @@
 ---
 title: Bitmap fonts
-permalink: /wiki/bitmap-fonts
 ---
 libGDX makes use of bitmap files (pngs) to render fonts.  Each glyph in the font has a corresponding TextureRegion.
 

@@ -1,6 +1,5 @@
 ---
 title: Project Setup via Command Line
-permalink: /wiki/project-setup-via-command-line
 ---
 ## Creating a libGDX project using the command line
 

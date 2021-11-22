@@ -1,6 +1,5 @@
 ---
 title: Google Summer of Code 2014
-permalink: /wiki/google-summer-of-code-2014
 ---
 
 FIXME out of date. This page is mostly an [RFC](https://en.wikipedia.org/wiki/Request_for_Comments)

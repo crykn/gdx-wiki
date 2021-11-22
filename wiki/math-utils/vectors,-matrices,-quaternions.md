@@ -1,6 +1,5 @@
 ---
 title: Vectors, matrices, quaternions
-permalink: /wiki/vectors,-matrices,-quaternions
 ---
 # Introduction #
 

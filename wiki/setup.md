@@ -1,5 +1,4 @@
 ---
-permalink: /wiki/setup
 redirect_from:
   - /dev/setup/
   - /dev/project_generation/

@@ -1,6 +1,5 @@
 ---
 title: Integrating libgdx and the device camera
-permalink: /wiki/integrating-libgdx-and-the-device-camera
 ---
 This article shows how to integrate the Android device camera with your libGDX application. 
 This functionality can be used in order to let the user see what going on behind the device while playing and walking on the street, or even have some interaction between  the game and the real world (FPS game using the face detection mechanism?)

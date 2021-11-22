@@ -1,6 +1,5 @@
 ---
 title: 3D Particle Effects
-permalink: /wiki/3d-particle-effects
 ---
 Because of issues with perspective and depth, the 2D particle effects are not suitable for 3D applications.  Additionally, the 3d particle effects take full advantage of movement through 3d space, allowing a wide variety of dynamic graphical effects.
 

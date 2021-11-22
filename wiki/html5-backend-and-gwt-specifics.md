@@ -1,6 +1,5 @@
 ---
 title: HTML5 Backend and GWT Specifics
-permalink: /wiki/html5-backend-and-gwt-specifics
 ---
 Welcome to a place of magic and wonder, the World Wide Web! Even though some folks say this Internet thing is "just a fad," and we should keep using usenet and gopher, there's at least one thing the WWW has that those technologies don't:
 

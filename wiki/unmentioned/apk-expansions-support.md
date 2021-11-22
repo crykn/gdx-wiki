@@ -1,6 +1,5 @@
 ---
 title: APK Expansions support
-permalink: /wiki/apk-expansions-support
 ---
 Whenever the assets of a game exceed a certain size, in order to release the game on Google Play, the assets have to be placed into a separate file, to keep the APK size under 100MB. For more information about this you can read [here](http://developer.android.com/google/play/expansion-files.html).
 

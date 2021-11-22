@@ -1,6 +1,5 @@
 ---
 title: File handling
-permalink: /wiki/file-handling
 ---
 * [Introduction](#introduction)
 * [Platform Filesystems](#platform-filesystems)

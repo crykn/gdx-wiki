@@ -1,6 +1,5 @@
 ---
 title: Clipping, with the use of scissorstack
-permalink: /wiki/clipping,-with-the-use-of-scissorstack
 ---
 # Clipping #
 

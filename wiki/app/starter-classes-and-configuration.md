@@ -1,6 +1,5 @@
 ---
 title: Starter classes and configuration
-permalink: /wiki/starter-classes-and-configuration
 ---
 * [Desktop (LWJGL3)](#desktop-lwjgl3)
 * [Desktop (LWJGL)](#desktop-lwjgl)

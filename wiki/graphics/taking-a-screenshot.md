@@ -1,6 +1,5 @@
 ---
 title: Taking a Screenshot
-permalink: /wiki/taking-a-screenshot
 ---
 Screenshots are easy in LibGDX!
 

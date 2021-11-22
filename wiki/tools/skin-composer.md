@@ -1,6 +1,5 @@
 ---
 title: Skin Composer
-permalink: /wiki/skin-composer
 ---
 [Skin Composer](https://github.com/raeleus/skin-composer) is a handy tool to make the process of creating Scene2D skins easier. Its extensive [wiki](https://github.com/raeleus/skin-composer/wiki) provides information on how to use it.
 

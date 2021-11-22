@@ -1,6 +1,5 @@
 ---
 title: Frame buffer objects
-permalink: /wiki/frame-buffer-objects
 ---
 Framebuffers allow users to render stuff to a texture instead of to the screen (= the backbuffer). This can prove useful in various ways, for example to perform post processing effects.
 

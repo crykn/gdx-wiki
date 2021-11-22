@@ -1,6 +1,5 @@
 ---
 title: More Info
-permalink: /wiki/more-info
 ---
 If you have been sent to this page it is because you failed to provide enough information for us to take action on your issue. We handle hundreds of issues and cannot burn our time explaining to each person how to properly post an issue. Instead we send you here, which explains what you need to do.
 

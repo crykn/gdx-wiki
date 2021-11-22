@@ -1,6 +1,5 @@
 ---
 title: Airpush in Libgdx
-permalink: /wiki/airpush-in-libgdx
 ---
 # Summary #
 

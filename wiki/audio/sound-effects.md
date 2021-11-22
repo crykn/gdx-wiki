@@ -1,6 +1,5 @@
 ---
 title: Sound effects
-permalink: /wiki/sound-effects
 ---
 Sound effects are small audio samples, usually no longer than a few seconds, that are played back on specific game events such as a character jumping or shooting a gun.
 

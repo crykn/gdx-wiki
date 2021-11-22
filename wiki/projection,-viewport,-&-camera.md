@@ -1,6 +1,5 @@
 ---
 title: Projection, viewport, & camera
-permalink: /wiki/projection,-viewport,-&-camera
 ---
 # No Op: Not Translating
 

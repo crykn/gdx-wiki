@@ -1,6 +1,5 @@
 ---
 title: Bullet Wrapper Using models
-permalink: /wiki/bullet-wrapper-using-models
 ---
 ## <a id="Using_models"></a>Using models ##
 [`Model`](https://github.com/libgdx/libgdx/wiki/Models) and `ModelInstance` are typically used for the visual representation of objects. `btCollisionObject` or `btRigidBody` are used for the physical representation of these objects.

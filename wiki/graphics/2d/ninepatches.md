@@ -1,6 +1,5 @@
 ---
 title: Ninepatches
-permalink: /wiki/ninepatches
 ---
 This article introduce NinePatch images, how they can be created and how they
 are used in a libGDX context.

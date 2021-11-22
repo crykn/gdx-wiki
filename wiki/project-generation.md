@@ -1,5 +1,4 @@
 ---
-permalink: /wiki/project-generation
 redirect_from:
   - /dev/project-generation/
   - /dev/project_generation/

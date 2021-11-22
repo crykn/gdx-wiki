@@ -1,6 +1,5 @@
 ---
 title: Reflection
-permalink: /wiki/reflection
 ---
 # Reflection #
 <sub>Available since libGDX version 0.9.9.</sub>

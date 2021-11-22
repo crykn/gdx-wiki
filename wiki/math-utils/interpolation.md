@@ -1,6 +1,5 @@
 ---
 title: Interpolation
-permalink: /wiki/interpolation
 ---
 # Interpolation #
 

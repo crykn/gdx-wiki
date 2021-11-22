@@ -1,6 +1,5 @@
 ---
 title: 3D Picking
-permalink: /wiki/3d-picking
 ---
 1. Compose a pick ray with and origin and direction:
 ```

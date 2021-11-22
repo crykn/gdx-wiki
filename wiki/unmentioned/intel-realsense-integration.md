@@ -1,6 +1,5 @@
 ---
 title: Intel RealSense Integration
-permalink: /wiki/intel-realsense-integration
 ---
 LibGDX can be combined with [Intel RealSense](https://software.intel.com/en-us/realsense/home). RealSense is a suite of software (algorithms plus data files) and hardware (depth/color camera with mirophone) that let’s you explore human computer interaction, such as hand and face tracking or gesture and voice recognition.
 

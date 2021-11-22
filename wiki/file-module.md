@@ -1,6 +1,5 @@
 ---
 title: File module
-permalink: /wiki/file-module
 ---
 The File module provides methods for easy file manipulation. It provides all the functionality needed for most common tasks.
 

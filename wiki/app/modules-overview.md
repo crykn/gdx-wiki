@@ -1,6 +1,5 @@
 ---
 title: Modules overview
-permalink: /wiki/modules-overview
 ---
 ## Introduction ##
 

@@ -1,6 +1,5 @@
 ---
 title: Project Setup Gradle
-permalink: /wiki/project-setup-gradle
 ---
 #### This page has moved! Check it out [here](https://libgdx.com/dev/project-generation/).
 

@@ -1,6 +1,5 @@
 ---
 title: Pollfish in libgdx
-permalink: /wiki/pollfish-in-libgdx
 ---
 # **Introduction**
 

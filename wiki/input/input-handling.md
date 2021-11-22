@@ -1,6 +1,5 @@
 ---
 title: Input handling
-permalink: /wiki/input-handling
 ---
 Different platforms have different input facilities. On the desktop users can talk to your application via the keyboard and a mouse. The same is true for browser based games. On Android, the mouse is replaced with a (capacitive) touch screen, and a hardware keyboard is often missing. All (compatible) Android devices also feature an accelerometer and sometimes even a compass (magnetic field sensor).
 

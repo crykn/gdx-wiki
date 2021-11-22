@@ -1,6 +1,5 @@
 ---
 title: Bullet Wrapper   Debugging
-permalink: /wiki/bullet-wrapper---debugging
 ---
 > Make sure to use the latest nightly (not stable) or to work directly with the latest libGDX code (also make sure to manually update natives in the latter case). The issue you're having might already be solved.
 

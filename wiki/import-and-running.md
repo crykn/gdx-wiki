@@ -1,5 +1,4 @@
 ---
-permalink: /wiki/import-and-running
 redirect_from:
   - /dev/import-and-running/
   - /dev/import_and_running/

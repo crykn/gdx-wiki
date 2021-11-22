@@ -1,6 +1,5 @@
 ---
 title: Gdx audio
-permalink: /wiki/gdx-audio
 ---
 **This extension has been removed as per 8th of April 2014**
 

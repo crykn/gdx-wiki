@@ -1,6 +1,5 @@
 ---
 title: Simple text input
-permalink: /wiki/simple-text-input
 ---
 If an application needs to ask the user for a string, e.g a user name or a password, it can do so by using a simple dialog box that is customizable to some extent.
 

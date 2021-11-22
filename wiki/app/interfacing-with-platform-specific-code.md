@@ -1,6 +1,5 @@
 ---
 title: Interfacing with platform specific code
-permalink: /wiki/interfacing-with-platform-specific-code
 ---
 Here's a [forum discussion](https://web.archive.org/web/20200427014652/https://www.badlogicgames.com/forum/viewtopic.php?f=11&t=9072&p=41323#p41323) on the matter, also mentioning iOS specific things.
 

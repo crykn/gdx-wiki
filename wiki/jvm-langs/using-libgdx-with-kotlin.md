@@ -1,6 +1,5 @@
 ---
 title: Using libGDX with Kotlin
-permalink: /wiki/using-libgdx-with-kotlin
 ---
 [Kotlin](https://kotlinlang.org) is a modern statically typed JVM language from [JetBrains](https://www.jetbrains.com), the creators of [IntelliJ IDEA](https://www.jetbrains.com/idea/) (Kotlin supports Eclipse too). If you’re a C# user or appreciate its features, you will feel more at home as Kotlin has many features C# has.
 

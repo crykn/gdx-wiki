@@ -1,5 +1,4 @@
 ---
-permalink: /wiki/a-simple-game
 redirect_from:
   - /dev/simple-game/
   - /dev/simple_game/

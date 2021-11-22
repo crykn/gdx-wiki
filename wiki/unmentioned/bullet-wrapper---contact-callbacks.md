@@ -1,6 +1,5 @@
 ---
 title: Bullet Wrapper   Contact callbacks
-permalink: /wiki/bullet-wrapper---contact-callbacks
 ---
 Contact callbacks allow you to be notified when a contact/collision on two objects occur ([more info and a performance related warning](https://github.com/AndresTraks/BulletSharp/wiki/Collision-Callbacks-and-Triggers#contact-callbacks)).
 

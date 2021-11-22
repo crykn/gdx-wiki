@@ -1,6 +1,5 @@
 ---
 title: Bullet Wrapper   Using the wrapper
-permalink: /wiki/bullet-wrapper---using-the-wrapper
 ---
 ## <a id="Initializing_Bullet"></a>Initializing Bullet ##
 

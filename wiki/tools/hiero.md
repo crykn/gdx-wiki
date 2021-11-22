@@ -1,6 +1,5 @@
 ---
 title: Hiero
-permalink: /wiki/hiero
 ---
 Hiero is a bitmap font packing tool. It saves in the [Angel Code font](http://www.angelcode.com/products/bmfont/) format, which can be used by [BitmapFont](/wiki/bitmap-fonts) in libGDX applications.
 

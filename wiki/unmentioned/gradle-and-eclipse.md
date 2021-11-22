@@ -1,6 +1,5 @@
 ---
 title: Gradle and Eclipse
-permalink: /wiki/gradle-and-eclipse
 ---
 #### This page has moved! Check it out [here](https://libgdx.com/dev/setup/).
 

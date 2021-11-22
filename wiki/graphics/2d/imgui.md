@@ -1,6 +1,5 @@
 ---
 title: ImGui
-permalink: /wiki/imgui
 ---
 An **alternative GUI for libGDX** is [Dear ImGui](https://github.com/ocornut/imgui), a bloat-free graphical user interface library in C++. It outputs optimized vertex buffers that you can render anytime in your 3D-pipeline enabled application. It is fast, portable, renderer agnostic and self-contained (few dependencies).
 

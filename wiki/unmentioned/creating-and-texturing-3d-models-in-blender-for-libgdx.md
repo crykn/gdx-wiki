@@ -1,6 +1,5 @@
 ---
 title: Creating and texturing 3d models in blender for libgdx
-permalink: /wiki/creating-and-texturing-3d-models-in-blender-for-libgdx
 ---
 # No Op: Not Translating
 

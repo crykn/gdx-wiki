@@ -1,6 +1,5 @@
 ---
 title: Artificial Intelligence
-permalink: /wiki/artificial-intelligence
 ---
 ![images/64ae592a-55e2-11e4-8a31-31c2941ff995.png](/assets/wiki/images/64ae592a-55e2-11e4-8a31-31c2941ff995.png)
 

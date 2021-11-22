@@ -1,6 +1,5 @@
 ---
 title: Building the Bullet wrapper
-permalink: /wiki/building-the-bullet-wrapper
 ---
 * [Modifying the wrapper](#modifying-the-wrapper)
 * [Building the Java module](#building-the-java-module)

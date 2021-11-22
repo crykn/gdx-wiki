@@ -1,6 +1,5 @@
 ---
 title: Bullet Wrapper Setup
-permalink: /wiki/bullet-wrapper-setup
 ---
 The Bullet wrapper (`gdx-bullet` extension) is currently supported on desktop, android and ios. The Bullet wrapper isn't supported for GWT at the moment.
 

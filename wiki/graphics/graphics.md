@@ -1,6 +1,5 @@
 ---
 title: Graphics
-permalink: /wiki/graphics
 ---
 # REWRITE THIS #
 This page needs to be rewritten.

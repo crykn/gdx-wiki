@@ -1,6 +1,5 @@
 ---
 title: Continuous and Non Continuous Rendering
-permalink: /wiki/continuous-and-non-continuous-rendering
 ---
 By default in libGDX, the rendering thread calls the `render()` method of your ApplicationListener class continuously, with a frequency that depends on your hardware (30-50-80 times per second).
 

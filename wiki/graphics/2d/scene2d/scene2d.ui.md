@@ -1,6 +1,5 @@
 ---
 title: Scene2d.ui
-permalink: /wiki/scene2d.ui
 ---
 ## Overview ##
 

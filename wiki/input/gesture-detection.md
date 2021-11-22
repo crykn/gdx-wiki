@@ -1,6 +1,5 @@
 ---
 title: Gesture detection
-permalink: /wiki/gesture-detection
 ---
 # Gesture Detection #
 Touch screens lend themselves well to gesture based input. A gesture could be a pinch with two fingers to indicate the desire to zoom, a tap or double tap, a long press and so on.

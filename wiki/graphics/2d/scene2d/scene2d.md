@@ -1,6 +1,5 @@
 ---
 title: Scene2d
-permalink: /wiki/scene2d
 ---
 ## Overview ##
 

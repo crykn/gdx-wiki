@@ -1,6 +1,5 @@
 ---
 title: The application framework
-permalink: /wiki/the-application-framework
 ---
 ## Modules ##
 At its core, libGDX consists of six interfaces that provide means to interact with the operating system. Each back-end implements these interfaces.

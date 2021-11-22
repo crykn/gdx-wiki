@@ -1,6 +1,5 @@
 ---
 title: Gdx freetype
-permalink: /wiki/gdx-freetype
 ---
 # Introduction #
 

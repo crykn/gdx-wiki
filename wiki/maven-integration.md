@@ -1,6 +1,5 @@
 ---
 title: Maven integration
-permalink: /wiki/maven-integration
 ---
 libGDX is currently published to the SonaType snapshot repository. This will continue to happen until the Maven integration is complete. The repository only contains the latest snapshot release for now. Eventually we will publish release builds to SonaType as well.
 

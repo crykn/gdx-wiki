@@ -1,6 +1,5 @@
 ---
 title: Deploying as an Applet
-permalink: /wiki/deploying-as-an-applet
 ---
 # Deploying as an Applet #
 

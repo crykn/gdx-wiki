@@ -1,6 +1,5 @@
 ---
 title: Admob in libgdx
-permalink: /wiki/admob-in-libgdx
 ---
  * [Introduction](#introduction)
  * [Background](#background)

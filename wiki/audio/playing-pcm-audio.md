@@ -1,6 +1,5 @@
 ---
 title: Playing pcm audio
-permalink: /wiki/playing-pcm-audio
 ---
 The audio module can provide you direct access to the audio hardware for writing [PCM samples](http://en.wikipedia.org/wiki/Pulse-code_modulation) to it.
 

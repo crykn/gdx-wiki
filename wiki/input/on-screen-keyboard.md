@@ -1,6 +1,5 @@
 ---
 title: On screen keyboard
-permalink: /wiki/on-screen-keyboard
 ---
 Most Android devices and all iOS devices do not possess a hardware keyboard. Instead, a soft- or on-screen keyboard can be presented to the user. To bring up the on-screen keyboard we can call this method:
 

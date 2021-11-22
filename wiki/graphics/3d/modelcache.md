@@ -1,6 +1,5 @@
 ---
 title: ModelCache
-permalink: /wiki/modelcache
 ---
 When rendering many [Models]] using [ModelBatch](/wiki/modelbatch) you might notice that it will have an impact on performance. This is often because every [[part](/wiki/models#nodepart) of the model will cause a [render call](/wiki/https://github.com/libgdx/libgdx/wiki/modelbatch#what-are-render-calls). Every render call requires the GPU and the CPU to synchronize, which is a relatively costly operation. Therefor you typically want to keep the number of render calls to a minimum.
 

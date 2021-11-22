@@ -1,6 +1,5 @@
 ---
 title: Internationalization and Localization
-permalink: /wiki/internationalization-and-localization
 ---
 ## Overview ##
 

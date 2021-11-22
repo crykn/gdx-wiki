@@ -1,6 +1,5 @@
 ---
 title: 2D Animation
-permalink: /wiki/2d-animation
 ---
 2D Animation is a technique used to create the illusion of movement using static images. This article describes how to create animations with libGDX using its [Animation Class](https://libgdx.badlogicgames.com/nightlies/docs/api/com/badlogic/gdx/graphics/g2d/Animation.html).
 

@@ -1,6 +1,5 @@
 ---
 title: TextButton
-permalink: /wiki/textbutton
 ---
 # TextButton. General usage.
 

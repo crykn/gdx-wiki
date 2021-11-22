@@ -1,6 +1,5 @@
 ---
 title: Bundling a JRE
-permalink: /wiki/bundling-a-jre
 ---
 Java apps need a Java Runtime Environment to run. Typically this is installed by the user and hopefully already available when they go to run your app. Unfortunately users may not have Java installed and there are differences between JREs that can cause problems with your app. These can be difficult for users to explain and worse, difficult for them to fix themselves. Also, you may require, as a minimum, a certain JRE version.
 

@@ -1,6 +1,5 @@
 ---
 title: Google Mobile Ads in Libgdx (replaces deprecated AdMob)
-permalink: /wiki/google-mobile-ads-in-libgdx-(replaces-deprecated-admob)
 ---
 The number one ad service being used by Android and libGDX developers at the moment is Google AdMob.
 

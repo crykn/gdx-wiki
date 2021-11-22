@@ -1,6 +1,5 @@
 ---
 title: Skin Properties
-permalink: /wiki/skin-properties
 ---
 The following is a list of all properties of UI skin elements.
 

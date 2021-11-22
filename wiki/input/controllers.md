@@ -1,6 +1,5 @@
 ---
 title: Controllers
-permalink: /wiki/controllers
 ---
 [Controllers extension has been moved to an own repo](https://github.com/libgdx/gdx-controllers).
 

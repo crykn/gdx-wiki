@@ -1,6 +1,5 @@
 ---
 title: Pixmaps
-permalink: /wiki/pixmaps
 ---
 # Introduction #
 

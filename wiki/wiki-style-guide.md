@@ -1,6 +1,5 @@
 ---
 title: Wiki Style Guide
-permalink: /wiki/wiki-style-guide
 ---
 This page gives some information on how to edit libGDX wiki pages. Please read this before contributing to the libGDX wiki! If you have any (additional) questions, please do not hesitate to ask! See our [Discord](https://libgdx.com/community/) for more information.
 

@@ -1,6 +1,5 @@
 ---
 title: Local LibGDX package use with GWT
-permalink: /wiki/local-libgdx-package-use-with-gwt
 ---
 # Building for GWT with a package created from source
 When working with libGDX source and creating a custom package (see [working with source](https://libgdx.com/dev/from-source/)), sometimes one wants to add a new file to LibGDX.

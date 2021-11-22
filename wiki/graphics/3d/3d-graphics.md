@@ -1,6 +1,5 @@
 ---
 title: 3D Graphics
-permalink: /wiki/3d-graphics
 ---
 ### The 3D Graphics API
  * [Quick Start](/wiki/quick-start)

@@ -1,6 +1,5 @@
 ---
 title: Masking
-permalink: /wiki/masking
 ---
 Masking is the technique of hiding portions of an image using the pixel information of another to decide whether a pixel of the original should or should not be shown. There’s more than one way to achieve this effect in libGDX.
 

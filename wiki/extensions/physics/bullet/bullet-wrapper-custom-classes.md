@@ -1,6 +1,5 @@
 ---
 title: Bullet Wrapper Custom classes
-permalink: /wiki/bullet-wrapper-custom-classes
 ---
 In some cases it's not possible to wrap a C++ bullet class/method in a Java class/method, in which case a custom class or method is used to bridge the two. The following list describes those. Note that the list might not be complete.
 

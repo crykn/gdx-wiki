@@ -1,6 +1,5 @@
 ---
 title: Saved game serialization
-permalink: /wiki/saved-game-serialization
 ---
 # JSON serialization #
 

@@ -1,6 +1,5 @@
 ---
 title: Accelerometer
-permalink: /wiki/accelerometer
 ---
 An accelerometer measures the acceleration of a device on three axes (at least on Android). From this acceleration one can derive the tilt or orientation of the device.
 

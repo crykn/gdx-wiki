@@ -1,6 +1,5 @@
 ---
 title: Threading
-permalink: /wiki/threading
 ---
 All of the `ApplicationListener` methods are called on the same thread. This thread is the rendering thread on which OpenGL calls can be made. For most games it is sufficient to implement both logic updates and rendering in the `ApplicationListener.render()` method, and on the rendering thread. 
 

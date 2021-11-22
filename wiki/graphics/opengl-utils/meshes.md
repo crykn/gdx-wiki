@@ -1,6 +1,5 @@
 ---
 title: Meshes
-permalink: /wiki/meshes
 ---
 A [mesh](http://libgdx.badlogicgames.com/nightlies/docs/api/com/badlogic/gdx/graphics/Mesh.html) is a collection of vertices (and optionally indices) which describe a batch of geometry for rendering. The vertices are held either in VRAM in form of vertex buffer objects (VBOs) or in RAM in form of vertex arrays. VBOs are faster and are used by default if the hardware supports it. Like [Textures](http://libgdx.badlogicgames.com/nightlies/docs/api/com/badlogic/gdx/graphics/Texture.html), meshes are managed and will be automatically reloaded when the context is lost.
 

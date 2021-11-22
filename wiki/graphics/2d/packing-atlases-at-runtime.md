@@ -1,6 +1,5 @@
 ---
 title: Packing atlases at runtime
-permalink: /wiki/packing-atlases-at-runtime
 ---
 - [Texture-packer](/wiki/texture-packer)
 - [PixmapPacker](http://libgdx.badlogicgames.com/nightlies/docs/api/com/badlogic/gdx/graphics/g2d/PixmapPacker.html) [(code)](https://github.com/libgdx/libgdx/blob/master/gdx/src/com/badlogic/gdx/graphics/g2d/PixmapPacker.java)

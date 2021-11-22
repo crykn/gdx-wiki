@@ -1,6 +1,5 @@
 ---
 title: Circles, planes, rays, etc.
-permalink: /wiki/circles,-planes,-rays,-etc.
 ---
 # Introduction #
 

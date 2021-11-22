@@ -1,6 +1,5 @@
 ---
 title: Reading and writing XML
-permalink: /wiki/reading-and-writing-xml
 ---
 [XmlReader](http://libgdx.badlogicgames.com/nightlies/docs/api/com/badlogic/gdx/utils/XmlReader.html)[(code)](https://github.com/libgdx/libgdx/blob/master/gdx/src/com/badlogic/gdx/utils/XmlReader.java) parses XML into a simple DOM. It can also do event based parsing.
 

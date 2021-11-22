@@ -1,6 +1,5 @@
 ---
 title: Tile maps
-permalink: /wiki/tile-maps
 ---
 # Maps #
 

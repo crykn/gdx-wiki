@@ -1,6 +1,5 @@
 ---
 title: Third Party Extension Support
-permalink: /wiki/third-party-extension-support
 ---
 # Third Party Extension Support in the libGDX setup
 ---

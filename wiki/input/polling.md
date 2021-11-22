@@ -1,6 +1,5 @@
 ---
 title: Polling
-permalink: /wiki/polling
 ---
 Polling refers to checking the current state of an input device, e.g. is a specific key pressed, where is the first finger on the screen and so on. It's a quick and easy way to process user input and will suffice for most arcade games.
 

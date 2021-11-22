@@ -1,6 +1,5 @@
 ---
 title: Distance field fonts
-permalink: /wiki/distance-field-fonts
 ---
 ## rendering super-smooth scalable bitmap fonts ##
 

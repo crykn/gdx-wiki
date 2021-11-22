@@ -1,6 +1,5 @@
 ---
 title: Mouse, Touch and Keyboard
-permalink: /wiki/mouse,-touch-and-keyboard
 redirect_from:
   - /wiki/mouse,-touch-&-keyboard
 ---

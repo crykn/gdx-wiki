@@ -1,6 +1,5 @@
 ---
 title: Color Markup Language
-permalink: /wiki/color-markup-language
 ---
 The `BitmapFontCache` class supports in-string colored text through a simple markup language.
 

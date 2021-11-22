@@ -1,6 +1,5 @@
 ---
 title: Getting Help
-permalink: /wiki/getting-help
 ---
 The [libGDX community](https://libgdx.com/community/) is glad to help you when you get stuck or encounter a bug, but we need your help to make it as easy to help you as possible.
 

@@ -1,6 +1,5 @@
 ---
 title: The life cycle
-permalink: /wiki/the-life-cycle
 ---
 A libGDX application has a well defined life-cycle, governing the states of an application, like creating, pausing and resuming, rendering and disposing the application.
 

@@ -1,6 +1,5 @@
 ---
 title: Improving workflow with Gradle
-permalink: /wiki/improving-workflow-with-gradle
 ---
 # Contents
 

@@ -1,6 +1,5 @@
 ---
 title: Viewports
-permalink: /wiki/viewports
 ---
 When dealing with different screens it is often necessary to decide for a certain strategy how those different screen sizes and aspect ratios should be handled. Camera and Stage support different viewport strategies, for example when doing picking via `Camera.project(vec, viewportX, viewportY, viewportWidth, viewportHeight)`.
 

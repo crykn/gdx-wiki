@@ -1,6 +1,5 @@
 ---
 title: Screen & viewport
-permalink: /wiki/screen-&-viewport
 ---
 # fixme: weird image issues.
 
