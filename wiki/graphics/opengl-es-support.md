@@ -1,6 +1,5 @@
 ---
 title: OpenGL (ES) Support
-permalink: /wiki/opengl-es-support
 ---
 # What is what (GL, GL ES, GLSL)?
 

@@ -1,6 +1,5 @@
 ---
 title: "Getting ready for #libGDXJAM"
-permalink: /wiki/getting-ready-for-libgdxjam
 ---
 The libGDX community is organizing [#libGDXJAM](https://twitter.com/hashtag/libGDXJam?src=hash), a game programming competition that will take place sometime in December, the final date is yet to be announced.
 
