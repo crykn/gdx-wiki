@@ -9,9 +9,9 @@ This page is mostly a copy-paste of the GSoC2013 page on the old Google Code wik
 ## Introduction ##
 We assume you already know what Google Summer of Code is, if not, please check out the [Google Summer of Code](http://www.google-melange.com/gsoc/homepage/google/gsoc2013) site for general information.
 
-For **students**, we recommend to read up on what libGDX is, then proceed to the [Information For Students](google-summer-of-code-2014#Information_for_Students) section.
+For **students**, we recommend to read up on what libGDX is, then proceed to the [Information For Students](/wiki/unmentioned/google-summer-of-code-2014#Information_for_Students) section.
 
-*Mentors* must read the [Information for Mentors](google-summer-of-code-2014#Information_for_Mentors)  section, add themselves to existing ideas in the list below, and optionally create and add new ideas.
+*Mentors* must read the [Information for Mentors](/wiki/unmentioned/google-summer-of-code-2014#Information_for_Mentors)  section, add themselves to existing ideas in the list below, and optionally create and add new ideas.
 
 ## What is libGDX? ##
 
@@ -256,7 +256,7 @@ This project could be done in collaboration with the Scripting Support project a
 
 (FIXME done with Gradle?)
 
-**Goals**: libGDX projects are usually done with Eclipse in mind. While we support [Maven](/wiki/maven-integration) and other [IDEs](/wiki/using-libgdx-with-intellij-idea) and development environments, integration isn't as straight forward. Maven is problematic due to GWT and Android being somewhat second class citizens in that area. Also, IDE integration of Maven Android and GWT projects is lacking. In addition to IDE woes, packaging and deploying projects can be cumbersome. We'd like to develop a command line application that allows the creation of new libGDX projects, create project files for various IDEs, create POM and Gradle build files, can update dependencies automatically, can remove and add extensions, and package and deploy the application to connected devices. [Loom Engine](http://theengine.co/loom) and [Haxe NME](http://www.nme.io/developer/documentation/getting-started/) provide similar tools.
+**Goals**: libGDX projects are usually done with Eclipse in mind. While we support [Maven](/wiki/unmentioned/maven-integration) and other [IDEs](/wiki/using-libgdx-with-intellij-idea) and development environments, integration isn't as straight forward. Maven is problematic due to GWT and Android being somewhat second class citizens in that area. Also, IDE integration of Maven Android and GWT projects is lacking. In addition to IDE woes, packaging and deploying projects can be cumbersome. We'd like to develop a command line application that allows the creation of new libGDX projects, create project files for various IDEs, create POM and Gradle build files, can update dependencies automatically, can remove and add extensions, and package and deploy the application to connected devices. [Loom Engine](http://theengine.co/loom) and [Haxe NME](http://www.nme.io/developer/documentation/getting-started/) provide similar tools.
 
 **Required Skills**: Java, Maven, Gradle, Eclipse, Intellij, Netbeans
 **Links**: [Google Doc with requirements](https://docs.google.com/document/d/1yy3Q5B0K06yz_Oool1ZCtavtSvASJa56lic_5Yg1C9c/edit?usp=sharing)
