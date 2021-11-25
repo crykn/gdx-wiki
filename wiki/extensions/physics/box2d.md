@@ -9,23 +9,23 @@ Box2D is an extension and not included with libGDX by default. Thus a manual ins
 
 ## Table of Contents ##
 
-  * [Initialization](box2d#initialization)
-  * [Creating a World](box2d#creating-a-world)
-  * [Debug Renderer](box2d#debug-renderer)
-  * [Stepping the simulation](box2d#stepping-the-simulation)
-  * [Rendering](box2d#rendering)
-  * [Objects/Bodies](box2d#objectsbodies)
-    * [Dynamic Bodies](box2d#dynamic-bodies)
-    * [Static Bodies](box2d#static-bodies)
-    * [Kinematic Bodies](box2d#kinematic-bodies)
-  * [Impulses/Forces](box2d#wiki-impulsesforces)
-  * [Joints and Gears](box2d#joints-and-gears)
-  * [Fixture Shapes](box2d#fixture-shapes)
-  * [Sprites and Bodies](box2d#sprites-and-bodies)
-  * [Sensors](box2d#sensors)
-  * [Contact Listeners](box2d#contact-listeners)
-  * [Resources](box2d#resources)
-  * [Tools](box2d#tools)
+  * [Initialization](/wiki/extensions/physics/box2d#initialization)
+  * [Creating a World](/wiki/extensions/physics/box2d#creating-a-world)
+  * [Debug Renderer](/wiki/extensions/physics/box2d#debug-renderer)
+  * [Stepping the simulation](/wiki/extensions/physics/box2d#stepping-the-simulation)
+  * [Rendering](/wiki/extensions/physics/box2d#rendering)
+  * [Objects/Bodies](/wiki/extensions/physics/box2d#objectsbodies)
+    * [Dynamic Bodies](/wiki/extensions/physics/box2d#dynamic-bodies)
+    * [Static Bodies](/wiki/extensions/physics/box2d#static-bodies)
+    * [Kinematic Bodies](/wiki/extensions/physics/box2d#kinematic-bodies)
+  * [Impulses/Forces](/wiki/extensions/physics/box2d#wiki-impulsesforces)
+  * [Joints and Gears](/wiki/extensions/physics/box2d#joints-and-gears)
+  * [Fixture Shapes](/wiki/extensions/physics/box2d#fixture-shapes)
+  * [Sprites and Bodies](/wiki/extensions/physics/box2d#sprites-and-bodies)
+  * [Sensors](/wiki/extensions/physics/box2d#sensors)
+  * [Contact Listeners](/wiki/extensions/physics/box2d#contact-listeners)
+  * [Resources](/wiki/extensions/physics/box2d#resources)
+  * [Tools](/wiki/extensions/physics/box2d#tools)
 
 ## Initialization ##
 
@@ -409,7 +409,7 @@ joint.setMotorSpeed(1f);
 ## Fixture Shapes ##
 
 As mentioned previously, a fixture has a shape, density, friction and restitution attached to it.
-Out of the box you can easily create boxes (as seen in the section [Static Bodies](box2d#static-bodies) section) and circle shapes (as seen in the [Dynamic Bodies](box2d#dynamic-bodies) section).
+Out of the box you can easily create boxes (as seen in the section [Static Bodies](/wiki/extensions/physics/box2d#static-bodies) section) and circle shapes (as seen in the [Dynamic Bodies](/wiki/extensions/physics/box2d#dynamic-bodies) section).
 
 You can programatically define more complex shapes using the following classes
 * ChainShape,
@@ -423,7 +423,7 @@ However using third party tools you can simply define your shapes and import the
 [box2d-editor](https://github.com/julienvillegas/box2d-editor) is a free open source tool to define complex shapes and load them into your game.
 An example of how to import a shape into your game using box2d-editor is available on [Libgdx.info](https://libgdx.info/box2d-importing-complex-bodies/).
 
-Check out the [Tools section](box2d#Tools) for more tools.
+Check out the [Tools section](/wiki/extensions/physics/box2d#Tools) for more tools.
 
 In a nutshell, if you are using Box2d-editor:
 * Create your shape within Box2d-editor.

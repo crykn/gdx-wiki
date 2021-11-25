@@ -29,4 +29,4 @@ Here's an illustration of the axis relative to the earth.
 
 ![images/compass.png](/assets/wiki/images/compass.png)
 
-[Prev](/wiki/accelerometer) | [Next](/wiki/vibrator)
+[Prev](/wiki/input/accelerometer) | [Next](/wiki/input/vibrator)

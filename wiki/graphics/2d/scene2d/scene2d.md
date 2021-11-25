@@ -3,7 +3,7 @@ title: Scene2d
 ---
 ## Overview ##
 
-scene2d is a 2D scene graph for building applications and UIs using a hierarchy of actors. If you're looking for the UI component of scene2d, see [Scene2d.ui](/wiki/scene2d.ui)
+scene2d is a 2D scene graph for building applications and UIs using a hierarchy of actors. If you're looking for the UI component of scene2d, see [Scene2d.ui](/wiki/graphics/2d/scene2d/scene2d.ui)
 
 Check out [LibGDX.info](https://libgdx.info/basic_action/) for Scene2d examples (Image, Label etc...)
 
@@ -11,7 +11,7 @@ It provides the following features:
 
  * Rotation and scale of a group is applied to all child actors. Child actors always work in their own coordinate system, parent transformations are applied transparently.
 
- * Simplified 2D drawing via [SpriteBatch](/wiki/spritebatch,-textureregions,-and-sprites). Each actor draws in its own un-rotated and unscaled coordinate system where 0,0 is the bottom left corner of the actor.
+ * Simplified 2D drawing via [SpriteBatch](/wiki/graphics/2d/spritebatch,-textureregions,-and-sprites). Each actor draws in its own un-rotated and unscaled coordinate system where 0,0 is the bottom left corner of the actor.
 
  * Hit detection of rotated and scaled actors. Each actor determines if it is hit using its own un-rotated and unscaled coordinate system.
 
@@ -19,7 +19,7 @@ It provides the following features:
 
  * Action system for easy manipulation of actors over time. Actions can be chained and combined for complex effects.
 
-scene2d is well equipped for laying out, drawing, and handling input for game menus, HUD overlays, tools, and other UIs. The [scene2d.ui](/wiki/scene2d.ui) package provides many actors and other utilities specifically for building UIs.
+scene2d is well equipped for laying out, drawing, and handling input for game menus, HUD overlays, tools, and other UIs. The [scene2d.ui](/wiki/graphics/2d/scene2d/scene2d.ui) package provides many actors and other utilities specifically for building UIs.
 
 Scene graphs have the drawback that they couple model and view. Actors store data that is often considered model data in games, such as their size and position. Actors are also the view, as they know how to draw themselves. This coupling makes MVC separation difficult. When used solely for UIs or for apps that don't care about MVC, the coupling is not an issue.
 
@@ -39,7 +39,7 @@ Stage has an `act` method that takes a delta time since last frame. This causes 
 
 ### Viewport ###
 
-The stage's viewport is determined by a [Viewport](Viewports) instance. The viewport manages a `Camera` and controls how the stage is displayed on the screen, the stage's aspect ratio (whether it is stretched) and whether black bars appear (letterboxing). The viewport also converts screen coordinates to and from stage coordinates.
+The stage's viewport is determined by a [Viewport](/wiki/graphics/viewports) instance. The viewport manages a `Camera` and controls how the stage is displayed on the screen, the stage's aspect ratio (whether it is stretched) and whether black bars appear (letterboxing). The viewport also converts screen coordinates to and from stage coordinates.
 
 The viewport is specified in the stage constructor or by using `setViewport`. If running where the application window can be resized (eg, on the desktop), the stage's viewport should be set when the application window is resized.
 
@@ -108,7 +108,7 @@ Gdx.gl.glViewport(0, 0, Gdx.graphics.getWidth(), Gdx.graphics.getHeight());
 stage.getViewport().update(Gdx.graphics.getWidth(), Gdx.graphics.getHeight(), true);
 ```
 
-See [Viewport](Viewports) for more information.
+See [Viewport](/wiki/graphics/viewports) for more information.
 
 ## Drawing ##
 

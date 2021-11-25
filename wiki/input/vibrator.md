@@ -11,7 +11,7 @@ The vibrator is only available on Android and needs a special permission in the 
 android.permission.VIBRATE
 ```
 
-See the [application configuration](/wiki/starter-classes-and-configuration) section if you are unsure how to specify permissions in your Android manifest.
+See the [application configuration](/wiki/app/starter-classes-and-configuration) section if you are unsure how to specify permissions in your Android manifest.
 
 Vibrating the phone works as follows:
 
@@ -29,4 +29,4 @@ Gdx.input.vibrate(new long[] { 0, 200, 200, 200}, -1);
 
 This will turn the vibrator on for 200 milliseconds, then turn it off for 200 milliseconds then on again for another 200 milliseconds. The second parameter specifies that the pattern should not be repeated. Refer to the [Javadocs](http://libgdx.badlogicgames.com/nightlies/docs/api/com/badlogic/gdx/Input.html#vibrate(int)) for more information.
 
-[Prev](/wiki/compass) | [Next](/wiki/cursor-visibility-and-catching)
+[Prev](/wiki/input/compass) | [Next](/wiki/input/cursor-visibility-and-catching)

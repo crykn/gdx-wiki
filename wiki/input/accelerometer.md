@@ -60,4 +60,4 @@ Gdx.input.getRotationMatrix(matrix.val);
 // use the matrix, Luke
 ```
 
-[Prev](/wiki/simple-text-input) | [Next](/wiki/compass)
+[Prev](/wiki/input/simple-text-input) | [Next](/wiki/input/compass)

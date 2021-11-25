@@ -15,4 +15,4 @@ All of the input facilities are accessed via the [Input](https://github.com/libg
 ```
 
 
-[Next](/wiki/configuration-and-querying)
+[Next](/wiki/input/configuration-and-querying)

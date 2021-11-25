@@ -40,4 +40,4 @@ long nativeHeap = Gdx.app.getNativeHeap();
 
 Both methods return the number of bytes currently in use on the respective heap.
 
-[Prev](/wiki/starter-classes-and-configuration) | [Next](/wiki/logging)
+[Prev](/wiki/app/starter-classes-and-configuration) | [Next](/wiki/app/logging)

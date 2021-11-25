@@ -5,7 +5,7 @@ title: Scene2d.ui
 
 scene2d is libGDX's 2D scene graph. At its core, it provides basic 2D scene graph functionality: actors, groups, drawing, events, and actions. This is a lot of utility that applications can leverage, but it is reasonably low level. For games this is fine because most actors are application specific. For building UIs, the scene2d.ui package provides common UI widgets and other classes built on top of scene2d.
 
-It is highly recommended to read or least skim the [scene2d documentation](/wiki/scene2d) before continuing.
+It is highly recommended to read or least skim the [scene2d documentation](/wiki/graphics/2d/scene2d/scene2d) before continuing.
 
 Check out [libGDX.info](https://libgdx.info/) for examples showcasing Scene2d actors, scenes, Stages Images etc..
 
@@ -66,7 +66,7 @@ Before each widget is drawn, it first calls `validate`. If the widget's layout i
 
 ## <a id="Stage_setup"></a>Stage setup ##
 
-Most scene2d.ui layouts will use a [table](Table) that is the size of the stage. All other widgets and nested tables are placed in this table.
+Most scene2d.ui layouts will use a [table](/wiki/graphics/2d/scene2d/table) that is the size of the stage. All other widgets and nested tables are placed in this table.
 
 Here is an example of the most basic scene2d.ui application with a root table:
 
@@ -104,7 +104,7 @@ public void dispose() {
 
 Note that `setFillParent` is used on the root table, causing it to be sized to its parent (in this case, the stage) when validated. Normally a widget's size is set by its parent and `setFillParent` must not be used. `setFillParent` is for convenience only when the widget's parent does not set the size of its children (such as the stage).
 
-Tables automatically adapt to various screen resolutions, so this sets up a stage that uses pixel coordinates. See [stage viewport setup](/wiki/scene2d#viewport) for setting up a stage that scales.
+Tables automatically adapt to various screen resolutions, so this sets up a stage that uses pixel coordinates. See [stage viewport setup](/wiki/graphics/2d/scene2d/scene2d#viewport) for setting up a stage that scales.
 
 ## <a id="Skin"></a>Skin ##
 
@@ -133,7 +133,7 @@ table.add(button2);
 
 Note the same style can be used for multiple widgets. Also note that all images needed by UI widgets are actually implementations of the Drawable interface.
 
-The Skin class can be used to more conveniently define the styles and other resources for UI widgets. See the [Skin documentation](/wiki/skin) for more information. It is very strongly recommended to use Skin for convenience, even if not defining styles via JSON.
+The Skin class can be used to more conveniently define the styles and other resources for UI widgets. See the [Skin documentation](/wiki/graphics/2d/scene2d/skin) for more information. It is very strongly recommended to use Skin for convenience, even if not defining styles via JSON.
 
 ## <a id="Drawable"></a>Drawable ##
 
@@ -169,7 +169,7 @@ Actors added to a table using the `add` Table methods get a table cell and will 
 
 ## <a id="Rotation_and_scale"></a>Rotation and scale ##
 
-As [described previously](Scene2d#wiki-group-transform), a scene2d group that has transform enabled causes a SpriteBatch flush before drawing its children. A UI often has dozens, if not hundreds, of groups. Flushing for each group would severely limit performance, so most scene2d.ui groups have transform set to false by default. Rotation and scale is ignored when the group's transform is disabled.
+As [described previously](/wiki/graphics/2d/scene2d/scene2d#wiki-group-transform), a scene2d group that has transform enabled causes a SpriteBatch flush before drawing its children. A UI often has dozens, if not hundreds, of groups. Flushing for each group would severely limit performance, so most scene2d.ui groups have transform set to false by default. Rotation and scale is ignored when the group's transform is disabled.
 
 Transforms can be enabled as needed, with some caveats. Not all widgets support all features when rotation or scaling is applied. Eg, transform can be enabled for a Table and then it can be rotated and scaled. Children will be drawn rotated and scaled, input is routed correctly, etc. However, other widgets may perform drawing without taking rotation and/or scale into account. A workaround for this problem is to wrap a widget in a table or container with transform enabled and set the rotation and scale on the table or container, not on the widget:
 
@@ -194,7 +194,7 @@ If excessive batch flushes are occurring due to transform being enabled on many 
 
 [The Table class](http://libgdx.badlogicgames.com/nightlies/docs/api/com/badlogic/gdx/scenes/scene2d/ui/Table.html) ([code](https://github.com/libgdx/libgdx/blob/master/gdx/src/com/badlogic/gdx/scenes/scene2d/ui/Table.java)) sizes and positions its children using a logical table, similar to HTML tables. Tables are intended to be used extensively in scene2d.ui to layout widgets, as they are easy to use and much more powerful than manually sizing and positioning widgets. Table-based layouts don't rely on absolute positioning and therefore automatically adjust to different widget sizes and screen resolutions.
 
-It is highly recommended to read the [Table documentation](Table) before building a UI using scene2d.ui.
+It is highly recommended to read the [Table documentation](/wiki/graphics/2d/scene2d/table) before building a UI using scene2d.ui.
 
 ### <a id="Container"></a>Container ###
 

@@ -13,7 +13,7 @@ We use Markdown in this wiki. To learn your way around this, here is GitHub's ve
 
 * Wiki links are made like this:
 
-`[link text to simple game](/wiki/a-simple-game)` renders this: [link text to simple game](/wiki/a-simple-game)  
+`[link text to simple game](/wiki/start/a-simple-game)` renders this: [link text to simple game](/wiki/start/a-simple-game)  
 
 ## Linking to code/docs ##
 Links are done as follows: `[ClassName](link to docs) [(code)](link to code)` for example:
@@ -67,11 +67,11 @@ The Table of contents contains a few pages that do not have a link, and are appe
 
 ## Tables of Contents per page ##
 
-Tables of contents have to be manually created on a per-page basis. For an example of how to do so outside of this section, please refer to our [Box2d](/wiki/box2d) article.
+Tables of contents have to be manually created on a per-page basis. For an example of how to do so outside of this section, please refer to our [Box2d](/wiki/extensions/physics/box2d) article.
 
 When creating headers in markdown, we specify using a number of octothorpes (`#`) that define the header level. When we create a header `## Comments and Questions/Concerns` in an article entitled `Help Me` the corresponding link would be `help-me#comments-and-questionsconcerns`
 
-so when we go to make our table of contents, it would be in an unordered list, and using these qualified page fragment links. Please see the [Box2d](/wiki/box2d) article for more information.
+so when we go to make our table of contents, it would be in an unordered list, and using these qualified page fragment links. Please see the [Box2d](/wiki/extensions/physics/box2d) article for more information.
 
 ## Adding Images ##
 

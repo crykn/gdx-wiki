@@ -3,7 +3,7 @@ title: Saved game serialization
 ---
 # JSON serialization #
 
-The [JSON](/wiki/reading-and-writing-json) class can automatically convert Java objects to and from JSON.
+The [JSON](/wiki/utils/reading-and-writing-json) class can automatically convert Java objects to and from JSON.
 
 # Binary serialization #
 

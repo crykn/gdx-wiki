@@ -3,7 +3,7 @@ title: Gdx freetype
 ---
 # Introduction #
 
-If you want to draw text in your game, you usually use a [BitmapFont](/wiki/bitmap-fonts).
+If you want to draw text in your game, you usually use a [BitmapFont](/wiki/graphics/2d/fonts/bitmap-fonts).
 However, there is a downside:
 
 * **BitmapFonts rely on an image, so you have to scale them if you want a different size, which may look ugly.**

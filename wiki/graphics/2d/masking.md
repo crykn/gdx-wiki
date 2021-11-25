@@ -4,14 +4,14 @@ title: Masking
 Masking is the technique of hiding portions of an image using the pixel information of another to decide whether a pixel of the original should or should not be shown. There’s more than one way to achieve this effect in libGDX.
 
 ## Table of Contents
-1. [Masking using glScissor](masking#1-masking-using-glScissor-rectangle)
-2. [Masking using the ScissorStack](masking#2-masking-using-the-scissorstack-rectangles)
-3. [Masking using the Depth Buffer](masking#3-masking-using-the-depth-buffer-shapes)
-4. [Masking using Blending Function](masking#4-masking-using-blending-function-shapes-or-textures)
-5. [Masking using Pixmaps](masking#5-masking-using-pixmaps-shapes-or-textures)
-6. [Masking using Shaders](masking#6-masking-using-shaders-textures)
-7. [Masking using the BlendFuncSeparate](masking#7-masking-using-blendfuncseparate-removal)
-8. [Masking using Blending Function (Tinting)](masking#8-masking-using-blending-function-tinting)
+1. [Masking using glScissor](/wiki/graphics/2d/masking#1-masking-using-glScissor-rectangle)
+2. [Masking using the ScissorStack](/wiki/graphics/2d/masking#2-masking-using-the-scissorstack-rectangles)
+3. [Masking using the Depth Buffer](/wiki/graphics/2d/masking#3-masking-using-the-depth-buffer-shapes)
+4. [Masking using Blending Function](/wiki/graphics/2d/masking#4-masking-using-blending-function-shapes-or-textures)
+5. [Masking using Pixmaps](/wiki/graphics/2d/masking#5-masking-using-pixmaps-shapes-or-textures)
+6. [Masking using Shaders](/wiki/graphics/2d/masking#6-masking-using-shaders-textures)
+7. [Masking using the BlendFuncSeparate](/wiki/graphics/2d/masking#7-masking-using-blendfuncseparate-removal)
+8. [Masking using Blending Function (Tinting)](/wiki/graphics/2d/masking#8-masking-using-blending-function-tinting)
 
 ## 1. Masking using glScissor (Rectangle)
 

@@ -16,7 +16,7 @@ This is an example demonstrating what ImGui is capable of:
 
 <br/>
 
-# First steps using [kotlin-graphics' binding]([kotlin-graphics/imgui](https://github.com/kotlin-graphics/imgui))
+# First steps using [kotlin-graphics' binding](https://github.com/kotlin-graphics/imgui)
 
 There is an elaborate wiki entry over in the Kotlin-graphics's repo, detailing how ImGui can be used together with libGDX: https://github.com/kotlin-graphics/imgui/wiki/Using-libGDX
 

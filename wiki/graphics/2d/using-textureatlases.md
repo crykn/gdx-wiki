@@ -1,4 +1,4 @@
 ---
 title: Using textureatlases
 ---
-See the [TexturePacker2 documentation](Texture-packer#textureatlas) for more information.
+See the [TexturePacker2 documentation](/wiki/tools/texture-packer#textureatlas) for more information.

@@ -639,7 +639,7 @@ These are the libGDX extensions that are supported in gwt
 #### Step by step Universal Tween Engine guide
 This guide uses everything that is explained in this article to add the Universal Tween Engine to your project as a dependency.
 
-[Click me](Universal-Tween-Engine)
+[Click me](/wiki/articles/universal-tween-engine)
 
 ### Dependency management for libraries
 If you're creating a library that people can include in their projects via gradle, you might need to replace the _implementation_ keyword by _api_.

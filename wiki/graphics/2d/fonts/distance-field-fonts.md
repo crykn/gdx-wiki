@@ -27,10 +27,10 @@ We then set up alpha testing to output a pixel only when the alpha is greater th
 
 # Generating the font #
 
-This process is much the same as for regular [bitmap fonts](/wiki/bitmap-fonts), but with different settings.
+This process is much the same as for regular [bitmap fonts](/wiki/graphics/2d/fonts/bitmap-fonts), but with different settings.
 
-  * [Fire up Hiero](/wiki/hiero) and choose your font and attributes as normal.
-  * In the "Effects" list on the right, double-click "Distance field". (If there is no filter called "Distance field", your version of Hiero is too old. Try the nightly build as described on the [Hiero](hiero) page.)
+  * [Fire up Hiero](/wiki/tools/hiero) and choose your font and attributes as normal.
+  * In the "Effects" list on the right, double-click "Distance field". (If there is no filter called "Distance field", your version of Hiero is too old. Try the nightly build as described on the [Hiero](/wiki/tools/hiero) page.)
   * Remove the default "Color" effect by clicking the X.
   * Set the color of the distance field if you like. It is best to leave this set to white, because you can change the color at rendering time.
   * Set the "Spread" to a suitable value. It should be about half the width of the thickest lines in your font, in pixels. At most, there should be small regions of bright white; don't lose too much contrast.
@@ -67,7 +67,7 @@ BitmapFont font = new BitmapFont(Gdx.files.internal("myfont.fnt"), new TextureRe
 
 # Rendering with a shader #
 
-I'll assume that you are familiar with shaders in libgdx; if not, read the [page on shaders](/wiki/shaders).
+I'll assume that you are familiar with shaders in libgdx; if not, read the [page on shaders](/wiki/graphics/opengl-utils/shaders).
 
 There is nothing special about the vertex shader; we can just duplicate the one that SpriteBatch uses by default. Just take care to name the variables in the way that `SpriteBatch` expects:
 ```cpp

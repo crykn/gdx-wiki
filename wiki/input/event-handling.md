@@ -165,4 +165,4 @@ Then, in your Input processor:
     }
 ```
 
-[Prev](/wiki/polling) | [Next](/wiki/controllers)
+[Prev](/wiki/input/polling) | [Next](/wiki/input/controllers)

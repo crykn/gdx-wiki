@@ -5,10 +5,10 @@ title: Modules overview
 
 libGDX comprises several modules that provide services for each step of a typical game architecture. 
 
- * *[Input](/wiki/input-handling)* - Provides a unified input model and handler for all platforms. Supports keyboard, touchscreen, accelerometer and mouse where available. 
- * *[Graphics](/wiki/graphics)* - Enables the drawing of images to the screen using the hardware provided OpenGL ES implementation.
+ * *[Input](/wiki/input/input-handling)* - Provides a unified input model and handler for all platforms. Supports keyboard, touchscreen, accelerometer and mouse where available. 
+ * *[Graphics](/wiki/graphics/graphics)* - Enables the drawing of images to the screen using the hardware provided OpenGL ES implementation.
  * *[Files](/wiki/file-handling)* - Abstracts file access on all platforms by providing convenient methods for read/write operations regardless of the media.
- * *[Audio](/wiki/audio)* - Facilitates sound recording and playback on all platforms.
+ * *[Audio](/wiki/audio/audio)* - Facilitates sound recording and playback on all platforms.
  * *[Networking](/wiki/networking)* - Provides methods to perform networking operations, such as simple HTTP get and post requests, and TCP server/client socket communication.
 
 The following diagram shows the modules in a simple game architecture:
@@ -61,7 +61,7 @@ The following API versions are supported:
 |3.0 |`Gdx.graphics.getGL30();`|
 
 
-To learn more about the Graphics module check its documentation [here](/wiki/graphics).
+To learn more about the Graphics module check its documentation [here](/wiki/graphics/graphics).
 
 ### Files ###
 The _Files_ module provides a generic way to access files regardless of the platform.
@@ -122,4 +122,4 @@ Gdx.net.sendHttpRequest(httpRequest, httpResponseListener);
 ```
 
 
-[Prev](/wiki/the-life-cycle) | [Starter classes and configuration](https://github.com/libgdx/libgdx/wiki/Starter-classes-and-configuration)
+[Prev](/wiki/app/the-life-cycle) | [Starter classes and configuration](https://github.com/libgdx/libgdx/wiki/Starter-classes-and-configuration)

@@ -5,7 +5,7 @@ If you have been sent to this page it is because you failed to provide enough in
 
 ## What do I do now? ##
 
-We have an extensive guide called [Getting Help](/wiki/getting-help). Read it. Yes, the whole thing. 99% of the time you will need to post an [executable example](/wiki/getting-help#executable-example-code).
+We have an extensive guide called [Getting Help](/wiki/articles/getting-help). Read it. Yes, the whole thing. 99% of the time you will need to post an [executable example](/wiki/articles/getting-help#executable-example-code).
 
 If your issue has been closed, don't take it personal or be offended. Instead, remedy the problem by adding the necessary information to your issue and it will be re-opened. Do not file another separate issue for the same problem.
 
@@ -13,7 +13,7 @@ If your issue has been closed, don't take it personal or be offended. Instead, r
 
 A problem must be reproducible in order to 1) test and identify the problem, 2) implement a fix, and 3) verify the fix works. **If we can't reproduce your problem, we can't fix it.** We do not blindly implement fixes and hope they work.
 
-If you think you posted enough information for us to work on your issue, you are wrong. Either your post lacks required information or it requires too much effort for us to figure out what you are talking about. You almost certainly did not include an [executable example](/wiki/getting-help#executable-example-code).
+If you think you posted enough information for us to work on your issue, you are wrong. Either your post lacks required information or it requires too much effort for us to figure out what you are talking about. You almost certainly did not include an [executable example](/wiki/articles/getting-help#executable-example-code).
 
 ## Indignation, resentment, exasperation, and friends ##
 

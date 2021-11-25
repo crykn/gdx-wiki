@@ -51,4 +51,4 @@ Please refer to the [Peripheral](https://github.com/libgdx/libgdx/blob/master/gd
 
 Note that only a few Android devices have a hardware keyboard. Even if the keyboard is physically present, the user might not have slid it out. The method shown above will return false in this case.
 
-[Next](/wiki/mouse,-touch-and-keyboard)
+[Next](/wiki/input/mouse,-touch-and-keyboard)

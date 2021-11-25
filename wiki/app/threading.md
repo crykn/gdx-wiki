@@ -33,4 +33,4 @@ You should never perform multi-threaded operations on anything that is graphics 
 ## HTML5 ##
 JavaScript is inherently single-threaded. As such, threading is impossible. [Web Workers](http://www.whatwg.org/specs/web-apps/current-work/multipage/workers.html) might be an option in the future, however, data is passed via message passing between thread. Java uses different threading primitives and mechanisms, porting threading code to Web Workers will not be straight forward.
 
-[Prev](/wiki/logging) | [Next](/wiki/interfacing-with-platform-specific-code)
+[Prev](/wiki/app/logging) | [Next](/wiki/app/interfacing-with-platform-specific-code)
