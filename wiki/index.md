@@ -6,12 +6,12 @@ excluded: true
 **Welcome to our Wiki, a place for comprehensive documentation on the libGDX API and features.** This wiki is community driven, and can be edited by anyone. If you find information out of date or want to add some more in-depth explanations, you are very welcome to do the necessary changes after having had a look at our [Wiki Style Guide](/wiki/wiki-style-guide).  
 
 ## Getting Started
-#### If you want to get started coding with libGDX, head to the [Official documentation - here - ](/wiki/start/setup) to learn how to setup your environment and create/import your project.
-* [Setting Up a Dev Environment](/wiki/start/setup)
-* [Creating Your First libGDX Project](/wiki/start/project-generation)
-* [Importing & Running It](/wiki/start/import-and-running)
-* [A Simple Game](/wiki/start/a-simple-game)
-* [Extending the Simple Game](/wiki/start/simple-game-extended)
+#### If you want to get started coding with libGDX, head to the [Official documentation - here - ](https://libgdx.com/dev/setup/) to learn how to setup your environment and create/import your project.
+* [Setting Up a Dev Environment](https://libgdx.com/dev/setup/)
+* [Creating Your First libGDX Project](https://libgdx.com/dev/project_generation/)
+* [Importing & Running It](https://libgdx.com/dev/import_and_running/)
+* [A Simple Game](https://libgdx.com/dev/simple_game/)
+* [Extending the Simple Game](https://libgdx.com/dev/simple_game_extended/)
 
 ## Developer's Guide
 {% include wiki_index.md %}

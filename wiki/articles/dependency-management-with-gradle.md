@@ -14,7 +14,6 @@ title: Dependency management with Gradle
    * [Android pitfall](#android-pitfall)
  * [Examples](#external-dependencies-examples)
    * [Jar example](#universal-tween-engine-by-jar)
-    * [Mavenize locally](universal-tween-engine-by-locally-mavenizing-maven)
 * [**Declaring Dependencies with HTML**](#gwt-inheritance)
  * [libGDX Extension Inherits](#libgdx-extension-inherits)
 * [**Step by Step Universal Tween Engine guide**](#step-by-step-universal-tween-engine-guide)

@@ -15,11 +15,11 @@ title: Starter classes and configuration
 
 For each target platform, a starter class has to be written. This class instantiates a back-end specific `Application` implementation and the `ApplicationListener` that implements the application logic. The starter classes are platform dependent, let's have a look at how to instantiate and configure these for each back-end.
 
-This article assumes you have followed the instruction in [Project Setup](/wiki/project-generation/), [Importing & Running a Project](/wiki/import-and-running/) and therefore have imported the generated core, desktop, Android and HTML5 projects into Eclipse.
+This article assumes you have followed the instruction in [Project Setup](https://libgdx.com/dev/project-generation/), [Importing & Running a Project](https://libgdx.com/dev/import-and-running/) and therefore have imported the generated core, desktop, Android and HTML5 projects into Eclipse.
 
 # Desktop (LWJGL3) #
 
-Since libGDX version 1.10.1, this has been the default desktop backend. You can find more information [here](/news/2021/07/devlog-7-lwjgl3).
+Since libGDX version 1.10.1, this has been the default desktop backend. You can find more information [here](https://libgdx.com/news/2021/07/devlog-7-lwjgl3).
 {: .notice--info}
 
 Opening the `DesktopLauncher.java` class in `my-gdx-game` shows the following:
@@ -65,7 +65,7 @@ From there on a window is created and the ApplicationListener is invoked as desc
 
 # Desktop (LWJGL) #
 
-In version 1.10.1, libGDX switched its default desktop backend to LWJGL 3. If you want to upgrade, please take a look [here](/news/2021/07/devlog-7-lwjgl3#how-can-i-migrate).
+In version 1.10.1, libGDX switched its default desktop backend to LWJGL 3. If you want to upgrade, please take a look [here](https://libgdx.com/news/2021/07/devlog-7-lwjgl3#how-can-i-migrate).
 {: .notice--warning}
 
 Opening the `DesktopLauncher.java` class in `my-gdx-game` shows the following:

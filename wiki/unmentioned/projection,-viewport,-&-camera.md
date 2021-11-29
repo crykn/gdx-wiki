@@ -9,11 +9,11 @@ title: Projection, viewport, & camera
 Learn about a viewport's proportions, how to specify a projection, and to use Camera
 
 # Introduction
-In the [MyFirstTriangle](My-First-Triangle-(Example)) and [ColorMeshTexture](Mesh%2C-color-%26-texture) tutorials, we learned the basics of setting up and rendering meshes. Did you notice, however, that the triangles we created appear stretched? Lets start with an example that will make this issue clear.
+In the [MyFirstTriangle](/wiki/unmentioned/my-first-triangle-example) and [ColorMeshTexture](/wiki/unmentioned/mesh,-color-&-texture) tutorials, we learned the basics of setting up and rendering meshes. Did you notice, however, that the triangles we created appear stretched? Lets start with an example that will make this issue clear.
 
 # Creating a Square
 
-Create a new libGDX desktop project named `projection-viewport-camera`. Create a class called `ProjectionViewportCamera` that implements `ApplicationListener` and put it in the package `com.example.projectionviewportcamera`. For full instruction on how to set up a libGDX desktop (and Android) project, look at the [MyFirstTriangle](My-First-Triangle-(Example)) tutorial. Unlike in that tutorial, we're going to show a square instead of a rectangle. Here's the code for `ProjectionViewportCamera`:
+Create a new libGDX desktop project named `projection-viewport-camera`. Create a class called `ProjectionViewportCamera` that implements `ApplicationListener` and put it in the package `com.example.projectionviewportcamera`. For full instruction on how to set up a libGDX desktop (and Android) project, look at the [MyFirstTriangle](/wiki/unmentioned/my-first-triangle-example) tutorial. Unlike in that tutorial, we're going to show a square instead of a rectangle. Here's the code for `ProjectionViewportCamera`:
 
 ```java
 package com.example.projectionviewportcamera;

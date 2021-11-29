@@ -13,7 +13,7 @@ We use Markdown in this wiki. To learn your way around this, here is GitHub's ve
 
 * Wiki links are made like this:
 
-`[link text to simple game](/wiki/start/a-simple-game)` renders this: [link text to simple game](/wiki/start/a-simple-game)  
+`[link text to networking](/wiki/networking)` renders this: [link text to networking](/wiki/networking)  
 
 ## Linking to code/docs ##
 Links are done as follows: `[ClassName](link to docs) [(code)](link to code)` for example:

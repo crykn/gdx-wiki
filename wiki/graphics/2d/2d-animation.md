@@ -124,4 +124,4 @@ Creating an animation is extremely simple by using the following constructor.
 
 ## Assets ##
 
-Get the sprite sheet [here](images/sprite-animation4.png).
+Get the sprite sheet [here](/assets/wiki/images/sprite-animation4.png).

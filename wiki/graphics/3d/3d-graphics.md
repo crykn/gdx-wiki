@@ -11,5 +11,4 @@ title: 3D Graphics
  * [3D Animations and Skinning](/wiki/graphics/3d/3d-animations-and-skinning)
  * [Importing Blender Models in libGDX](/wiki/graphics/3d/importing-blender-models-in-libgdx)
  * [3D Particle Effects](/wiki/graphics/3d/3d-particle-effects)
- * [Virtual Reality (VR)](/wiki/virtual-reality)
- * [ImGui Bindings And 3D Graphics](/wiki/imgui-bindings-and-3d-graphics)
+ * [Virtual Reality (VR)](/wiki/graphics/3d/virtual-reality)
