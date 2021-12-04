@@ -1,8 +1,6 @@
 ---
-redirect_from:
-  - /dev/import-and-running/
-  - /dev/import_and_running/
 title: "Importing & Running a Project"
+order: 30
 ---
 
 Next up, you need to import your project into your IDE.

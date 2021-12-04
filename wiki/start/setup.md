@@ -1,8 +1,6 @@
 ---
-redirect_from:
-  - /dev/setup/
-  - /dev/project_generation/
-title: "Creating a Project"
+title: "Set Up a Dev Env"
+order: 10
 ---
 
 If this is your first time using libGDX, you're at the right place. The following steps detail how you can get your fist libGDX project up and running.

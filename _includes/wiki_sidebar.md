@@ -1,231 +1,159 @@
-# Table of Contents
-[Wiki Style Guide](/wiki/wiki-style-guide)
-
-## Getting Started
-* [Setting Up a Dev Environment](/wiki/setup)
-* [Creating Your First libGDX Project](/wiki/project-generation)
-* [Importing & Running It](/wiki/import-and-running)
-* [A Simple Game](/wiki/a-simple-game)
-* [Extending the Simple Game](/wiki/simple-game-extended)
-
-## Developer's Guide
-<details><summary>The Application Framework</summary>
-
-<div markdown="1">
-* [The Application Framework](/wiki/the-application-framework)  
-* [The Life-Cycle](/wiki/the-life-cycle)  
-* [Modules Overview](/wiki/modules-overview)  
-* [Starter Classes and Configuration](/wiki/starter-classes-and-configuration)  
-* [Querying](/wiki/querying)  
-* [Logging](/wiki/logging)  
-* [Threading](/wiki/threading)  
-* [Interfacing With Platform-Specific Code](/wiki/interfacing-with-platform-specific-code)
-</div>
-
-</details>
-
-[File Handling](/wiki/file-handling)
-
-[Networking](/wiki/networking)
-
-[Preferences](/wiki/preferences)
-
-<details><summary>Input Handling</summary>
-
-<div markdown="1">
-* [Input Handling](/wiki/input-handling)
-* [Configuration and Querying](/wiki/configuration-and-querying)
-* [Mouse, Touch and Keyboard](/wiki/mouse,-touch-and-keyboard)
-  * [Polling](/wiki/polling)  
-  * [Event Handling](/wiki/event-handling)
-* [Controllers](/wiki/controllers)
-* [Gesture Detection](/wiki/gesture-detection)
-* [Simple Text Input](/wiki/simple-text-input)
-* [Accelerometer](/wiki/accelerometer)
-* [Compass](/wiki/compass)
-* [Gyroscope](/wiki/gyroscope)
-* [Vibrator](/wiki/vibrator)
-* [Cursor Visibility and Catching](/wiki/cursor-visibility-and-catching)
-* [Back and Menu Key Catching](/wiki/back-and-menu-key-catching)
-* [On-Screen Keyboard](/wiki/on-screen-keyboard)
-* [Adding new Keycodes](/wiki/adding-new-keycodes)
-</div>
-
-</details>
-
-[Memory Management](/wiki/memory-management)
-
-<details><summary>Audio</summary>
-
-<div markdown="1">
-* [Audio](/wiki/audio)
-* [Sound Effects](/wiki/sound-effects)
-* [Streaming Music](/wiki/streaming-music)
-* [Playing PCM Audio](/wiki/playing-pcm-audio)
-* [Recording PCM Audio](/wiki/recording-pcm-audio)
-</div>
-
-</details>
-
-<details><summary>Graphics</summary>
-
-<div markdown="1">
-* [Graphics](/wiki/graphics)
-* [Querying and configuring graphics (monitors, display modes, vsync, display cutouts)](/wiki/querying-and-configuring-graphics-(monitors,-display-modes,-vsync,-display-cutouts))
-* [Continuous and Non-Continuous Rendering](/wiki/continuous-and-non-continuous-rendering)
-* [Clearing the Screen](/wiki/clearing-the-screen)
-* [Taking a Screenshot](/wiki/taking-a-screenshot)
-* [Profiling](/wiki/profiling)
-* [Viewports](/wiki/viewports)
-* [OpenGL (ES) Support](/wiki/opengl-(es)-support)  
-  * Configuration and Querying OpenGL ??  
-  * Direct Access ??  
-  * Utility Classes  
-     -[Rendering Shapes](/wiki/rendering-shapes)  
-     -[Textures and TextureRegions](/wiki/textures-and-textureregions)  
-     -[Meshes](/wiki/meshes)  
-     -[Shaders](/wiki/shaders)  
-     -[Frame Buffer Objects](/wiki/frame-buffer-objects)
-
-&nbsp;&nbsp;&nbsp; **2D Graphics**  
-* [SpriteBatch, TextureRegions, and Sprites](/wiki/spritebatch,-textureregions,-and-sprites)  
-* [2D Animation](/wiki/2d-animation)  
-* [Clipping, With the Use of ScissorStack](/wiki/clipping,-with-the-use-of-scissorstack)  
-* [Masking](/wiki/masking)  
-* [Orthographic Camera](/wiki/orthographic-camera)  
-* Mapping Touch Coordinates ??  
-* [NinePatches](/wiki/ninepatches)  
-* [Bitmap Fonts](/wiki/bitmap-fonts)  
-  * [Distance Field Fonts](/wiki/distance-field-fonts)  
-  * [Color Markup Language](/wiki/color-markup-language)  
-* [Using TextureAtlases](/wiki/using-textureatlases)  
-* [Pixmaps](/wiki/pixmaps)  
-* [Packing Atlases Offline](/wiki/packing-atlases-offline)  
-* [Packing Atlases at Runtime](/wiki/packing-atlases-at-runtime)  
-* [Texture Compression](/wiki/texture-compression)  
-* [2D ParticleEffects](/wiki/2d-particleeffects)  
-* [Tile Maps](/wiki/tile-maps)  
-* [scene2d](/wiki/scene2d)  
-* [scene2d.ui](/wiki/scene2d.ui)  
-  * [Table](/wiki/table)  
-  * [Skin](/wiki/skin)  
-* [ImGui](/wiki/imgui)
-
-&nbsp;&nbsp;&nbsp; **[3D Graphics](/wiki/3d-graphics)**
-
-* [Quick Start](/wiki/quick-start)  
-* [Models](/wiki/models)  
-* [Material and Environment](/wiki/material-and-environment)  
-* [ModelBatch](/wiki/modelbatch)  
-* [ModelCache](/wiki/modelcache)  
-* [ModelBuilder, MeshBuilder and MeshPartBuilder](/wiki/modelbuilder,-meshbuilder-and-meshpartbuilder)  
-* [3D Animations and Skinning](/wiki/3d-animations-and-skinning)  
-* [Importing Blender Models in libGDX](/wiki/importing-blender-models-in-libgdx)  
-* [3D Particle Effects](/wiki/3d-particle-effects)  
-* [Virtual Reality (VR)](/wiki/virtual-reality-(vr))
-* [3D Picking](/wiki/3d-picking)
-* Perspective Camera ??  
-</div>
-
-</details>
-
-[Managing Your Assets](/wiki/managing-your-assets)
-
-[HTML5 Backend and GWT Specifics](/wiki/html5-backend-and-gwt-specifics)
-
-[Internationalization and Localization](/wiki/internationalization-and-localization)
-
-<details><summary>Utilities</summary>
-
-<div markdown="1">
-* [Reading and Writing JSON](/wiki/reading-and-writing-json)
-* [Reading and Writing XML](/wiki/reading-and-writing-xml)
-* [Collections](/wiki/collections)
-* [Reflection](/wiki/reflection)
-* [jnigen](/wiki/jnigen)
-</div>
-
-</details>
-
-<details><summary>Math Utilities</summary>
-
-<div markdown="1">
-* [Math Utilities](/wiki/math-utilities)
-* [Interpolation](/wiki/interpolation)
-* [Vectors, Matrices, Quaternions](/wiki/vectors,-matrices,-quaternions)
-* [Circles, Planes, Rays, etc.](/wiki/circles,-planes,-rays,-etc.)
-* [Path Interface and Splines](/wiki/path-interface-and-splines)
-* Bounding Volumes ??
-* Intersection and Overlap Testing ??
-</div>
-
-</details>
-
-<details><summary>Tools</summary>
-
-<div markdown="1">
-* [Texture Packer](/wiki/texture-packer)
-* [Hiero](/wiki/hiero)
-* [2D Particle Editor](/wiki/2d-particle-editor)
-* [Skin Composer](/wiki/skin-composer)
-* [Overlap2D](/wiki/overlap2d)
-</div>
-
-</details>
-
-<details><summary>Extensions</summary>
-
-<div markdown="1">
-* [Artificial Intelligence](/wiki/artificial-intelligence)
-* [gdx-freetype](/wiki/gdx-freetype)
-* [gdx-pay](/wiki/gdx-pay): cross-platform In-App-Purchasing API
-* [Physics](/wiki/physics)  
-  * [Box2D](/wiki/box2d)  
-  * [Bullet Physics](/wiki/bullet-physics)  
-     -[Setup](/wiki/bullet-wrapper-setup)  
-     -[Using the Wrapper](/wiki/bullet-wrapper-using-the-wrapper)  
-     -[Using Models](/wiki/bullet-wrapper-using-models)  
-     -[Contact Callbacks](/wiki/bullet-wrapper-contact-callbacks)  
-     -[Custom Classes](/wiki/bullet-wrapper-custom-classes)  
-     -[Debugging](/wiki/bullet-wrapper-debugging)
-* [Publishing Your Own Extensions](/wiki/third-party-extension-support)
-</div>
-
-</details>
-
-<details><summary>Using libGDX With Other JVM Languages</summary>
-
-<div markdown="1">
-* [Using libGDX With Other JVM Languages](/wiki/using-libgdx-with-other-jvm-languages)
-* [Using libGDX With Clojure](/wiki/using-libgdx-with-clojure)
-* [Using libGDX With Kotlin](/wiki/using-libgdx-with-kotlin)
-* [Using libGDX With Python](/wiki/using-libgdx-with-python)
-* [Using libGDX With Scala](/wiki/using-libgdx-with-scala)
-</div>
-
-</details>
-
-<details><summary>Third Party Services</summary>
-
-<div markdown="1">
-* [AdMob in libGDX](/wiki/admob-in-libgdx)
-* [Airpush in libGDX](/wiki/airpush-in-libgdx)
-* [Firebase in libGDX](/wiki/firebase-in-libgdx)
-* [Smaato in libGDX](/wiki/smaato-in-libgdx)
-* [Google Play Games Services in libGDX](/wiki/google-play-games-services-in-libgdx)
-* [Pollfish in libGDX](/wiki/pollfish-in-libgdx)
-* [ProGuard/DexGuard and libGDX](/wiki/proguard/dexguard-and-libgdx)
-</div>
-
-</details>
-
-## Articles
-* [Getting Help](/wiki/getting-help)
-* [External Tutorials](/wiki/external-tutorials)
-* [Java Development Kit - Selection](/wiki/java-development-kit---selection)
-* [Deploying your application](/wiki/deploying-your-application)
-* [Coordinate systems](/wiki/coordinate-systems)
-* [Updating Your libGDX Version](/wiki/updating-libgdx)
-* [Adding Extensions and 3rd Party Libraries](/wiki/dependency-management-with-gradle)
-* [Improving Your Gradle Workflow](/wiki/improving-workflow-with-gradle)
-* [Creating Asset Project in Eclipse](/wiki/creating-a-separate-assets-project-in-eclipse)
+* Getting Started
+  * [Set Up a Dev Env](/wiki/start/setup)
+  * [Creating a Project](/wiki/start/project-generation)
+  * [Importing & Running a Project](/wiki/start/import-and-running)
+  * [A Simple Game](/wiki/start/a-simple-game)
+  * [Extending the Simple Game](/wiki/start/simple-game-extended)
+  * [Running Demos](/wiki/start/running-demos)
+  * [Project Setup via Command Line](/wiki/start/project-setup-via-command-line)
+* [The Application Framework](/wiki/app/the-application-framework)
+  * [Interfacing with platform specific code](/wiki/app/interfacing-with-platform-specific-code)
+  * [Logging](/wiki/app/logging)
+  * [Modules overview](/wiki/app/modules-overview)
+  * [Querying](/wiki/app/querying)
+  * [Starter classes and configuration](/wiki/app/starter-classes-and-configuration)
+  * [The application framework](/wiki/app/the-application-framework)
+  * [The life cycle](/wiki/app/the-life-cycle)
+  * [Threading](/wiki/app/threading)
+* [Audio](/wiki/audio/audio)
+  * [Audio](/wiki/audio/audio)
+  * [Playing pcm audio](/wiki/audio/playing-pcm-audio)
+  * [Recording pcm audio](/wiki/audio/recording-pcm-audio)
+  * [Sound effects](/wiki/audio/sound-effects)
+  * [Streaming music](/wiki/audio/streaming-music)
+* Extensions
+  * [Physics](/wiki/extensions/physics/physics)
+    * [Bullet Physics](/wiki/extensions/physics/bullet/bullet-physics)
+      * [Bullet physics](/wiki/extensions/physics/bullet/bullet-physics)
+      * [Bullet Wrapper Contact callbacks](/wiki/extensions/physics/bullet/bullet-wrapper-contact-callbacks)
+      * [Bullet Wrapper Custom classes](/wiki/extensions/physics/bullet/bullet-wrapper-custom-classes)
+      * [Bullet Wrapper Debugging](/wiki/extensions/physics/bullet/bullet-wrapper-debugging)
+      * [Bullet Wrapper Setup](/wiki/extensions/physics/bullet/bullet-wrapper-setup)
+      * [Bullet Wrapper Using models](/wiki/extensions/physics/bullet/bullet-wrapper-using-models)
+      * [Bullet Wrapper Using the wrapper](/wiki/extensions/physics/bullet/bullet-wrapper-using-the-wrapper)
+    * [Box2d](/wiki/extensions/physics/box2d)
+    * [Physics](/wiki/extensions/physics/physics)
+  * [Artificial Intelligence](/wiki/extensions/artificial-intelligence)
+  * [Gdx freetype](/wiki/extensions/gdx-freetype)
+  * [gdx pay](/wiki/extensions/gdx-pay)
+  * [Third Party Extension Support](/wiki/extensions/third-party-extension-support)
+* [Graphics](/wiki/graphics/graphics)
+  * 2D Graphics
+    * [Bitmap Fonts](/wiki/graphics/2d/fonts/bitmap-fonts)
+      * [Bitmap fonts](/wiki/graphics/2d/fonts/bitmap-fonts)
+      * [Color Markup Language](/wiki/graphics/2d/fonts/color-markup-language)
+      * [Distance field fonts](/wiki/graphics/2d/fonts/distance-field-fonts)
+    * [Scene2d](/wiki/graphics/2d/scene2d/scene2d)
+      * [Actions](/wiki/graphics/2d/scene2d/actions)
+      * [Scene2d.ui](/wiki/graphics/2d/scene2d/scene2d-ui)
+      * [Scene2d](/wiki/graphics/2d/scene2d/scene2d)
+      * [Skin](/wiki/graphics/2d/scene2d/skin)
+      * [Table](/wiki/graphics/2d/scene2d/table)
+    * [2D Animation](/wiki/graphics/2d/2d-animation)
+    * [2D ParticleEffects](/wiki/graphics/2d/2d-particleeffects)
+    * [Clipping, with the use of scissorstack](/wiki/graphics/2d/clipping-with-the-use-of-scissorstack)
+    * [ImGui](/wiki/graphics/2d/imgui)
+    * [Masking](/wiki/graphics/2d/masking)
+    * [Ninepatches](/wiki/graphics/2d/ninepatches)
+    * [Orthographic camera](/wiki/graphics/2d/orthographic-camera)
+    * [Packing atlases at runtime](/wiki/graphics/2d/packing-atlases-at-runtime)
+    * [Packing atlases offline](/wiki/graphics/2d/packing-atlases-offline)
+    * [Pixmaps](/wiki/graphics/2d/pixmaps)
+    * [Spritebatch, Textureregions, and Sprites](/wiki/graphics/2d/spritebatch-textureregions-and-sprites)
+    * [Texture Compression](/wiki/graphics/2d/texture-compression)
+    * [Tile maps](/wiki/graphics/2d/tile-maps)
+    * [Using textureatlases](/wiki/graphics/2d/using-textureatlases)
+  * [3D graphics](/wiki/graphics/3d/3d-graphics)
+    * [3D animations and skinning](/wiki/graphics/3d/3d-animations-and-skinning)
+    * [3D Graphics](/wiki/graphics/3d/3d-graphics)
+    * [3D Particle Effects](/wiki/graphics/3d/3d-particle-effects)
+    * [3D Picking](/wiki/graphics/3d/3d-picking)
+    * [Decals](/wiki/graphics/3d/decals)
+    * [Importing Blender models in LibGDX](/wiki/graphics/3d/importing-blender-models-in-libgdx)
+    * [Material and environment](/wiki/graphics/3d/material-and-environment)
+    * [ModelBatch](/wiki/graphics/3d/modelbatch)
+    * [ModelBuilder, MeshBuilder and MeshPartBuilder](/wiki/graphics/3d/modelbuilder-meshbuilder-and-meshpartbuilder)
+    * [ModelCache](/wiki/graphics/3d/modelcache)
+    * [Models](/wiki/graphics/3d/models)
+    * [Quick start](/wiki/graphics/3d/quick-start)
+    * [Virtual Reality (VR)](/wiki/graphics/3d/virtual-reality)
+  * OpenGL Utility Classes
+    * [Frame buffer objects](/wiki/graphics/opengl-utils/frame-buffer-objects)
+    * [Meshes](/wiki/graphics/opengl-utils/meshes)
+    * [Rendering shapes](/wiki/graphics/opengl-utils/rendering-shapes)
+    * [Shaders](/wiki/graphics/opengl-utils/shaders)
+  * [Clearing the screen](/wiki/graphics/clearing-the-screen)
+  * [Continuous and Non Continuous Rendering](/wiki/graphics/continuous-and-non-continuous-rendering)
+  * [Graphics](/wiki/graphics/graphics)
+  * [Integrating libgdx and the device camera](/wiki/graphics/integrating-libgdx-and-the-device-camera)
+  * [OpenGL (ES) Support](/wiki/graphics/opengl-es-support)
+  * [Profiling](/wiki/graphics/profiling)
+  * [Querying and Configuring Graphics (monitors, display modes, vsync, display cutouts)](/wiki/graphics/querying-and-configuring-graphics)
+  * [Taking a Screenshot](/wiki/graphics/taking-a-screenshot)
+  * [Viewports](/wiki/graphics/viewports)
+* [Input Handling](/wiki/input/input-handling)
+  * [Accelerometer](/wiki/input/accelerometer)
+  * [Adding new Keycodes](/wiki/input/adding-new-keycodes)
+  * [Back and menu key catching](/wiki/input/back-and-menu-key-catching)
+  * [Compass](/wiki/input/compass)
+  * [Configuration and Querying](/wiki/input/configuration-and-querying)
+  * [Controllers](/wiki/input/controllers)
+  * [Cursor Visibility and Catching](/wiki/input/cursor-visibility-and-catching)
+  * [Event handling](/wiki/input/event-handling)
+  * [Gesture detection](/wiki/input/gesture-detection)
+  * [Gyroscope](/wiki/input/gyroscope)
+  * [Input handling](/wiki/input/input-handling)
+  * [Memory management](/wiki/input/memory-management)
+  * [Mouse, Touch and Keyboard](/wiki/input/mouse-touch-and-keyboard)
+  * [On screen keyboard](/wiki/input/on-screen-keyboard)
+  * [Polling](/wiki/input/polling)
+  * [Simple text input](/wiki/input/simple-text-input)
+  * [Vibrator](/wiki/input/vibrator)
+* [Using libGDX With Other JVM Languages](/wiki/jvm-langs/using-libgdx-with-other-jvm-languages)
+  * [Using libgdx with Clojure](/wiki/jvm-langs/using-libgdx-with-clojure)
+  * [Using libGDX with Kotlin](/wiki/jvm-langs/using-libgdx-with-kotlin)
+  * [Using libGDX with other JVM languages](/wiki/jvm-langs/using-libgdx-with-other-jvm-languages)
+  * [Using libgdx with Python](/wiki/jvm-langs/using-libgdx-with-python)
+  * [Using libgdx with Scala](/wiki/jvm-langs/using-libgdx-with-scala)
+* [Math Utilities](/wiki/math-utils/math-utilities)
+  * [Circles, planes, rays, etc.](/wiki/math-utils/circles-planes-rays-etc)
+  * [Interpolation](/wiki/math-utils/interpolation)
+  * [Math utilities](/wiki/math-utils/math-utilities)
+  * [Path interface and Splines](/wiki/math-utils/path-interface-and-splines)
+  * [Vectors, matrices, quaternions](/wiki/math-utils/vectors-matrices-quaternions)
+* Third Party Services
+  * [Admob in libgdx](/wiki/third-party/admob-in-libgdx)
+  * [Airpush in Libgdx](/wiki/third-party/airpush-in-libgdx)
+  * [Firebase in libGDX](/wiki/third-party/firebase-in-libgdx)
+  * [Google Mobile Ads in Libgdx (replaces deprecated AdMob)](/wiki/third-party/google-mobile-ads-in-libgdx)
+  * [Google Play Games Services in LibGDX](/wiki/third-party/google-play-games-services-in-libgdx)
+  * [Pollfish in libgdx](/wiki/third-party/pollfish-in-libgdx)
+  * [ProGuard DexGuard and libGDX](/wiki/third-party/proguard-dexguard-and-libgdx)
+  * [Smaato in libGDX](/wiki/third-party/smaato-in-libgdx)
+* Tools
+  * [2D Particle Editor](/wiki/tools/2d-particle-editor)
+  * [Hiero](/wiki/tools/hiero)
+  * [Overlap2D](/wiki/tools/overlap2d)
+  * [Skin Composer](/wiki/tools/skin-composer)
+  * [Texture packer](/wiki/tools/texture-packer)
+* unlisted
+  * [Getting ready for #libGDXJAM](/wiki/unlisted/getting-ready-for-libgdxjam)
+  * [Google Summer of Code 2014](/wiki/unlisted/google-summer-of-code-2014)
+  * [Issue Tracker](/wiki/unlisted/issue-tracker)
+  * [More Info](/wiki/unlisted/more-info)
+  * [Overlap2D survival guide for](/wiki/unlisted/overlap2d-survival-guide-for-libgdxjam)
+* Utilities
+  * [Collections](/wiki/utils/collections)
+  * [jnigen](/wiki/utils/jnigen)
+  * [Reading and writing JSON](/wiki/utils/reading-and-writing-json)
+  * [Reading and writing XML](/wiki/utils/reading-and-writing-xml)
+  * [Reflection](/wiki/utils/reflection)
+  * [Saved game serialization](/wiki/utils/saved-game-serialization)
+* [File handling](/wiki/file-handling)
+* [HTML5 Backend and GWT Specifics](/wiki/html5-backend-and-gwt-specifics)
+* [Internationalization and Localization](/wiki/internationalization-and-localization)
+* [Local LibGDX package use with GWT](/wiki/local-libgdx-package-use-with-gwt)
+* [Managing your assets](/wiki/managing-your-assets)
+* [Networking](/wiki/networking)
+* [Preferences](/wiki/preferences)
+* [Wiki Style Guide](/wiki/wiki-style-guide)

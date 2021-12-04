@@ -7,7 +7,7 @@ There are multiple ways to reduce the number of render calls. For example by *fr
 
 > **BE AWARE** merging and optimizing models *at runtime* is typically still a relatively costly operation and when done incorrectly it can even make performance worse. Always make sure to implement other options of reducing the render calls, like frustum culling or optimizing assets, as well.
 
-ModelCache is somewhat comparable to [SpriteCache](https://libgdx.badlogicgames.com/nightlies/docs/api/com/badlogic/gdx/graphics/g2d/SpriteCache.html) and [SpriteBatch](/wiki/graphics/2d/spritebatch,-textureregions,-and-sprites) which are used for 2D rendering. However, models typically are more complex compared to sprites in for example the number of vertices, vertex attributes and the material.
+ModelCache is somewhat comparable to [SpriteCache](https://libgdx.badlogicgames.com/nightlies/docs/api/com/badlogic/gdx/graphics/g2d/SpriteCache.html) and [SpriteBatch](/wiki/graphics/2d/spritebatch-textureregions-and-sprites) which are used for 2D rendering. However, models typically are more complex compared to sprites in for example the number of vertices, vertex attributes and the material.
 
 ModelCache will not merge skinned meshes. When you add a skinned mesh it will not be merged, but instead kept as is. So it is safe to add a skinned mesh to the cache, but it won't reduce the number of render calls (because skinning is applied inside the render call).
 

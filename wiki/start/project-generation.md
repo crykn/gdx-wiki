@@ -1,8 +1,6 @@
 ---
-redirect_from:
-  - /dev/project-generation/
-  - /dev/project_generation/
 title: "Creating a Project"
+order: 20
 ---
 
 To setup your first project and download the necessary dependencies, libGDX offers a setup tool.

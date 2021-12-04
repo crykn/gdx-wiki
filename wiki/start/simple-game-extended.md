@@ -1,8 +1,6 @@
 ---
-redirect_from:
-  - /dev/simple-game-extended/
-  - /dev/simple_game_extended/
 title: "Extending the Simple Game"
+order: 50
 ---
 
 In this tutorial we will be **extending the simple game** "Drop", made in [the previous tutorial](/wiki/start/a-simple-game). We will be adding a menu screen and a couple of features to make this game a little more fully featured.
