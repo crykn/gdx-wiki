@@ -2,7 +2,7 @@
 title: Wiki Style Guide
 # Not listed in ToC
 ---
-This page gives some information on how to edit libGDX wiki pages. Please read this before contributing to the libGDX wiki! If you have any (additional) questions, please do not hesitate to ask! See our [Discord](/community/) for more information.
+This page gives some information on how to edit libGDX wiki pages. **Please read this before contributing to the libGDX wiki!** If you have any (additional) questions, please do not hesitate to ask! See our [Discord](/community/) for more information.
 
 ## How to? ##
 Every wiki page has an "Edit on GitHub" button on top which redirects you to the GitHub Web Interface of the wiki repo. Use this for small fixes/typos. If you want to undertake more extensive changes, you should fork [the repo](https://github.com/libgdx/libgdx.github.io). The [wiki of our website repo](https://github.com/libgdx/libgdx.github.io/wiki) also offers some pointers on this.
@@ -17,7 +17,7 @@ We use Markdown in this wiki. To learn your way around this, here is GitHub's ve
 `[link text to networking](/wiki/networking)` renders this: [link text to networking](/wiki/networking)  
 
 ## Linking to code/docs ##
-Links are done as follows: `[ClassName](link to docs) [(code)](link to code)` for example:
+Links to code/docs should be done as follows: `[ClassName](link to docs) [(code)](link to code)`. For example:
 ```
 [Texture](http://libgdx.badlogicgames.com/nightlies/docs/api/com/badlogic/gdx/graphics/Texture.html)
 [(code)](https://github.com/libgdx/libgdx/tree/master/gdx/src/com/badlogic/gdx/graphics/Texture.java)
@@ -31,23 +31,25 @@ renders the following:
 Don't use non-alphabetic characters in Wiki page names, because not all operating systems can handle
 them when cloning Wiki as Git repository (for example, Windows doesn't support ":").
 
-### Notes on doc links ###
-
-* Please note that there should be a space in between `ClassName (Code)` style formatting, in order to differentiate the two.
-* Please make the format `ClassName (Code)` with the word `Code`, not `Source` or any derivative of that. Consistency is key!
-*  If a link to documentation ends in a right paren `)`, it will mess up the markdown. take this as an example:
+{% capture docs-notice %}
+- Please note that there should be a space in between `ClassName (Code)` style formatting, in order to differentiate the two.
+- Please make the format `ClassName (Code)` with the word `Code`, not `Source` or any derivative of that. Consistency is key!
+- If a link to documentation ends in a right parenthesis `)`, it will mess up the markdown. take this as an example:
 
 ```
 http://libgdx.badlogicgames.com/nightlies/docs/api/com/badlogic/gdx/graphics/Texture.html#getWidth()
 ```
 
-when using the markdown formatting of `[]()` the end paren will mess up the link, so please remember to escape the ending paren (`)`) so for example, it should be :
+when using the markdown formatting of `[]()` the end parenthesis will mess up the link, so please remember to escape the ending parenthesis (`)`) so for example, it should be :
 
 ```markdown
 [Link to Texture#getWidth](http://libgdx.badlogicgames.com/nightlies/docs/api/com/badlogic/gdx/graphics/Texture.html#getWidth(\))
 ```
 
-without the escaped paren, a 404 is imminent!
+without the escaped parenthesis, a 404 is imminent!
+{% endcapture %}
+
+<div class="notice notice--primary">{{ docs-notice | markdownify }}</div>
 
 ## Videos ##
 

@@ -31,11 +31,11 @@ google_site_verification: "qc0iys9Aweas1z8EhICO-0Ohwh6Iq1GDV6K75e0ToO8"
 search: false
 
 # Open Graph
-og_image: /assets/images/logo.png # default open graph (=social media) image
+og_image: /assets/images/logo.png # default open graph (= social media) image
 
 # Build settings
 markdown: kramdown
-remote_theme: mmistakes/minimal-mistakes@4.24.0 # 2021-07-05; when updating this, the theme ovverides should be adapted accordingly!
+remote_theme: mmistakes/minimal-mistakes@4.24.0 # 2021-07-05; when updating this, the theme overrides should be adapted accordingly!
 
 future: false # allow scheduling posts
 
@@ -108,7 +108,7 @@ defaults:
     values:
       layout: single
       author_profile: false
-  # _wiki
+  # wiki
   - scope:
       path: "wiki"
       type: pages

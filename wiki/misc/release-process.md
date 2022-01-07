@@ -2,6 +2,9 @@
 title: Release Process
 # Not listed in ToC
 ---
+**Note:** This page is outdated and needs to be updated.
+{: .notice--danger}
+
 2. Setup pgp keys and settings.xml for Maven release, ask Mario
 1. Disable the libGDX project on the build server
 3. pull in the latest changes into your local libGDX repository

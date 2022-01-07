@@ -2,7 +2,8 @@
 title: "Getting ready for #libGDXJAM"
 # Not listed in ToC
 ---
-The libGDX community is organizing [#libGDXJAM](https://twitter.com/hashtag/libGDXJam?src=hash), a game programming competition that will take place sometime in December, the final date is yet to be announced.
+The [#libGDXJAM](https://twitter.com/hashtag/libGDXJam?src=hash) was organized by the libGDX community and took place in December 2015. You can find all the entries [here](https://itch.io/jam/libgdxjam).
+{: .notice--info}
 
 This article will take you through the rules and help you get ready to jam!
 

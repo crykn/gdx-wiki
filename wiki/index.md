@@ -10,7 +10,7 @@ excluded: true
 * [Setting Up a Dev Environment](/wiki/start/setup)
 * [Creating Your First libGDX Project](/wiki/start/project-generation)
 * [Importing & Running It](/wiki/start/import-and-running)
-* [A Simple Game](simple-game)
+* [A Simple Game](/wiki/start/a-simple-game)
 * [Extending the Simple Game](/wiki/start/simple-game-extended)
 * [Demos & Tutorials](/wiki/start/demos-and-tutorials)
 
@@ -20,10 +20,10 @@ excluded: true
 ## Articles
 * [Getting Help](/wiki/articles/getting-help)
 * [External Tutorials](/wiki/articles/external-tutorials)
-* [Java Development Kit - Selection](/wiki/articles/java-development-kit-selection)
 * [Coordinate systems](/wiki/articles/coordinate-systems)
+* [Memory management](/wiki/articles/memory-management)
 * [Updating Your libGDX Version](/wiki/articles/updating-libgdx)
 * [Adding Extensions and 3rd Party Libraries](/wiki/articles/dependency-management-with-gradle)
 * [Improving Your Gradle Workflow](/wiki/articles/improving-workflow-with-gradle)
 * [Creating Asset Project in Eclipse](/wiki/articles/creating-a-separate-assets-project-in-eclipse)
-* [Memory management](/wiki/articles/memory-management)
+* [Java Development Kit - Selection](/wiki/articles/java-development-kit-selection)

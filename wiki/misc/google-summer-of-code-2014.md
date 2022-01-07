@@ -3,9 +3,8 @@ title: Google Summer of Code 2014
 # Not listed in ToC
 ---
 
-FIXME out of date. This page is mostly an [RFC](https://en.wikipedia.org/wiki/Request_for_Comments)
-
-This page is mostly a copy-paste of the GSoC2013 page on the old Google Code wiki. The mentor list is not here, I might just make a section here for it.
+This page was a [RFC](https://en.wikipedia.org/wiki/Request_for_Comments) for the GSoC 2014.
+{: .notice--info}
 
 ## Introduction ##
 We assume you already know what Google Summer of Code is, if not, please check out the [Google Summer of Code](http://www.google-melange.com/gsoc/homepage/google/gsoc2013) site for general information.
