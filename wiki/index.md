@@ -6,7 +6,6 @@ excluded: true
 **Welcome to our Wiki, a place for comprehensive documentation on the libGDX API and features.** This wiki is community driven, and can be edited by anyone. If you find information out of date or want to add some more in-depth explanations, you are very welcome to do the necessary changes after having had a look at our [Wiki Style Guide](/wiki/misc/wiki-style-guide).  
 
 ## Getting Started
-#### If you want to get started coding with libGDX, head to the [Official documentation - here - ](/wiki/start/setup) to learn how to setup your environment and create/import your project.
 * [Setting Up a Dev Environment](/wiki/start/setup)
 * [Creating Your First libGDX Project](/wiki/start/project-generation)
 * [Importing & Running It](/wiki/start/import-and-running)

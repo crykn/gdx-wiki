@@ -1,13 +1,13 @@
 #
-# PLEASE NOTE THAT this file is a copy of _config.yml with the only difference
-# being that the wiki pages are excluded from the build.
+# Please note that this file is a copy of _config.yml with the only difference
+# being that the wiki pages are excluded from the build. Thus, it should mirror
+# all changes made to the default config file.
 #
-# This can speed up testing by severly reducing page build times.
+# Excluding the pages in /wiki/ severly reduces page build times and can therefore
+# be useful when testing changes outside of the wiki.
 #
-# This config can be used as follows:
+# To use this config file, execute the following command:
 # bundle exec jekyll serve --config _config_no_wiki.yml
-#
-# THIS FILE SHOULD MIRROR ALL CHANGES MADE TO _config.yml!
 #
 # For technical reasons, this file is *NOT* reloaded automatically when you use
 # 'bundle exec jekyll serve'. If you change this file, please restart the server process.
