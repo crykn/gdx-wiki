@@ -8,15 +8,14 @@ Some target platforms can’t run Java bytecodes directly, and so have more spec
 ## Language interoperability guides
 
 * [Clojure](http://clojure.org/java_interop)
-    * [Using libGDX with Clojure](https://github.com/libgdx/libgdx/wiki/Using-libgdx-with-Clojure)
+    * [Using libGDX with Clojure](/wiki/jvm-langs/using-libgdx-with-clojure)
 * [Kotlin](http://confluence.jetbrains.com/display/Kotlin/Java+interoperability)
-    * [Using libGDX with Kotlin](https://github.com/libgdx/libgdx/wiki/Using-libGDX-with-Kotlin)
+    * [Using libGDX with Kotlin](/wiki/jvm-langs/using-libgdx-with-kotlin)
 * [Scala](http://www.scala-lang.org/old/faq/4)
-    * [Using libGDX with Scala](https://github.com/libgdx/libgdx/wiki/Using-libgdx-with-Scala)
+    * [Using libGDX with Scala](/wiki/jvm-langs/using-libgdx-with-scala)
 * [Python](http://www.jython.org/jythonbook/en/1.0/JythonAndJavaIntegration.html) (Jython)
-    * [Using libGDX with Python](https://github.com/libgdx/libgdx/wiki/Using-libgdx-with-Python)
+    * [Using libGDX with Python](/wiki/jvm-langs/using-libgdx-with-python)
 * [Ruby](https://github.com/jruby/jruby/wiki/CallingJavaFromJRuby) (JRuby)
-* [Ceylon](http://ceylon-lang.org/documentation/1.2/tour/interop/)
 
 ## Target platform compatibility
 
@@ -51,7 +50,7 @@ Many people have used libGDX in their JVM language of choice. Here are some exam
 * [Scala](https://github.com/ajhager/libgdx-sbt-project.g8)
 * [Ruby](https://github.com/kabbotta/LibGDX-and-Ruby)
 * [Ruby on Android with Ruboto](https://github.com/ashes999/libgdx-ruboto)
-* [Kotlin](https://github.com/libgdx/libgdx/wiki/Using-libGDX-with-Kotlin#examples-of-libgdx-projects-using-kotlin)
+* [Kotlin](/wiki/jvm-langs/using-libgdx-with-kotlin#examples-of-libgdx-projects-using-kotlin)
 
 TODO (find some recent examples, would love contributions!)
 

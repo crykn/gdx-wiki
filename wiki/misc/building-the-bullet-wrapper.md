@@ -1,5 +1,6 @@
 ---
 title: Building the Bullet wrapper
+# Not listed in ToC
 ---
 * [Modifying the wrapper](#modifying-the-wrapper)
 * [Building the Java module](#building-the-java-module)
@@ -12,7 +13,7 @@ The [Bullet physics library](http://bulletphysics.org/wordpress/) extension is a
 ### Modifying the wrapper ###
 New or modified functionality can be added to the Bullet wrapper by modifying the SWIG interface files in `libgdx/extensions/gdx-bullet/jni/swig`. Consult the SWIG [documentation](http://www.swig.org/Doc1.3/Java.html) for details.
 
-[Bullet wrapper custom classes](/wiki/extensions/physics/bullet/bullet-wrapper-custom-classes) which add extra functionality should be put into `libgdx/extensions/gdx-bullet/jni/src/custom`. To use the new classes in Java, include them in the SWIG interface files. 
+[Bullet wrapper custom classes](/wiki/extensions/physics/bullet/bullet-wrapper-custom-classes) which add extra functionality should be put into `libgdx/extensions/gdx-bullet/jni/src/custom`. To use the new classes in Java, include them in the SWIG interface files.
 
 ### Building the Java module ###
 After the SWIG interface files have been modified, build the gdx-bullet Java module.
@@ -20,7 +21,7 @@ After the SWIG interface files have been modified, build the gdx-bullet Java mod
 cd libgdx/extensions/gdx-bullet/jni/swig
 ant -f build.xml
 ```
-This will generate Java classes from the Bullet source in `libgdx/extensions/gdx-bullet/jni/src`, using the SWIG interface files. 
+This will generate Java classes from the Bullet source in `libgdx/extensions/gdx-bullet/jni/src`, using the SWIG interface files.
 
 If a new C++ source file was added, it is necessary to update the `Android.mk` build file before compiling the native Bullet code. This is done by running the Java program `libgdx/extensions/gdx-bullet/src/com/badlogic/gdx/physics/bullet/BulletBuild.java` using the working directory `libgdx/extensions/gdx-bullet`.
 

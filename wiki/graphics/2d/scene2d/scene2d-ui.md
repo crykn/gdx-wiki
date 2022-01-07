@@ -143,7 +143,7 @@ Drawable provides a minimum size, which can be used as a hint for the smallest i
 
 By default, NinePatchDrawable uses the top, right, bottom, and left sizes of the corresponding nine patch texture regions. However, the drawable sizes are separate from the nine patch sizes. The drawable sizes can be changed to draw content on the nine patch with more or less padding than the actual nine patch regions.
 
-Creating drawables is very common and somewhat tedious. It is recommended to use the [skin methods](https://github.com/libgdx/libgdx/wiki/Skin#wiki-Conversions) to automatically obtain a drawable of the appropriate type.
+Creating drawables is very common and somewhat tedious. It is recommended to use the [skin methods](/wiki/graphics/2d/scene2d/skin#wiki-Conversions) to automatically obtain a drawable of the appropriate type.
 
 ### <a id="ChangeEvents"></a>ChangeEvents ###
 
@@ -234,7 +234,7 @@ A [HorizontalGroup](http://libgdx.badlogicgames.com/nightlies/docs/api/com/badlo
 
 The labels that use the same font will be the same size, though they may have different colors. Bitmap fonts don't typical scale well, especially at small sizes. It is suggested to use a separate bitmap font for each font size. The bitmap font image should be packed into the skin's atlas to reduce texture binds.
 
-To create a label which contain text with different colors, the [BitmapFont](https://libgdx.badlogicgames.com/nightlies/docs/api/com/badlogic/gdx/graphics/g2d/BitmapFont.html) used to create the label should have markup enabled by setting it in the [BitmapFont.BitmapFontData](https://libgdx.badlogicgames.com/nightlies/docs/api/com/badlogic/gdx/graphics/g2d/BitmapFont.BitmapFontData.html) object passed via the constructor. If you're using the [AssetManager](https://github.com/libgdx/libgdx/wiki/Managing-your-assets), you can pass this data by passing an appropriate [BitmapFontParameter](https://libgdx.badlogicgames.com/nightlies/docs/api/com/badlogic/gdx/assets/loaders/BitmapFontLoader.BitmapFontParameter.html) object when you call [load](https://libgdx.badlogicgames.com/nightlies/docs/api/com/badlogic/gdx/assets/AssetManager.html#load-java.lang.String-java.lang.Class-com.badlogic.gdx.assets.AssetLoaderParameters-).
+To create a label which contain text with different colors, the [BitmapFont](https://libgdx.badlogicgames.com/nightlies/docs/api/com/badlogic/gdx/graphics/g2d/BitmapFont.html) used to create the label should have markup enabled by setting it in the [BitmapFont.BitmapFontData](https://libgdx.badlogicgames.com/nightlies/docs/api/com/badlogic/gdx/graphics/g2d/BitmapFont.BitmapFontData.html) object passed via the constructor. If you're using the [AssetManager](/wiki/managing-your-assets), you can pass this data by passing an appropriate [BitmapFontParameter](https://libgdx.badlogicgames.com/nightlies/docs/api/com/badlogic/gdx/assets/loaders/BitmapFontLoader.BitmapFontParameter.html) object when you call [load](https://libgdx.badlogicgames.com/nightlies/docs/api/com/badlogic/gdx/assets/AssetManager.html#load-java.lang.String-java.lang.Class-com.badlogic.gdx.assets.AssetLoaderParameters-).
 
 ### <a id="Image"></a>Image ###
 

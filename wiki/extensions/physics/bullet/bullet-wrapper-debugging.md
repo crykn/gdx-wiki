@@ -30,7 +30,7 @@ If you look at the log file it generated, then you will see that it contains a b
 
 It is possible to compile the Bullet Wrapper with debug information and even trace into the C++ wrapper and bullet code. For most problems, however, this is not necessary. The cause of most common problems can be found by inspecting the java code.
 
-> The most common problem with the Bullet wrapper is caused by not properly maintaining references when you actually still need it. This will cause the garbage collector to destroy the native (C++) object and your application to crash. Because you can't control the garbage collector, this problem might appear more frequently on different devices. See the [creating and destroying objects](https://github.com/libgdx/libgdx/wiki/Bullet%20Wrapper:%20Using%20the%20wrapper#creating-and-destroying-objects) section for more information.
+> The most common problem with the Bullet wrapper is caused by not properly maintaining references when you actually still need it. This will cause the garbage collector to destroy the native (C++) object and your application to crash. Because you can't control the garbage collector, this problem might appear more frequently on different devices. See the [creating and destroying objects](/wiki/extensions/physics/bullet/bullet-wrapper-using-the-wrapper#creating-and-destroying-objects) section for more information.
 
 Debugging on Windows
 -----

@@ -67,7 +67,7 @@ To update our simulation we need to tell our world to step. Stepping basically u
 world.step(1/60f, 6, 2);
 ```
 
-The first argument is the time-step, or the amount of time you want your world to simulate. In most cases you want this to be a fixed time step. libGDX recommends using a value between `1/45f` (which is 1/45th of a second) and `1/300f` (1/300th of a second).
+The first argument is the time-step, or the amount of time you want your world to simulate. In most cases you want this to be a fixed time step. libGDX recommends using a value between `1/60f` (which is 1/60th of a second) and `1/240f` (1/240th of a second).
 
 The other two arguments are `velocityIterations` and `positionIterations`. For now we will leave these at `6` and `2`, but you can read more about them in the Box2D documentation.
 
@@ -125,7 +125,7 @@ BodyDef bodyDef = new BodyDef();
 // We set our body to dynamic, for something like ground which doesn't move we would set it to StaticBody
 bodyDef.type = BodyType.DynamicBody;
 // Set our body's starting position in the world
-bodyDef.position.set(100, 300);
+bodyDef.position.set(5, 10);
 
 // Create our body in the world using our body definition
 Body body = world.createBody(bodyDef);
@@ -507,7 +507,7 @@ In order to listen to this sensor contact, we need to implement the ContactListe
 
 ## Contact Listeners ##
 The Contact Listeners listen for collisions events on a specific fixture. The methods are passed a Contact object, which contain information about the two bodies involved.
-The beginContact method is called when the object overlap another. When the objects are no longer colliding, the endContact method is called.
+The beginContact method is called when the object overlaps another. When the objects are no longer colliding, the endContact method is called.
 
 ```java
 public class ListenerClass implements ContactListener {

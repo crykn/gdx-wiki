@@ -1,7 +1,7 @@
 ---
 title: ModelBatch
 ---
-[ModelBatch](http://libgdx.badlogicgames.com/nightlies/docs/api/com/badlogic/gdx/graphics/g3d/ModelBatch.html) ([code](https://github.com/libgdx/libgdx/blob/master/gdx/src/com/badlogic/gdx/graphics/g3d/ModelBatch.java)) is a class used for managing render calls. It is typically used to render instances of [models](https://github.com/libgdx/libgdx/wiki/Models), although it is not restricted to models. The ModelBatch class abstracts away all rendering code, providing a layer on top of it and allowing you to focus on more game specific logic. Every part of the ModelBatch functionality is customizable by design.
+[ModelBatch](http://libgdx.badlogicgames.com/nightlies/docs/api/com/badlogic/gdx/graphics/g3d/ModelBatch.html) ([code](https://github.com/libgdx/libgdx/blob/master/gdx/src/com/badlogic/gdx/graphics/g3d/ModelBatch.java)) is a class used for managing render calls. It is typically used to render instances of [models](/wiki/graphics/3d/models), although it is not restricted to models. The ModelBatch class abstracts away all rendering code, providing a layer on top of it and allowing you to focus on more game specific logic. Every part of the ModelBatch functionality is customizable by design.
 
 **Caution:** because ModelBatch manages the render calls and therefore the rendering context, you should not try to manually modify the render context (e.g. bind shaders, texture or meshes, or call any function starting with `gl`) in between the `ModelBatch.begin()` and `ModelBatch.end()` calls. This will not work and might cause unpredictable behavior. Instead use the customization options that ModelBatch offers.
 
@@ -22,7 +22,7 @@ title: ModelBatch
     * [TextureDescriptor](#texturedescriptor)
 
 # Common misconceptions
-* ModelBatch is often compared to [SpriteBatch](https://github.com/libgdx/libgdx/wiki/Spritebatch%2C-Textureregions%2C-and-Sprites). While this might be understandable from an API view, there are some very big differences making them less comparable. The main difference is that SpriteBatch merges multiple sprites into a single draw call, while ModelBatch doesn't combine render calls. This does have performance implications, so be aware to merge any render calls before sending them to the ModelBatch.
+* ModelBatch is often compared to [SpriteBatch](/wiki/graphics/2d/spritebatch-textureregions-and-sprites). While this might be understandable from an API view, there are some very big differences making them less comparable. The main difference is that SpriteBatch merges multiple sprites into a single draw call, while ModelBatch doesn't combine render calls. This does have performance implications, so be aware to merge any render calls before sending them to the ModelBatch.
 * ModelBatch does not perform (frustum) culling. It simply hasn't enough information to do this using the best performing method. By default, every call to `ModelBatch.render()` will at least lead to one actual render call. ModelBatch does allow you to customize this though and perform frustum culling prior to actually rendering. However, typically, you should perform (frustum) culling prior to calling `ModelBatch.render()`.
 
 # Overview
@@ -123,9 +123,9 @@ public static class MyShaderProvider extends DefaultShaderProvider {
 Here the [Material](/wiki/graphics/3d/material-and-environment) is used to decide whether the custom shader should be used. This is the preferred and easiest method. However, you can use any value, including the generic [`renderable.userData`](http://libgdx.badlogicgames.com/nightlies/docs/api/com/badlogic/gdx/graphics/g3d/Renderable.html#userData) to decide which shader to use, as long as its `shader.canRender(renderable)` method returns true for the given renderable.
 
 ## Default shader
-When you don't specify a custom `ShaderProvider`, then `ModelBatch` will use the `DefaultShaderProvider`. This provider creates a new [`DefaultShader`](http://libgdx.badlogicgames.com/nightlies/docs/api/com/badlogic/gdx/graphics/g3d/shaders/DefaultShader.html) instance when needed. 
+When you don't specify a custom `ShaderProvider`, then `ModelBatch` will use the `DefaultShaderProvider`. This provider creates a new [`DefaultShader`](http://libgdx.badlogicgames.com/nightlies/docs/api/com/badlogic/gdx/graphics/g3d/shaders/DefaultShader.html) instance when needed.
 
-The `DefaultShader` class provides a default implementation of most of the standard [material and environment attributes](https://github.com/libgdx/libgdx/wiki/Material-and-environment), including lighting, normal maps, reflection cubemaps, etc. That is: it binds the attribute values to the corresponding `uniform`s. [A list of uniform names can be found here](https://github.com/libgdx/libgdx/blob/1.7.0/gdx/src/com/badlogic/gdx/graphics/g3d/shaders/DefaultShader.java#L81-L120).
+The `DefaultShader` class provides a default implementation of most of the standard [material and environment attributes](/wiki/graphics/3d/material-and-environment), including lighting, normal maps, reflection cubemaps, etc. That is: it binds the attribute values to the corresponding `uniform`s. [A list of uniform names can be found here](https://github.com/libgdx/libgdx/blob/1.7.0/gdx/src/com/badlogic/gdx/graphics/g3d/shaders/DefaultShader.java#L81-L120).
 
 > **NOTE: by default, the shader program (the glsl files) use per-vertex lighting ([Gouraud shading](https://en.wikipedia.org/wiki/Gouraud_shading)).Normal mapping, reflection etc. is not applied by default.**
 
@@ -139,9 +139,9 @@ config.numBones = 16;
 modelBatch = new ModelBatch(new DefaultShaderProvider(config));
 ```
 
-> **NOTE:** the default configuration is rarely the most optimal for each use-case. For example it uses 5 point lights and 2 directional lights, even if you're only using 1 direction and 1 point light. Make sure to adjust it to your specific use-case to get the most out of it. [If you're using skinning, then the number of bones must match the number of bones the model is created with.](https://github.com/libgdx/libgdx/wiki/3D-animations-and-skinning#loading-skinning)
+> **NOTE:** the default configuration is rarely the most optimal for each use-case. For example it uses 5 point lights and 2 directional lights, even if you're only using 1 direction and 1 point light. Make sure to adjust it to your specific use-case to get the most out of it. [If you're using skinning, then the number of bones must match the number of bones the model is created with.](/wiki/graphics/3d/3d-animations-and-skinning)
 
-The [GPU shader](https://github.com/libgdx/libgdx/wiki/Shaders) (the vertex and fragment shader) to be used is also configurable using this config. Because this shader can be used for various combinations of attributes, it typically is a so-called *ubershader*. This is shader glsl code of which parts are enabled or disabled based on the `Renderable` by using [pre-processor macro directives](https://www.opengl.org/wiki/Core_Language_(GLSL)#Preprocessor_directives). For example:
+The [GPU shader](/wiki/graphics/opengl-utils/shaders) (the vertex and fragment shader) to be used is also configurable using this config. Because this shader can be used for various combinations of attributes, it typically is a so-called *ubershader*. This is shader glsl code of which parts are enabled or disabled based on the `Renderable` by using [pre-processor macro directives](https://www.opengl.org/wiki/Core_Language_(GLSL)#Preprocessor_directives). For example:
 
 ```glsl
 #ifdef blendedFlag
@@ -186,7 +186,7 @@ public static class MyShaderProvider extends DefaultShaderProvider {
 # Sorting render calls
 If render calls would be executed in a random order, then it would cause strange and less performing result. For example, if a transparent object would be rendered prior to an object that's behind it then you won't see the object behind it. This is because the depth buffer will prevent the object further away from being rendered. Sorting the render calls helps to solve this.
 
-By default `ModelBatch` will use the [DefaultRenderableSorter](http://libgdx.badlogicgames.com/nightlies/docs/api/com/badlogic/gdx/graphics/g3d/utils/DefaultRenderableSorter.html) ([code](https://github.com/libgdx/libgdx/blob/master/gdx/src/com/badlogic/gdx/graphics/g3d/utils/DefaultRenderableSorter.java)) to sort the render calls. This implementation will cause that opaque objects are rendered first from front to back, after which transparent objects are rendered from back to front. To decide whether an object is transparent or not, the default implementation checks the [BlendingAttribute#blended](https://github.com/libgdx/libgdx/wiki/Material-and-environment#blendingattribute) value.
+By default `ModelBatch` will use the [DefaultRenderableSorter](http://libgdx.badlogicgames.com/nightlies/docs/api/com/badlogic/gdx/graphics/g3d/utils/DefaultRenderableSorter.html) ([code](https://github.com/libgdx/libgdx/blob/master/gdx/src/com/badlogic/gdx/graphics/g3d/utils/DefaultRenderableSorter.java)) to sort the render calls. This implementation will cause that opaque objects are rendered first from front to back, after which transparent objects are rendered from back to front. To decide whether an object is transparent or not, the default implementation checks the [BlendingAttribute#blended](/wiki/graphics/3d/material-and-environment) value.
 
 Customizing sorting can help increase performance. For example, sorting based on shader, mesh or used textures might help decreasing shader, mesh or texture switches. These kind of optimizations are very application specific. You can customize sorting by specifying your own [`RenderableSorter`](http://libgdx.badlogicgames.com/nightlies/docs/api/com/badlogic/gdx/graphics/g3d/utils/RenderableSorter.html) ([code](https://github.com/libgdx/libgdx/blob/master/gdx/src/com/badlogic/gdx/graphics/g3d/utils/RenderableSorter.java)) implementation while constructing the `ModelBatch`. This interface contains only one method:
 ```java
@@ -202,7 +202,7 @@ The [`RenderContext`](http://libgdx.badlogicgames.com/nightlies/docs/api/com/bad
 
 **Caution:** Obviously this will only work if all `Shader` implementations use the `RenderContext` instead of directly making GL calls. You should always use the `RenderContext` if possible, instead of directly calling the corresponding GL call.
 
-For example: When depth testing is enabled using the RenderContext, then it will enable depth testing for you. Now when you use e.g. SpriteBatch then that disables depth testing but doesn't update the RenderContext. This will lead to unexpected results. To avoid this, by default (when you don't specify a RenderContext yourself) ModelBatch will _reset_ the RenderContext on both the `begin()` and `end()` methods, by calling the same named methods on the RenderContext. This is to make sure that context switches outside the ModelBatch don't interfere with the rendering. 
+For example: When depth testing is enabled using the RenderContext, then it will enable depth testing for you. Now when you use e.g. SpriteBatch then that disables depth testing but doesn't update the RenderContext. This will lead to unexpected results. To avoid this, by default (when you don't specify a RenderContext yourself) ModelBatch will _reset_ the RenderContext on both the `begin()` and `end()` methods, by calling the same named methods on the RenderContext. This is to make sure that context switches outside the ModelBatch don't interfere with the rendering.
 
 However, when you specify your own `RenderContext` (which doesn't have to be a custom implementation of it) then you're responsible for calling the `context.begin()` and `context.end()` methods. This allows you use the same context for multiple ModelBatch instances or even avoid having to reset the context all together.
 

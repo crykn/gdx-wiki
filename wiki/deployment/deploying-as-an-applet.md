@@ -1,7 +1,10 @@
 ---
 title: Deploying as an Applet
+# Not listed in ToC
 ---
 # Deploying as an Applet #
+
+**NOTICE:** This page is outdated. Java applets are no longer supported by any major web browser other than Internet Explorer.
 
 ## Rationale ##
 
@@ -9,7 +12,7 @@ When you are ready to start distributing your game on PC, you will inevitably hi
 
 Ultimately, it is good to have both a downloadable installer build of your game as well as a web version of your game.  The web SKU is good because it allows players to try the game easily if they have a JRE installed.  Getting a JRE installed can be a major headache, but still about 90% of users do have a valid JRE.  If they don't, a downloadable installer can be used which bundles a JRE appropriate to their platform.  It is also quite common for us to see users who discover our game via our applet edition and then later want the downloadable edition so they have an easy desktop shortcut.
 
-In this article, we will explore using applets to embed our game in a web page, however there are [multiple alternatives](http://blog.gemserk.com/2011/02/09/ways-to-deploy-a-java-game/): 
+In this article, we will explore using applets to embed our game in a web page, however there are [multiple alternatives](http://blog.gemserk.com/2011/02/09/ways-to-deploy-a-java-game/):
 
 * GWT - My (very limited) understanding of GWT is it performs some magic to convert your Java code to Javascript.  The upside is that the end user wouldn't need a JRE installed.  However, you also don't have access to many core Java libraries or reflection support.  I'm also not sure how performant the final code is for complex 3D scenes, how stable such dramatic full codebase changes are, or how protected it is from deobfuscation techniques.  However, it is certainly an interesting new technique with a lot of promise.
 
@@ -40,7 +43,7 @@ First, when obfuscating in proguard, be sure your entry point is accessible:
 ```xml
 <keep name="util.MyGDXApplet"></keep>
 ```
-	
+
 Of course, I recommend while first getting applets working at all, don't obfuscate.  Once you have it up and running you can start tuning Proguard.
 
 #### Signing/Manifest ####
@@ -54,7 +57,7 @@ First, where will your application be distributed from?  We will define this at 
 ```
 
 When we're done testing, we should probably remove file:// and 127.0.0.1 from this list and rebuild.
-	
+
 Now let's create a task that can update the manifest and sign an arbitrary JAR:
 
 ```xml
@@ -62,12 +65,12 @@ Now let's create a task that can update the manifest and sign an arbitrary JAR:
     	 <jar destfile="bin\\applet\\${tosign}" update="true">
     	    <manifest>
             	<attribute name="Permissions" 								value="all-permissions" />
-        		<attribute name="Application-Name" 							value="Your Application Name" /> 
+        		<attribute name="Application-Name" 							value="Your Application Name" />
         		<attribute name="Codebase" 									value="${websource}" />
         		<attribute name="Application-Library-Allowable-Codebase"	value="${websource}" />
         	</manifest>
     	</jar>
-    	
+
     	<exec command="&quot;C:\\javapath\\jdk1.7.0_25\\bin\\jarsigner&quot; -storepass PASSWORD -storetype pkcs12
 			-keystore &quot;C:\certificatepath\cert.p12&quot; bin\\applet\\${tosign}
 			&quot;certificate name in store&quot;" />
@@ -125,9 +128,9 @@ Fortunately, there's a workaround, at least for v1.2.0.  If you move your gdx-na
 ```
 
 If you previously tried the other way, don't forget to reset your lwjgl cache or you'll still get that error (as I spent many hours learning the hard way).  On Windows, just delete %TEMP%\lwjglcache\*
-	
+
 ### HTML v2 - Resize ###
-	
+
 At this point, your applet should work on Firefox, IE, and Safari.  On Chrome, Chrome's java security warning will cause all sorts of input weirdness unless you click Always Remember For This Site, and then refresh.  You'll also notice the applet does not resize to the size of the page.
 
 Fortunately, these issues both have the same fix.  Let's update our HTML so we use the entirety of the window, and can resize as needed:

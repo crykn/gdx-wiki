@@ -20,7 +20,7 @@ public class LeaderboardServiceApi {
 
 The first step is to create an abstraction of the API in form of an interface.
 
-The interface is put into the core project (see [Project Setup, Running & Debugging](https://github.com/libgdx/libgdx/wiki/Project-setup,-running-&-debugging)):
+The interface is put into the core project:
 
 ```java
 public interface Leaderboard {

@@ -13,7 +13,7 @@ title: Airpush in Libgdx
 
 # Introduction #
 
-This tutorial will guide you for all the steps to add Airpush adds in your libGDX Powered Android Games. You will be able to add both Banner Ads, and Smartwall Ads. The basic structure is very like the [Admob Tutorial](https://github.com/libgdx/libgdx/wiki/Admob-in-libgdx). But there are several changes and it will be more straight forward with not much text. (If you want a very detailed explanation of why every step, feel free to read that tutorial first).
+This tutorial will guide you for all the steps to add Airpush adds in your libGDX Powered Android Games. You will be able to add both Banner Ads, and Smartwall Ads. The basic structure is very like the [Admob Tutorial](/wiki/third-party/admob-in-libgdx). But there are several changes and it will be more straight forward with not much text. (If you want a very detailed explanation of why every step, feel free to read that tutorial first).
 
 You need:
 
@@ -115,7 +115,7 @@ android:configChanges="orientation|screenSize" />
 <activity android:name="com.<sdkpackage>.VDActivity"
             android:configChanges="orientation|screenSize" android:screenOrientation="landscape"
             android:theme="@android:style/Theme.NoTitleBar.Fullscreen" >
-</activity> 
+</activity>
 ```
 
 **Bundle.-**
@@ -149,7 +149,7 @@ android:configChanges="orientation|screenSize" />
 <activity android:name="com.<sdkpackage>.VActivity"
             android:configChanges="orientation|screenSize" android:screenOrientation="landscape"
             android:theme="@android:style/Theme.NoTitleBar.Fullscreen" >
-</activity> 
+</activity>
  <service android:name="com.<sdkpackage>.LService" android:exported="false"></service>
  <receiver android:name="com.<sdkpackage>.BootReceiver" android:exported="false">
             <intent-filter>
@@ -179,7 +179,7 @@ Make your ApplicationListener receive an ActionResolver when created as a parame
 public class TheMonsterFree extends Game{
 
     public ActionResolver ar;
-	
+
     public TheMonsterFree(ActionResolver ar){
         this.ar = ar;
     }
@@ -195,7 +195,7 @@ public class Main {
 		cfg.title = "TheMonsterFree";
 		cfg.width = 480;
 		cfg.height = 320;
-		
+
 		new LwjglApplication(new TheMonsterFree(new ActionResolver(){
 			@Override public void startSmartWallAd(){}
 			@Override public void showAds(boolean show){}
@@ -232,14 +232,14 @@ public class MainActivity extends AndroidApplication implements ActionResolver{
     @Override
     public void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
-        
+
         AndroidApplicationConfiguration cfg = new AndroidApplicationConfiguration();
         cfg.useWakelock = true;
         cfg.useAccelerometer = false;
         cfg.useCompass = false;
-        
+
       	if(ma==null) ma=new Prm(this, adCallbackListener, false);
-      			
+
 		RelativeLayout layout = new RelativeLayout(this);
 
 		requestWindowFeature(Window.FEATURE_NO_TITLE);
@@ -247,21 +247,21 @@ public class MainActivity extends AndroidApplication implements ActionResolver{
 		getWindow().clearFlags(WindowManager.LayoutParams.FLAG_FORCE_NOT_FULLSCREEN);
 
 		View gameView = initializeForView(new TheMonsterFree(this), cfg);
-		
+
 		RelativeLayout.LayoutParams adParams = new
 		RelativeLayout.LayoutParams(RelativeLayout.LayoutParams.WRAP_CONTENT, RelativeLayout.LayoutParams.WRAP_CONTENT);
 		adParams.addRule(RelativeLayout.ALIGN_PARENT_TOP);
 		adParams.addRule(RelativeLayout.ALIGN_PARENT_LEFT);
-		 
-		adView = new AdView(this, AdView.BANNER_TYPE_IN_APP_AD, AdView.PLACEMENT_TYPE_INTERSTITIAL, false, false, 
+
+		adView = new AdView(this, AdView.BANNER_TYPE_IN_APP_AD, AdView.PLACEMENT_TYPE_INTERSTITIAL, false, false,
 				AdView.ANIMATION_TYPE_LEFT_TO_RIGHT);
 		adView.setAdListener(adlistener);
-		
+
 		layout.addView(gameView);
 		layout.addView(adView);
 		setContentView(layout);
     }
-	
+
     AdListener adCallbackListener=new AdListener(){
         @Override
         public void onSDKIntegrationError(String message){
@@ -284,12 +284,12 @@ public class MainActivity extends AndroidApplication implements ActionResolver{
         }
         @Override
 		public void onAdCached(AdType arg0){
-        	//This will get called when an ad is cached. 
+        	//This will get called when an ad is cached.
         	Log.w("Airpush", "onAdCached() "+arg0.toString());
 		}
 		@Override
-		public void noAdAvailableListener(){ 
-			//this will get called when ad is not available 
+		public void noAdAvailableListener(){
+			//this will get called when ad is not available
 			Log.w("Airpush", "noAdAvailableListener()");
 		}
      };
@@ -327,11 +327,11 @@ public class MainActivity extends AndroidApplication implements ActionResolver{
         }
         @Override
         public void noAdAvailableListener(){
-        	//this will get called when ad is not available 
+        	//this will get called when ad is not available
         	Log.w("Airpush", "noAdAvailableListener()");
 	   	}
     };
-	
+
 	private final int SHOW_ADS = 1;
 	private final int HIDE_ADS = 0;
 

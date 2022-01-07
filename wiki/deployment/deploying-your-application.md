@@ -1,8 +1,6 @@
 ---
 title: Deploying your application
 ---
-###  ###
-
 The mechanism to deploy your game differs between platforms. This article aims to articulate, what is necessary to deploy to each platform that libGDX officially supports:
 
 * [Deploy to Windows/Linux/Mac](#deploy-to-windowslinuxmac-os-x)
@@ -15,17 +13,17 @@ The mechanism to deploy your game differs between platforms. This article aims t
 The easiest way to deploy to Windows/Linux/Mac is to create a runnable JAR file. This can be done via the following console command:
 `./gradlew desktop:dist`
 
-If you are getting an error like `Unsupported class file major version 60`, your Java version (see [here](https://stackoverflow.com/q/9170832) for a list) is not supported by your Gradle version. To fix this, install an older JDK. 
+If you are getting an error like `Unsupported class file major version 60`, your Java version (see [here](https://stackoverflow.com/q/9170832) for a list) is not supported by your Gradle version. To fix this, install an older JDK.
 
 The generated JAR file will be located in the `desktop/build/libs/` folder. It contains all necessary code as well as all your art assets from the android/assets folder and can be run either by double clicking or on the command line via `java -jar jar-file-name.jar`. Your audience must have a JVM installed for this to work. The JAR will work on Windows, Linux and Mac OS X!
 
 ### Alternative (modern) ways of deployment
 Distributing java applications as JAR file can be very unhandy and prone to issues, as not every user can be expected to have the right JRE (or even any JRE) installed. Other ways of deployment are for example:
 
-* A very convenient way to distribute java application is to just bundle an JRE. See this [entry](/wiki/articles/bundling-a-jre) on how to do this. (**This is the recommended way to distribute an application!**)
+* A very convenient way to distribute java application is to just bundle an JRE. See this [entry](/wiki/deployment/bundling-a-jre) on how to do this. (**This is the recommended way to distribute an application!**)
 * Via electron, HTML5 applications can be deployed to desktop. See [here](https://medium.com/@bschulte19e/how-to-deploy-a-libgdx-game-with-electron-3f1b37f0c26e).
 * GWT applications can also be bundled as UWP Apps, see [here](https://web.archive.org/web/20200428040905/https://www.badlogicgames.com/forum/viewtopic.php?f=17&t=14766).
-* Games can also be deployed as an [Applet](https://github.com/libgdx/libgdx/wiki/Deploying-as-an-Applet) (outdated, not recommended!)
+* Games can also be deployed as an [Applet](/wiki/deployment/deploying-as-an-applet) (outdated, not recommended!)
 
 # <a id="Deploy_to_Android"></a>Deploy to Android
 `gradlew android:assembleRelease`
@@ -81,7 +79,7 @@ Deploying to iOS is relatively straight forward, see [here](https://medium.com/@
 
 This will compile your app to Javascript and place the resulting Javascript, HTML and asset files in the `html/build/dist/` folder. The contents of this folder have to be served up by a web server, e.g. Apache or Nginx. Just treat the contents like you'd treat any other static HTML/Javascript site. There is no Java or Java Applets involved!
 
-When running the result, you might encounter errors like `Couldn't find Type for class ...`. To fix this, please see our wiki page [Reflection](https://github.com/libgdx/libgdx/wiki/Reflection) and include the needed classes/packages.
+When running the result, you might encounter errors like `Couldn't find Type for class ...`. To fix this, please see our wiki page [Reflection](/wiki/utils/reflection) and include the needed classes/packages.
 
 With Python installed, you can test your distribution by executing the following in the `html/build/dist` folder:
 

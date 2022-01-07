@@ -25,7 +25,7 @@ Animation has a generic type parameter for the type of class that represents the
 
 ## TextureAtlas example ##
 
-libGDX's [TextureAtlas](http://libgdx.badlogicgames.com/nightlies/docs/api/com/badlogic/gdx/graphics/g2d/TextureAtlas.html) [(code)](https://github.com/libgdx/libgdx/blob/master/gdx/src/com/badlogic/gdx/graphics/g2d/TextureAtlas.java) class is typically used for combining many separate TextureRegions into a smaller set of Textures to reduce expensive draw calls. ([details here](https://github.com/libgdx/libgdx/wiki/Texture-packer#textureatlas)).
+libGDX's [TextureAtlas](http://libgdx.badlogicgames.com/nightlies/docs/api/com/badlogic/gdx/graphics/g2d/TextureAtlas.html) [(code)](https://github.com/libgdx/libgdx/blob/master/gdx/src/com/badlogic/gdx/graphics/g2d/TextureAtlas.java) class is typically used for combining many separate TextureRegions into a smaller set of Textures to reduce expensive draw calls. ([details here](/wiki/tools/texture-packer#textureatlas)).
 
 TexturePacker and TextureAtlas provide a convenient way to generate animations. All the source images of an animation should be named with an underscore and frame number at the end, such as `running_0.png`, `running_1.png`, `running_2.png`, etc. TexturePacker will automatically use these numbers as frame numbers (so long as the packing parameter `useIndexes` is left true).
 

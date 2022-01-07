@@ -1,12 +1,13 @@
 ---
 title: Release Process
+# Not listed in ToC
 ---
 2. Setup pgp keys and settings.xml for Maven release, ask Mario
 1. Disable the libGDX project on the build server
 3. pull in the latest changes into your local libGDX repository
 4. pull in the latest nightlies via `ant -f fetch.xml`
 1. Make sure Version.java has the release version in it
-10. Modify DependencyBank.java, update the libGDX version (and snapshot version) to the latest (must match Version.java), 
+10. Modify DependencyBank.java, update the libGDX version (and snapshot version) to the latest (must match Version.java),
 5. `mvn release:clean`, this should print `BUILD SUCCESSFUL`, if not, you've done something wrong
 6. `mvn release:prepare -DdryRun=true` to test the prepare, see http://www.jroller.com/robertburrelldonkin/entry/apache_using_dry_run_with
 7. `mvn release:prepare`, enter the release version number, then make sure the new snapshot version is x.y.z+1 or x.y+1.0 if you released an API breaking change

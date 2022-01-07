@@ -19,7 +19,7 @@ The iterator returned by `iterator()` is always the same instance, allowing the 
 [(code)](https://github.com/libgdx/libgdx/blob/master/gdx/src/com/badlogic/gdx/utils/CharArray.java)
   * [LongArray](http://libgdx.badlogicgames.com/nightlies/docs/api/com/badlogic/gdx/utils/LongArray.html) [(code)](https://github.com/libgdx/libgdx/blob/master/gdx/src/com/badlogic/gdx/utils/LongArray.java)
   * [ByteArray](http://libgdx.badlogicgames.com/nightlies/docs/api/com/badlogic/gdx/utils/ByteArray.html) [(code)](https://github.com/libgdx/libgdx/blob/master/gdx/src/com/badlogic/gdx/utils/ByteArray.java)
-  
+
 These are identical to Array except they use primitive types instead of objects. This avoids boxing and unboxing.
 
 ## Specialized lists ##
@@ -44,7 +44,7 @@ If any code inside `begin()` and `end()` would modify the SnapshotArray, the int
 
 ### [DelayedRemovalArray](http://libgdx.badlogicgames.com/nightlies/docs/api/com/badlogic/gdx/utils/DelayedRemovalArray.html) [(code)](https://github.com/libgdx/libgdx/blob/master/gdx/src/com/badlogic/gdx/utils/DelayedRemovalArray.java) ###
 
-This is identical to Array except any removals done after `begin()` is called are queued and only occur once `end()` is called. This can be used to avoid concurrent modification. Note that code using this type of list must be aware that removed items are not actually removed immediately. Because of this, often !SnapshotArray is easier to use.
+This is identical to Array except any removals done after `begin()` is called are queued and only occur once `end()` is called. This can be used to avoid concurrent modification. Note that code using this type of list must be aware that removed items are not actually removed immediately. Because of this, often SnapshotArray is easier to use.
 
 
 ### [PooledLinkedList](http://libgdx.badlogicgames.com/nightlies/docs/api/com/badlogic/gdx/utils/PooledLinkedList.html) [(code)](https://github.com/libgdx/libgdx/blob/master/gdx/src/com/badlogic/gdx/utils/PooledLinkedList.java) ###
@@ -97,7 +97,7 @@ Exactly like ObjectMap, except only keys are stored. No values are stored for ea
 
   * [IntSet](http://libgdx.badlogicgames.com/nightlies/docs/api/com/badlogic/gdx/utils/IntSet.html) [(code)](https://github.com/libgdx/libgdx/blob/master/gdx/src/com/badlogic/gdx/utils/IntSet.java)
 
-These maps are identical to ObjectSet except they use primitive types for the keys. This avoids boxing and unboxing. 
+These maps are identical to ObjectSet except they use primitive types for the keys. This avoids boxing and unboxing.
 
 # Other collections #
 

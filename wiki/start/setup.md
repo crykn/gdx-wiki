@@ -1,9 +1,10 @@
 ---
 title: "Set Up a Dev Env"
-order: 10
+redirect_from:
+  - /dev/setup/
 ---
 
-If this is your first time using libGDX, you're at the right place. The following steps detail how you can get your fist libGDX project up and running.
+If this is your first time using libGDX, you're at the right place. The following steps detail how you can get your first libGDX project up and running.
 
 {% include setup_flowchart.html current='0' %}
 
@@ -24,7 +25,7 @@ For newcomers wanting to not only target desktop, but mobile platforms as well, 
 - JDK 8+: there are different distributions, but [Adoptium](https://adoptium.net/) should fit your needs
 
    At the moment, libGDX projects do <u>not</u> work with JDK 16, as Gretty does not yet support Gradle 7. As a consequence, you are advised to use **JDK 8-15**!
-   {: .notice}
+   {: .notice--warning}
 - IDE itself: [IntelliJ IDEA](https://www.jetbrains.com/idea/download/) (the "Community" edition is sufficient)
 - For Android: [Android SDK](https://developer.android.com/studio/releases/platform-tools)
 - For iOS: [RoboVM OSS IntelliJ plugin](http://robovm.mobidevelop.com)
@@ -33,7 +34,7 @@ For newcomers wanting to not only target desktop, but mobile platforms as well, 
 - JDK 8+: there are different distributions, but [Adoptium](https://adoptium.net/) should fit your needs
 
    At the moment, libGDX projects do <u>not</u> work with JDK 16, as Gretty does not yet support Gradle 7. As a consequence, you are advised to use **JDK 8-15**!
-   {: .notice}
+   {: .notice--warning}
 - IDE itself: [Eclipse](https://www.eclipse.org/downloads/)
 - Android: not officially supported, but you may have success with [Andmore](https://projects.eclipse.org/projects/tools.andmore) or tinkering around with an older [ADT](https://marketplace.eclipse.org/content/android-development-tools-eclipse) version
 - For iOS: [RoboVM OSS Eclipse plugin](http://robovm.mobidevelop.com)
@@ -45,7 +46,7 @@ As NetBeans is not commonly used in the libGDX community, it may prove difficult
 - JDK 8+: there are different distributions, but [Adoptium](https://adoptium.net/) should fit your needs
 
     At the moment, libGDX projects do <u>not</u> work with JDK 16, as Gretty does not yet support Gradle 7. As a consequence, you are advised to use **JDK 8-15**!
-   {: .notice}
+   {: .notice--warning}
 - IDE itself: [NetBeans](https://netbeans.apache.org/download/index.html) & the NetBeans Gradle Plugin
 - Android: not officially supported
 - iOS: not officially supported
@@ -57,7 +58,7 @@ It is also possible to develop libGDX applications entirely without any IDE, jus
 - JDK 8+: there are different distributions, but [Adoptium](https://adoptium.net/) should fit your needs
 
    At the moment, libGDX projects do <u>not</u> work with JDK 16, as Gretty does not yet support Gradle 7. As a consequence, you are advised to use **JDK 8-15**!
-   {: .notice}
+   {: .notice--warning}
 - For Android: [Android SDK](https://developer.android.com/studio/releases/platform-tools)
 - Set the ANDROID_HOME environment variable, or use gradle.properties
 

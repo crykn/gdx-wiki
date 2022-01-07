@@ -1,7 +1,7 @@
 ---
 title: External tutorials
 ---
-This page gives a list of some **external tutorials**, if our wiki here isn't enough for you. If you're looking for some **representative games** made with libGDX, have a look at our collection [here](https://libgdx.com/showcase/). If you're interested in some **tools and frameworks to use with libGDX**, [this curated list](https://github.com/rafaskb/awesome-libgdx) may be of help. We also have a list of useful resources on our discord server.
+This page gives a list of some **external tutorials**, if our wiki here isn't enough for you. If you're looking for some **representative games** made with libGDX, have a look at our collection [here](/showcase/). If you're interested in some **tools and frameworks to use with libGDX**, [this curated list](https://github.com/rafaskb/awesome-libgdx) may be of help. We also have a list of useful resources on our discord server.
 
 *Preliminary note:* Given the nature of this page's content it is likely that some of the links displayed here might become offline or even change. If you spot some broken link or wrong information please feel free to edit this page so we can keep our wiki as up-to-date as possible. Thank you.
 
@@ -59,7 +59,7 @@ These are some open-source projects found on the web that use libGDX and can be 
 * [Fire and Ice](https://github.com/lyze237/FireAndIce) (uses tile maps)
 * [On Guard](https://github.com/lyze237/On-Guard) (uses tile maps)
 * [Lendigastel](https://github.com/mgsx-dev/dl9) (3D; uses [gdx-gltf](https://github.com/mgsx-dev/gdx-gltf))
-* [libGDX vs Ray3K](https://github.com/raeleus/libgdx-jam-june-2020) (local multiplayer Smash Bros clone) 
+* [libGDX vs Ray3K](https://github.com/raeleus/libgdx-jam-june-2020) (local multiplayer Smash Bros clone)
 * [Super Spineboy](https://github.com/EsotericSoftware/spine-superspineboy) (a platformer using [Spine](http://www.esotericsoftware.com))
 * [Klooni 1010!](https://github.com/LonamiWebs/Klooni1010) (puzzle game based on the original 1010!)
 * [TDGalaxy](https://github.com/TheLogicMaster/Tower-Defense-Galaxy) (modular 3D tower defense game)

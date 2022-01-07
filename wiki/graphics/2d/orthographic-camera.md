@@ -1,7 +1,7 @@
 ---
 title: Orthographic camera
 ---
-This page presents the [OrthographicCamera](https://libgdx.badlogicgames.com/nightlies/docs/api/com/badlogic/gdx/graphics/OrthographicCamera.html) class and usage. 
+This page presents the [OrthographicCamera](https://libgdx.badlogicgames.com/nightlies/docs/api/com/badlogic/gdx/graphics/OrthographicCamera.html) class and usage.
 The orthographic camera is to be used in 2D environments only as it implements a parallel (orthographic) projection and there will be no scale factor for the final image regardless where the objects are placed in the world.
 
 Code for a simple example of a Camera zooming and moving is available on [LibGDX.info here](https://libgdx.info/basic_camera/)
@@ -11,7 +11,7 @@ Code for a simple example of a Camera zooming and moving is available on [LibGDX
 The Camera class operates as a very simple real world camera. It is possible to
  * move and rotate the camera around,
  * zoom in and out,
- * change the viewport, 
+ * change the viewport,
  * project/unproject points to and from window coordinate/ world space
 
 Using the camera is the easy way to move around a game world without having to manually operate on the matrices. All the projection and view matrix operations are hidden in the implementation.
@@ -160,7 +160,7 @@ What are these units though? What do they mean? How will I know what size to mak
 ```java
 	private OrthographicCamera cam;  #1
 	private SpriteBatch batch;       #2
- 
+
 	private Sprite mapSprite;        #3
 	private float rotationSpeed;     #4
 ```
@@ -220,7 +220,7 @@ In our example, we use `30` for our viewport width, and `30 * (h / w)` for our v
 
 
 ```
-Some examples - 
+Some examples -
 
 If we created our camera with viewport width of 100 and viewport height of 100 ('new OrthographicCamera(100, 100)') and centered it correctly, we would be able to see the 'whole' map, our 'whole' world at once.
 
@@ -266,7 +266,7 @@ public void render() {
 
 **#2** - Updates our `OrthographicCamera`, we have just manipulated it with `handleInput()` method, so we must remember to call the `update()` method.
 
-**#3** - Updates our `SpriteBatch` instance with our Camera's view and projection matrices. 
+**#3** - Updates our `SpriteBatch` instance with our Camera's view and projection matrices.
 
 **#4** - Clears the screen (actually the colour buffer).
 
@@ -339,9 +339,9 @@ The last two lines are responsible for making sure we can’t translate out of t
 ***
 
 
-What to do when the application changes size?  This is when you implement different strategies for handling devices with different resolutions/aspect ratios. I will include a few basic strategies to give you the basic idea. 
+What to do when the application changes size?  This is when you implement different strategies for handling devices with different resolutions/aspect ratios. I will include a few basic strategies to give you the basic idea.
 
-If you want a slightly higher level method of handling this, you should use viewports -> [Wiki Article on Viewports](https://github.com/libgdx/libgdx/wiki/Viewports)
+If you want a slightly higher level method of handling this, you should use viewports -> [Wiki Article on Viewports](/wiki/graphics/viewports)
 
 
 *The following resize strategy will ensure that you will always see 30 units in the x axis no matter what pixel-width your device has.*

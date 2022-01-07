@@ -3,9 +3,9 @@ title: Modules overview
 ---
 ## Introduction ##
 
-libGDX comprises several modules that provide services for each step of a typical game architecture. 
+libGDX comprises several modules that provide services for each step of a typical game architecture.
 
- * *[Input](/wiki/input/input-handling)* - Provides a unified input model and handler for all platforms. Supports keyboard, touchscreen, accelerometer and mouse where available. 
+ * *[Input](/wiki/input/input-handling)* - Provides a unified input model and handler for all platforms. Supports keyboard, touchscreen, accelerometer and mouse where available.
  * *[Graphics](/wiki/graphics/graphics)* - Enables the drawing of images to the screen using the hardware provided OpenGL ES implementation.
  * *[Files](/wiki/file-handling)* - Abstracts file access on all platforms by providing convenient methods for read/write operations regardless of the media.
  * *[Audio](/wiki/audio/audio)* - Facilitates sound recording and playback on all platforms.
@@ -20,15 +20,15 @@ The following part briefly describes each module providing the most common use c
 ## Modules ##
 
 ### Input ###
-The _Input_ module enables the polling of different input states on every platform. 
+The _Input_ module enables the polling of different input states on every platform.
 It allows polling the state of each key, touchscreen and accelerometer. On the desktop the touchscreen is replaced by the mouse while the accelerometer is not available.
 
-It also offers the means to register input processors to use an event based input model. 
+It also offers the means to register input processors to use an event based input model.
 
 The following code snippet gets the current touch coordinates if a touch (or mouse down on desktop) event is in progress:
 ```java
 if (Gdx.input.isTouched()) {
-  System.out.println("Input occurred at x=" + Gdx.input.getX() + ", y=" + Gdx.input.getY()); 
+  System.out.println("Input occurred at x=" + Gdx.input.getX() + ", y=" + Gdx.input.getY());
 }
 ```
 In similar fashion all the supported input means can be polled and handled.
@@ -74,7 +74,7 @@ The following example creates a Texture from a file present in the $APP_DIR/asse
 ```java
 Texture myTexture = new Texture(Gdx.files.internal("assets/textures/brick.png"));
 ```
-This is a very powerful abstraction layer as it works on both Android and desktop. 
+This is a very powerful abstraction layer as it works on both Android and desktop.
 
 ### Audio ###
 The _Audio_ module makes the creation and playback of audio files extremely simple. It also gives direct access to the sound hardware.
@@ -122,4 +122,4 @@ Gdx.net.sendHttpRequest(httpRequest, httpResponseListener);
 ```
 
 
-[Prev](/wiki/app/the-life-cycle) | [Starter classes and configuration](https://github.com/libgdx/libgdx/wiki/Starter-classes-and-configuration)
+[Prev](/wiki/app/the-life-cycle) | [Starter classes and configuration](/wiki/app/starter-classes-and-configuration)

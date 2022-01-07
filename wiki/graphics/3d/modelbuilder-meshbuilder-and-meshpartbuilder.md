@@ -2,7 +2,7 @@
 title: ModelBuilder, MeshBuilder and MeshPartBuilder
 ---
 # ModelBuilder
-[ModelBuilder](http://libgdx.badlogicgames.com/nightlies/docs/api/com/badlogic/gdx/graphics/g3d/utils/ModelBuilder.html) [(code)](https://github.com/libgdx/libgdx/blob/master/gdx/src/com/badlogic/gdx/graphics/g3d/utils/ModelBuilder.java) is a utility class to create one or more [models](https://github.com/libgdx/libgdx/wiki/Models) on code. It allows you to include one or more [nodes](https://github.com/libgdx/libgdx/wiki/Models#nodes), each node consisting of one or more [parts](https://github.com/libgdx/libgdx/wiki/Models#nodepart). It does, however, not support building a node hierarchy (child nodes). Be aware that building a model on code can be a costly operation and might trigger the garbage collector.
+[ModelBuilder](http://libgdx.badlogicgames.com/nightlies/docs/api/com/badlogic/gdx/graphics/g3d/utils/ModelBuilder.html) [(code)](https://github.com/libgdx/libgdx/blob/master/gdx/src/com/badlogic/gdx/graphics/g3d/utils/ModelBuilder.java) is a utility class to create one or more [models](/wiki/graphics/3d/models) on code. It allows you to include one or more [nodes](/wiki/graphics/3d/models#nodes), each node consisting of one or more [parts](/wiki/graphics/3d/models#nodepart). It does, however, not support building a node hierarchy (child nodes). Be aware that building a model on code can be a costly operation and might trigger the garbage collector.
 ## Building one or more models
 To start building a model use the `begin()` method, after which you must call the `end()` when you're done building the model. The `end()` method will return the newly created model. You can build multiple models using the same ModelBuilder, but not at the same time. For example:
 ```java
@@ -17,9 +17,9 @@ modelBuilder.begin();
 Model model2 = modelBuilder.end();
 ```
 ## Managing resources
-Keep in mind that models contain one or more meshes and therefore [needs to be disposed](https://github.com/libgdx/libgdx/wiki/Models#managing-resources). A model built via ModelBuilder will always be responsible for disposing all meshes it contains, even if you provide the Mesh yourself. Do not share a Mesh along multiple Models.
+Keep in mind that models contain one or more meshes and therefore [needs to be disposed](/wiki/graphics/3d/models#managing-resources). A model built via ModelBuilder will always be responsible for disposing all meshes it contains, even if you provide the Mesh yourself. Do not share a Mesh along multiple Models.
 
-A Model built via ModelBuilder will not be made responsible for disposing any textures or any other resources contained in the [materials](https://github.com/libgdx/libgdx/wiki/Material-and-environment). You can, however, use the `manage(disposable)` method to make the model responsible for disposing those resources. For example:
+A Model built via ModelBuilder will not be made responsible for disposing any textures or any other resources contained in the [materials](/wiki/graphics/3d/material-and-environment). You can, however, use the `manage(disposable)` method to make the model responsible for disposing those resources. For example:
 ```java
 ModelBuilder modelBuilder = new ModelBuilder();
 modelBuilder.begin();
@@ -31,7 +31,7 @@ Model model = modelBuilder.end();
 model.dispose(); // this will dispose the texture as well
 ```
 ## Creating nodes
-A Model consists of one or more [nodes](https://github.com/libgdx/libgdx/wiki/Models#nodes). To start building a new node inside the model you can use the `node()` method. This will add a new node and make it active for building. It will also return the [`Node`](http://libgdx.badlogicgames.com/nightlies/docs/api/com/badlogic/gdx/graphics/g3d/model/Node.html) so you can reference it for later use or for example set its `id`.
+A Model consists of one or more [nodes](/wiki/graphics/3d/models#nodes). To start building a new node inside the model you can use the `node()` method. This will add a new node and make it active for building. It will also return the [`Node`](http://libgdx.badlogicgames.com/nightlies/docs/api/com/badlogic/gdx/graphics/g3d/model/Node.html) so you can reference it for later use or for example set its `id`.
 ```java
 ModelBuilder modelBuilder = new ModelBuilder();
 modelBuilder.begin();
@@ -59,7 +59,7 @@ Using the `node()` method for the first node is optional. For example, for model
 There can only be one `Node` active for building at a time. Calling the `node()` method will stop building the previous node (if any) and start building the newly created node. The nodes will only be valid (complete), however, after the Model is completely built (the call to `end()` is made).
 
 ## Creating node parts
-A `Node` can contain one or more [parts](https://github.com/libgdx/libgdx/wiki/Models#nodepart). Each part of a node will be rendered at the same location (the [node transformation](https://github.com/libgdx/libgdx/wiki/Models#node-transformation)), but can be made up of a different [material](https://github.com/libgdx/libgdx/wiki/Material-and-environment) (e.g. shader uniforms) and/or mesh (e.g. shader (vertex) attributes).
+A `Node` can contain one or more [parts](/wiki/graphics/3d/models#nodepart). Each part of a node will be rendered at the same location (the [node transformation](/wiki/graphics/3d/models#node-transformation)), but can be made up of a different [material](/wiki/graphics/3d/material-and-environment) (e.g. shader uniforms) and/or mesh (e.g. shader (vertex) attributes).
 
 > A NodePart is the smallest renderable part of a Model. Every visible NodePart implies a render call (or "draw call" if you prefer). Reducing the number of render calls can help to decrease the time it takes to render the model. Therefore it is advised to try to combine multiple parts to a single part where possible.
 
@@ -80,13 +80,13 @@ meshBuilder = modelBuilder.part("part2", GL20.GL_TRIANGLES, Usage.Position | Usa
 meshBuilder.sphere(5, 5, 5, 10, 10);
 Model model = modelBuilder.end();
 ```
-This will create a model consisting of two nodes. Each node consisting of one part. The Mesh of both parts is shared, so there's only a single Mesh created for this Model. Note that in this example the vertex attributes are specified using a bit mask, which will cause `ModelBuilder` to create default (3D) `VertexAttributes`. You could also specify the [`VertexAttributes`](http://libgdx.badlogicgames.com/nightlies/docs/api/com/badlogic/gdx/graphics/VertexAttributes.html) yourself. 
+This will create a model consisting of two nodes. Each node consisting of one part. The Mesh of both parts is shared, so there's only a single Mesh created for this Model. Note that in this example the vertex attributes are specified using a bit mask, which will cause `ModelBuilder` to create default (3D) `VertexAttributes`. You could also specify the [`VertexAttributes`](http://libgdx.badlogicgames.com/nightlies/docs/api/com/badlogic/gdx/graphics/VertexAttributes.html) yourself.
 
 > Because `ModelBuilder` reuses the `MeshPartBuilder` instances for multiple parts, you cannot build multiple parts at the same time. Per `ModelBuilder` you can only build one `Model`, `Node` and `MeshPart` at any given time. **Calling the `part(...)` method will make the previous `MeshPartBuilder` invalid.**
 
 See the MeshPartBuilder section below for more information on how to use the `MeshPartBuilder` to create the shape of the part.
 # MeshBuilder
-[MeshBuilder](http://libgdx.badlogicgames.com/nightlies/docs/api/com/badlogic/gdx/graphics/g3d/utils/MeshBuilder.html) [(code)](https://github.com/libgdx/libgdx/blob/master/gdx/src/com/badlogic/gdx/graphics/g3d/utils/MeshBuilder.java) is a utility class to create one or more [meshes](https://github.com/libgdx/libgdx/wiki/Meshes), optionally consisting of one or more [MeshParts](http://libgdx.badlogicgames.com/nightlies/docs/api/com/badlogic/gdx/graphics/g3d/model/MeshPart.html). While a `MeshBuilder` is typically constructed and maintained by the `ModelBuilder` using the `ModelBuilder#part(...)` method, it is possible to use `MeshBuilder` without using a `ModelBuilder`. For this, you can use the `begin(...)` method to start building a mesh, after which you must call the `end()` method when you're done building the mesh. The begin methods accepts various arguments to specify the vertex attributes and optionally primitive type (required when not creating mesh part(s)). The `end()` method will return the newly created [`Mesh`](http://libgdx.badlogicgames.com/nightlies/docs/api/com/badlogic/gdx/graphics/Mesh.html). You can build multiple meshes using the same `MeshBuilder` instance, but not at the same time:
+[MeshBuilder](http://libgdx.badlogicgames.com/nightlies/docs/api/com/badlogic/gdx/graphics/g3d/utils/MeshBuilder.html) [(code)](https://github.com/libgdx/libgdx/blob/master/gdx/src/com/badlogic/gdx/graphics/g3d/utils/MeshBuilder.java) is a utility class to create one or more [meshes](/wiki/graphics/opengl-utils/meshes), optionally consisting of one or more [MeshParts](http://libgdx.badlogicgames.com/nightlies/docs/api/com/badlogic/gdx/graphics/g3d/model/MeshPart.html). While a `MeshBuilder` is typically constructed and maintained by the `ModelBuilder` using the `ModelBuilder#part(...)` method, it is possible to use `MeshBuilder` without using a `ModelBuilder`. For this, you can use the `begin(...)` method to start building a mesh, after which you must call the `end()` method when you're done building the mesh. The begin methods accepts various arguments to specify the vertex attributes and optionally primitive type (required when not creating mesh part(s)). The `end()` method will return the newly created [`Mesh`](http://libgdx.badlogicgames.com/nightlies/docs/api/com/badlogic/gdx/graphics/Mesh.html). You can build multiple meshes using the same `MeshBuilder` instance, but not at the same time:
 ```java
 MeshBuilder meshBuilder = new MeshBuilder();
 meshBuilder.begin(Usage.Position | Usage.Normal, GL20.GL_TRIANGLES);

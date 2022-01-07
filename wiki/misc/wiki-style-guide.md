@@ -1,7 +1,8 @@
 ---
 title: Wiki Style Guide
+# Not listed in ToC
 ---
-This page gives some information on how to edit libGDX wiki pages. Please read this before contributing to the libGDX wiki! If you have any (additional) questions, please do not hesitate to ask! See our [Discord](https://libgdx.com/community/) for more information.
+This page gives some information on how to edit libGDX wiki pages. Please read this before contributing to the libGDX wiki! If you have any (additional) questions, please do not hesitate to ask! See our [Discord](/community/) for more information.
 
 ## How to? ##
 Every wiki page has an "Edit on GitHub" button on top which redirects you to the GitHub Web Interface of the wiki repo. Use this for small fixes/typos. If you want to undertake more extensive changes, you should fork [the repo](https://github.com/libgdx/libgdx.github.io). The [wiki of our website repo](https://github.com/libgdx/libgdx.github.io/wiki) also offers some pointers on this.
@@ -30,7 +31,7 @@ renders the following:
 Don't use non-alphabetic characters in Wiki page names, because not all operating systems can handle
 them when cloning Wiki as Git repository (for example, Windows doesn't support ":").
 
-### Notes on Doc Links ###
+### Notes on doc links ###
 
 * Please note that there should be a space in between `ClassName (Code)` style formatting, in order to differentiate the two.
 * Please make the format `ClassName (Code)` with the word `Code`, not `Source` or any derivative of that. Consistency is key!
@@ -42,7 +43,7 @@ http://libgdx.badlogicgames.com/nightlies/docs/api/com/badlogic/gdx/graphics/Tex
 
 when using the markdown formatting of `[]()` the end paren will mess up the link, so please remember to escape the ending paren (`)`) so for example, it should be :
 
-```
+```markdown
 [Link to Texture#getWidth](http://libgdx.badlogicgames.com/nightlies/docs/api/com/badlogic/gdx/graphics/Texture.html#getWidth(\))
 ```
 
@@ -53,19 +54,18 @@ without the escaped paren, a 404 is imminent!
 Videos can be included like this:
 
 ```markdown
+{% raw %}
 {% include video id="3kPK_O6Q4wA" provider="youtube" %}
+{% endraw %}
 ```
 
-## The Main Table Of Contents ##
+## The main table of contents ##
 
-If you make a page, you will most likely want it to be displayed on the main libGDX wiki [Table of contents](https://github.com/libgdx/libgdx.github.io/blob/dev/_wiki/index.md) and the [sidebar Table of Contents](https://github.com/libgdx/libgdx.github.io/blob/dev/_includes/wiki_sidebar.md). When you create an article, please include the changes to the Home page with the appropriate positioning of your article. Mirror this change in the sidebar ToC, as to maintain likeness between the two.
+If you make a page, you will most likely want it to be displayed on the main libGDX wiki [Table of contents](https://github.com/libgdx/libgdx.github.io/blob/dev/_includes/wiki_index.md) and the [sidebar Table of Contents](https://github.com/libgdx/libgdx.github.io/blob/dev/_includes/wiki_sidebar.md). When you create an article, please include the changes to the Home page with the appropriate positioning of your article. Mirror this change in the sidebar ToC, as to maintain likeness between the two!
 
-### Non pages on the Table of Contents ###
+Some pages are not listed in the sidebar, in particular the ones located in the `/wiki/misc` folder. Those pages should contain a comment in the frontmatter, clarifying this: `# Not listed in ToC`.
 
-The Table of contents contains a few pages that do not have a link, and are appended with a `??`. This is to signify that during translation from Google Code wiki to Github Wiki, there were a couple of pages without links. If you have something to contribute on the topic of one of those pages without a page (yet!), please feel free to add a page, and add your content, then reflect your changes in the ToC by adding a link.
-
-
-## Tables of Contents per page ##
+## Tables of contents per page ##
 
 Tables of contents have to be manually created on a per-page basis. For an example of how to do so outside of this section, please refer to our [Box2d](/wiki/extensions/physics/box2d) article.
 
@@ -73,8 +73,16 @@ When creating headers in markdown, we specify using a number of octothorpes (`#`
 
 so when we go to make our table of contents, it would be in an unordered list, and using these qualified page fragment links. Please see the [Box2d](/wiki/extensions/physics/box2d) article for more information.
 
-## Adding Images ##
+## Adding images ##
 
 Images are stored in the [`assets/wiki/` directory](https://github.com/libgdx/libgdx.github.io/blob/dev/assets/wiki/) of the libGDX wiki. To add an image, you must fork and [clone the repo](https://docs.github.com/en/free-pro-team@latest/github/creating-cloning-and-archiving-repositories/cloning-a-repository). Then add your images to the images folder using the appropriate naming scheme `my-page-name#` where `#` is the order of the picture displayed on the page (this can be ommitted if only one image is used in the page, but recommended). Images are linked to with the following syntax (assuming the image is stored in the `/assets/wiki/images/` directory) `![image name](/assets/wiki/images/using-libgdx-with-intellij-idea01.png)` which will display:
 
 ![image name](/assets/wiki/images/using-libgdx-with-intellij-idea01.png)
+
+## Renaming pages ##
+
+If you are moving/renaming pages and want to preserve their old links, use `redirect_from` in the frontmatter:
+```yml
+redirect_from:
+  - /dev/setup/ # this page is now available via https://libgdx.com/dev/setup/ as well
+```

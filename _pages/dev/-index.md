@@ -31,7 +31,7 @@ To get started, please take a look at our **[Setup Instructions](/dev/setup/)** 
 
 From then on, our [wiki](/wiki/) is your best companion: it provides extensive documentation on nearly every feature offered by libGDX. For any further questions, our official [Discord server](/community/) is good starting point.
 
-If you want to inspect some open source libGDX games for reference, this [wiki article](/wiki/external-tutorials#some-simple-open-source-projects-for-reference) is the right place to start looking. The official libGDX organisation on GitHub also offers a few [demo projects](/wiki/running-demos).
+If you want to explore some other (third-party) tutorials or inspect some demos/other open source libGDX games for reference, this [wiki article](/wiki/start/demos-and-tutorials) is the right place to start looking.
 
 <br/>
 

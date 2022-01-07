@@ -1,5 +1,6 @@
 ---
-title: Overlap2D survival guide for #libGDXJAM
+title: "Overlap2D survival guide for #libGDXJAM"
+# Not listed in ToC
 ---
 So you are planning to join #libGDXJAM and you are considering (or already decided upon) choosing Overlap2D editor as your primary weapon of choice. If so, read on!
 
@@ -43,8 +44,8 @@ There is even tutorial series on how to do it in our [documentation](http://over
 
 ### Tiled view from above
 
-Could be tower defense or strategy or dungeon kind of thing. In this case you want your world to have tiles. 
-Decide on images you want to use as tiles (make sure they are same size and square) and put them lined up somewhere on the scene. give each of them tag "tile". In upper panel find grid size, and set it to your tile size (this way things will snap to grid) Now you can just copy paste your initial tiles, and put them where they fit. You can then give them additional tags like "wall" or "turret" to mention their behaviour or if 
+Could be tower defense or strategy or dungeon kind of thing. In this case you want your world to have tiles.
+Decide on images you want to use as tiles (make sure they are same size and square) and put them lined up somewhere on the scene. give each of them tag "tile". In upper panel find grid size, and set it to your tile size (this way things will snap to grid) Now you can just copy paste your initial tiles, and put them where they fit. You can then give them additional tags like "wall" or "turret" to mention their behaviour or if
 player can or cannot walk through them. Of course later you need to write a System in your code, to use this tags accordingly. There is a sample "Tower defense" project I made you can take a look at as an example  
 [here](https://github.com/azakhary/thm)
 
@@ -55,7 +56,7 @@ So you don't want to have entire map made up, because it has to be random each t
 ### I need it for UI
 
 Okay so your game itself is kind of different and does not need a predefined scene data. Maybe you generate all stuff with code, and that's fine. But you want to make your menus, dialogs and buttons with overlap2d?
-That's cool too! You can make buttons in overlap2d easily. just chose button assets, and right click convert to button. This will create a composite with some predefined layers. Make sure to go in, and put things in correct places (pressed layer and so on) You can test your button directly in the editor. 
+That's cool too! You can make buttons in overlap2d easily. just chose button assets, and right click convert to button. This will create a composite with some predefined layers. Make sure to go in, and put things in correct places (pressed layer and so on) You can test your button directly in the editor.
 To make some dialogs use 9patch images for background (actually same for buttons) If you do not have a 9patch images, you can make one directly from the editor. Just right click on regular image, and choose "Convert to 9patch" this will open a dialog to set it up. You can later convert all the buttons and texts to composite items, and put that dialog into library. Then later form your code create a CompositeActor from that library data. (Get VO object using resource manager, and then send it to CompositeActor constructor)
 
 

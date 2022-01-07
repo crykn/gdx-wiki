@@ -1,6 +1,8 @@
 ---
 title: "Creating a Project"
-order: 20
+redirect_from:
+  - /dev/project_generation/
+  - /dev/project-generation/
 ---
 
 To setup your first project and download the necessary dependencies, libGDX offers a setup tool.
@@ -18,7 +20,7 @@ This will open the following setup that will allow you to generate your project:
 
 ![](https://i.imgur.com/nI5lQKT.jpg){: style="width: 700px;" }
 
-**Note:** Instead of the User Interface of the Setup Tool you can also use the [command-line](https://github.com/libgdx/libgdx/wiki/Project-Setup-via-Command-Line) to create your project.
+**Note:** Instead of the User Interface of the Setup Tool you can also use the [command-line](/wiki/start/project-setup-via-command-line) to create your project.
 {: .notice--primary}
 
 You are asked to provide the following parameters:
@@ -37,16 +39,16 @@ You are asked to provide the following parameters:
 {: .notice--info}
 
 * **extensions**: the extensions offered are:<br>
-    **[Bullet](https://github.com/libgdx/libgdx/wiki/Bullet-physics)**: 3D Collision Detection and Rigid Body Dynamics Library.<br>
-    **[FreeType](https://github.com/libgdx/libgdx/wiki/Gdx-freetype)**: Scalable font. Great to manipulate font size dynamically. However be aware that it does not work with HTML target if you cross compile for that target.<br>
+    **[Bullet](/wiki/extensions/physics/bullet/bullet-physics)**: 3D Collision Detection and Rigid Body Dynamics Library.<br>
+    **[FreeType](/wiki/extensions/gdx-freetype)**: Scalable font. Great to manipulate font size dynamically. However be aware that it does not work with HTML target if you cross compile for that target.<br>
     **Tools**: Set of tools including: particle editor (2d/3d), bitmap font and image texture packers.<br>
-    **[Controller](https://github.com/libgdx/libgdx/wiki/Controllers)** Library to handle controllers (e.g.: XBox 360 controller).<br>
-    **[Box2d](https://github.com/libgdx/libgdx/wiki/Box2d)**: Box2D is a 2D physics library.<br>
+    **[Controller](/wiki/input/controllers)** Library to handle controllers (e.g.: XBox 360 controller).<br>
+    **[Box2d](/wiki/extensions/physics/box2d)**: Box2D is a 2D physics library.<br>
     **[Box2dlights](https://github.com/libgdx/box2dlights)**: 2D lighting framework that uses box2d for raycasting and OpenGL ES 2.0 for rendering.<br>
     **[Ashley](https://github.com/libgdx/ashley)**: A tiny entity framework.<br>
     **[Ai](https://github.com/libgdx/gdx-ai)**: An artificial intelligence framework.<br>
 
-By clicking "Show Third Party Extensions" you can access a list of community-made libGDX extensions. If you want to add extensions later on, please take a look at [this](https://github.com/libgdx/libgdx/wiki/Dependency-management-with-Gradle#libgdx-extensions) wiki page.
+By clicking "Show Third Party Extensions" you can access a list of community-made libGDX extensions. If you want to add extensions later on, please take a look at [this](/wiki/articles/dependency-management-with-gradle#libgdx-extensions) wiki page.
 
 When ready, click "Generate".
 
@@ -92,10 +94,10 @@ ios/
 ## What is Gradle?
 libGDX projects are [Gradle](http://www.gradle.org/) projects, which makes managing dependencies and building considerably easier.
 
-Gradle is a **dependency management** system and thus provides an easy way to pull in third-party libraries into your project, without having to manually download them. Instead, Gradle just needs you to provide it with the names and versions of the libraries you want to include in your application. This is all done in the Gradle configuration files. Adding, removing and changing the version of a third-party library is as easy as changing a few lines in that configuration file. The dependency management system will pull in the libraries you specified from a central repository (in our case [Maven Central](http://search.maven.org/)) and store them in a directory outside of your project. Find out more in our [wiki](https://github.com/libgdx/libgdx/wiki/Dependency-management-with-Gradle).
+Gradle is a **dependency management** system and thus provides an easy way to pull in third-party libraries into your project, without having to manually download them. Instead, Gradle just needs you to provide it with the names and versions of the libraries you want to include in your application. This is all done in the Gradle configuration files. Adding, removing and changing the version of a third-party library is as easy as changing a few lines in that configuration file. The dependency management system will pull in the libraries you specified from a central repository (in our case [Maven Central](http://search.maven.org/)) and store them in a directory outside of your project. Find out more in our [wiki](/wiki/articles/dependency-management-with-gradle).
 {: .notice--info}
 
-In addition, Gradle is also a **build system** helping with building and packaging your application, without being tied to a specific IDE. This is especially useful if you use a build or continuous integration server, where IDEs aren't readily available. Instead, the build server can call the build system, providing it with a build configuration so it knows how to build your application for different platforms. If you want to know more about deploying your application, take a look [here](https://github.com/libgdx/libgdx/wiki/Deploying-your-application).
+In addition, Gradle is also a **build system** helping with building and packaging your application, without being tied to a specific IDE. This is especially useful if you use a build or continuous integration server, where IDEs aren't readily available. Instead, the build server can call the build system, providing it with a build configuration so it knows how to build your application for different platforms. If you want to know more about deploying your application, take a look [here](/wiki/deployment/deploying-your-application).
 {: .notice--info}
 
 **Now you are ready to [import the project into your IDE and run it](/wiki/start/import-and-running).**

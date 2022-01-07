@@ -2,7 +2,7 @@
 title: Bullet Wrapper Using models
 ---
 ## <a id="Using_models"></a>Using models ##
-[`Model`](https://github.com/libgdx/libgdx/wiki/Models) and `ModelInstance` are typically used for the visual representation of objects. `btCollisionObject` or `btRigidBody` are used for the physical representation of these objects.
+[`Model`](/wiki/graphics/3d/models) and `ModelInstance` are typically used for the visual representation of objects. `btCollisionObject` or `btRigidBody` are used for the physical representation of these objects.
 
 ### <a id="Using_motion_states"></a>Using motion states ###
 To synchronize the location and orientation between a `ModelInstance` and `btRigidBody`, Bullet provides the `btMotionState` class that you can extend. A very basic example of such synchronization is:
@@ -51,7 +51,7 @@ Note that the transformation (location and rotation) of a `btRigidBody` is typic
 
 > Keep in mind that Bullet's transformation only supports translation (location) and rotation (orientation). Any other transformation, like scaling, is not supported.
 
-The motion state has to be disposed when no longer needed: `motionState.dispose();`. 
+The motion state has to be disposed when no longer needed: `motionState.dispose();`.
 
 ### <a id="Create_a_collision_object_from_a_model"></a>Create a collision object from a model ###
 A Model boils down to a bunch of triangles with some properties which are rendered with a specific transformation. It is optimized for rendering, not for physics. Therefore a Model is rarely useful for an efficient representation of a physics shape.
@@ -68,4 +68,4 @@ For the case of a static model, the Bullet wrapper provides a convenient method 
 ```java
 btCollisionShape shape = Bullet.obtainStaticNodeShape(model.nodes);
 ```
-In this case the collision shape will share the same data (vertices) as the model. This will include [node transformation](https://github.com/libgdx/libgdx/wiki/Models#node-transformation) by using a `btCompoundShape` if needed, but will not include any scaling applied to nodes.
+In this case the collision shape will share the same data (vertices) as the model. This will include [node transformation](/wiki/graphics/3d/models#node-transformation) by using a `btCompoundShape` if needed, but will not include any scaling applied to nodes.

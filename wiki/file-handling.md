@@ -14,7 +14,7 @@ title: File handling
 
 
 ## Introduction ##
-libGDX applications run on four different platforms: desktop systems (Windows, Linux, Mac OS X, headless), Android, iOS, and JavaScript/WebGL capable browsers. Each of these platforms handles file I/O a little differently. 
+libGDX applications run on four different platforms: desktop systems (Windows, Linux, Mac OS X, headless), Android, iOS, and JavaScript/WebGL capable browsers. Each of these platforms handles file I/O a little differently.
 
 Libgdx's [Files](http://libgdx.badlogicgames.com/nightlies/docs/api/com/badlogic/gdx/Files.html) [(code)](https://github.com/libgdx/libgdx/tree/master/gdx/src/com/badlogic/gdx/Files.java) module provides the ability to:
 
@@ -37,14 +37,14 @@ On a desktop OS, the filesystem is one big chunk of memory. Files can be referen
 ### Android
 On Android the situation is a little bit more complex. Files can be stored inside the application's [APK](http://en.wikipedia.org/wiki/APK_(file_format)) either as resources or as assets. These files are read-only. libGDX only uses the [assets mechanism](http://developer.android.com/reference/android/content/res/AssetManager.html), as it provides raw access to the byte streams and more closely resembles a traditional filesystem. [Resources](http://developer.android.com/guide/topics/resources/index.html) better lend themselves to normal Android applications but introduce problems when used in games. Android manipulates them at load time, e.g. it automatically resizes images.
 
-Assets are stored in your Android project's `assets` directory and will be packaged with your APK automatically when you deploy your application and are accessible via `Gdx.files.internal`, a read-only directory not to be confused with what the Android documentation refers to as "internal". No other application on the Android system can access these files. 
+Assets are stored in your Android project's `assets` directory and will be packaged with your APK automatically when you deploy your application and are accessible via `Gdx.files.internal`, a read-only directory not to be confused with what the Android documentation refers to as "internal". No other application on the Android system can access these files.
 
 Files can also be stored on what the Android documentation refers to as [internal storage](http://developer.android.com/guide/topics/data/data-storage.html#filesInternal) (accessible via `Gdx.files.local` in LibGDX), where they are readable and writable. Each installed application has a dedicated internal storage directory. This directory is again only accessible by that application. One can think of this storage as a private working area for the application.
 
-Finally, files can be stored on the external storage, accessible via `Gdx.files.external` in LibGDX. The behaviour regarding external files was changed in Android over the times, hence in LibGDX: 
+Finally, files can be stored on the external storage, accessible via `Gdx.files.external` in LibGDX. The behaviour regarding external files was changed in Android over the times, hence in LibGDX:
 
-* libGDX up to 1.9.11 uses the Android external storage directory. That is up to Android 4.3 the sd card directory, which might not always be available, and a virtual emulated sd card directory on later versions. For accessing these files, you need to add a permission to your AndroidManifest.xml file, see [Permissions](https://github.com/libgdx/libgdx/wiki/Starter-classes-and-configuration#permissions). From Android 6 on, even a runtime permission is needed to use the directory and starting from Android 11, access is forbidden completely for normal apps (if you want to publish on the Play Store).
-* libGDX 1.9.12 or later uses the App external storage directory. This directory (located at Android/data/data/your_package_id/) is readable and writable from your app without any further permission and changes. Other apps (like file managers) can access the files up to Android 10, from Android 11 on the directory is only accessible via USB access. Note: If the user uninstalls the app, the data saved here will be deleted if not copied to another location before by the user. 
+* libGDX up to 1.9.11 uses the Android external storage directory. That is up to Android 4.3 the sd card directory, which might not always be available, and a virtual emulated sd card directory on later versions. For accessing these files, you need to add a permission to your AndroidManifest.xml file, see [Permissions](/wiki/app/starter-classes-and-configuration#permissions). From Android 6 on, even a runtime permission is needed to use the directory and starting from Android 11, access is forbidden completely for normal apps (if you want to publish on the Play Store).
+* libGDX 1.9.12 or later uses the App external storage directory. This directory (located at Android/data/data/your_package_id/) is readable and writable from your app without any further permission and changes. Other apps (like file managers) can access the files up to Android 10, from Android 11 on the directory is only accessible via USB access. Note: If the user uninstalls the app, the data saved here will be deleted if not copied to another location before by the user.
 
 The App external storage is initialized at game start for you to use, therefore Android creates an empty directory. If you don't use external files and want to suppress this behaviour, you can do so by overriding the instantiation of `AndroidFiles` in `AndroidApplication#createFiles` (1.9.14 and up):
 
@@ -54,7 +54,7 @@ The App external storage is initialized at game start for you to use, therefore 
 	}
 
 ### iOS ###
-On iOS all file types are available. 
+On iOS all file types are available.
 
 ### Javascript/WebGL ###
 A raw Javascript/WebGL application doesn't have a traditional filesystem concept. Instead, assets like images are referenced by URLs pointing to files on one or more servers. Modern browsers also support [Local Storage](http://diveintohtml5.info/storage.html) which comes close to a traditional read/write filesystem. The problem with local storage is that the storage amount available by default is fairly small, not standardized, and there no (good) way to accurately query the quota. For this reason, the preferences API is currently the only way to write local data persistently on the JS platform.  
@@ -67,7 +67,7 @@ A file in libGDX is represented by an instance of the [FileHandle](https://githu
 | *Type* | *Description, file path and features* | *Desktop* | *Android* | *HTML5* | *iOS* |
 |:------:|:--------------------------------------|:---------:|:---------:|:-------:|:-----:|
 | Classpath | Classpath files are directly stored in your source folders. These get packaged with your jars and are always *read-only*. They have their purpose, but should be avoided if possible. | Yes | Yes | No | Yes |
-| Internal | Internal files are relative to the application’s *root* or *working* directory on desktops, relative to the *assets* directory on Android, and relative to the `core/assets/` directory of your GWT project. These files are *read-only*. If a file can't be found on the internal storage, the file module falls back to searching the file on the classpath. This is necessary if one uses the asset folder linking mechanism of Eclipse, see [Project Setup](https://github.com/libgdx/libgdx/wiki/Project-setup,-running-&-debugging) | Yes | Yes | Yes | Yes |
+| Internal | Internal files are relative to the application’s *root* or *working* directory on desktops, relative to the *assets* directory on Android, and relative to the `core/assets/` directory of your GWT project. These files are *read-only*. If a file can't be found on the internal storage, the file module falls back to searching the file on the classpath. This is necessary if one uses the asset folder linking mechanism of Eclipse, see [Project Setup](/wiki/start/project-generation) | Yes | Yes | Yes | Yes |
 | Local | Local files are stored relative to the application's *root* or *working* directory on desktops and relative to the internal (private) storage of the application on Android. Note that Local and internal are mostly the same on the desktop. | Yes | Yes | No | Yes |
 | External| External files paths are relative to the [home directory](http://www.roseindia.net/java/beginners/UserHomeExample.shtml) of the current user on desktop systems. On Android, the app-specific external storage is used. | Yes | Yes | No | Yes |
 | Absolute | Absolute files need to have their fully qualified paths specified. <br/>*Note*: For the sake of portability, this option must be used only when absolutely necessary | Yes | Yes | No | Yes |
@@ -102,7 +102,7 @@ The following code obtains a handle for the internal myfile.txt file.
 FileHandle handle = Gdx.files.internal("data/myfile.txt");
 ```
 
-If you used the [libGDX Setup application](https://github.com/libgdx/libgdx/wiki/Project-setup,-running-&-debugging#using-libgdx-setup), this file will be contained in your Android project's `assets` folder, `$ANDROID_PROJECT/assets/data` to be exact. Your desktop and html projects link to this folder in Eclipse, and will pick it up automatically when executed from within Eclipse.
+If you used the [libGDX Setup application](/wiki/start/project-generation), this file will be contained in your Android project's `assets` folder, `$ANDROID_PROJECT/assets/data` to be exact. Your desktop and html projects link to this folder in Eclipse, and will pick it up automatically when executed from within Eclipse.
 
 ```java
 FileHandle handle = Gdx.files.classpath("myfile.txt");
@@ -212,6 +212,6 @@ Gdx.files.external("mycopy.txt").moveTo(Gdx.files.local("mylocalcopy.txt"));
 Gdx.files.local("mylocalcopy.txt").delete();
 ```
 
-Note that source and target can be files or directories. 
+Note that source and target can be files or directories.
 
 For more information on available methods, check the [FileHandle Javadocs](http://libgdx.badlogicgames.com/nightlies/docs/api/com/badlogic/gdx/files/FileHandle.html).

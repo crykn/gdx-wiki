@@ -37,7 +37,7 @@ public class MyPacker {
 }
 ```
 
-If you use gradle and the `TexturePacker` class is not found, add gdx-tools to your [build.gradle](https://github.com/libgdx/libgdx/wiki/Dependency-management-with-Gradle#tools-gradle) file.
+If you use gradle and the `TexturePacker` class is not found, add gdx-tools to your [build.gradle](/wiki/articles/dependency-management-with-gradle#tools-gradle) file.
 
 
 You can also run `texturePacker` as a gradle task if you make the following updates to your gradle files. First, you will need to update your 'main' build.gradle:
@@ -201,7 +201,7 @@ MipMapNearestLinear: no filtering, smooth transition between mipmaps<br/>
 
 ## <a id="NinePatches"></a>NinePatches ##
 
-If an image file name ends with ".9" just before the file extension, it is considered a ninepatch. See [ninepatches](https://github.com/libgdx/libgdx/wiki/Ninepatches). The image must have a 1px transparent border. The upper and left edge may optionally have one contiguous line of black pixels which denote the split information, ie what part of the ninepatch will stretch. The bottom and right edge may optionally have one contiguous line of black pixels which denote the padding information, ie how content on top of the NinePatch should be inset. When this image is packed, the 1px border is removed and the split and padding information stored in the pack file. `TextureAtlas` allows an instance of NinePatch to created for the region using the split information.
+If an image file name ends with ".9" just before the file extension, it is considered a ninepatch. See [ninepatches](/wiki/graphics/2d/ninepatches). The image must have a 1px transparent border. The upper and left edge may optionally have one contiguous line of black pixels which denote the split information, ie what part of the ninepatch will stretch. The bottom and right edge may optionally have one contiguous line of black pixels which denote the padding information, ie how content on top of the NinePatch should be inset. When this image is packed, the 1px border is removed and the split and padding information stored in the pack file. `TextureAtlas` allows an instance of NinePatch to created for the region using the split information.
 
 ## <a id="Image_indexes"></a>Image indexes ##
 

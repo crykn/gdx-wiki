@@ -1,5 +1,6 @@
 ---
 title: Google Summer of Code 2014
+# Not listed in ToC
 ---
 
 FIXME out of date. This page is mostly an [RFC](https://en.wikipedia.org/wiki/Request_for_Comments)
@@ -9,9 +10,9 @@ This page is mostly a copy-paste of the GSoC2013 page on the old Google Code wik
 ## Introduction ##
 We assume you already know what Google Summer of Code is, if not, please check out the [Google Summer of Code](http://www.google-melange.com/gsoc/homepage/google/gsoc2013) site for general information.
 
-For **students**, we recommend to read up on what libGDX is, then proceed to the [Information For Students](/wiki/unlisted/google-summer-of-code-2014#Information_for_Students) section.
+For **students**, we recommend to read up on what libGDX is, then proceed to the [Information For Students](/wiki/misc/google-summer-of-code-2014#Information_for_Students) section.
 
-*Mentors* must read the [Information for Mentors](/wiki/unlisted/google-summer-of-code-2014#Information_for_Mentors)  section, add themselves to existing ideas in the list below, and optionally create and add new ideas.
+*Mentors* must read the [Information for Mentors](/wiki/misc/google-summer-of-code-2014#Information_for_Mentors)  section, add themselves to existing ideas in the list below, and optionally create and add new ideas.
 
 ## What is libGDX? ##
 
@@ -47,7 +48,7 @@ The ideas below have been compiled by the libGDX contributors and community. If 
   2. Get familiar on how to work with [libgdx's source](/wiki/start/import-and-running).
   3. Register on the forums and introduce yourself. Drop by on IRC (#libgdx, irc.freenode.org), get to know the community. [This forum thread](https://web.archive.org/web/20200928221625/https://www.badlogicgames.com/forum/viewtopic.php?f=11&t=7889) is where most of the GSoC students introduced themselves so far, make sure to subscribe to it to receive notifications for new messages. The subscribe button is at the bottom of the page.
   4. Pick one of the project ideas below or come up with your own. Prepare your application using our [student application template] (FIXME (todo)). You'll have to submit this application via the [Google Summer of Code 2013 site](http://www.google-melange.com/), from April 22 - May 3, 2013. You'll also need to sign the [Student Participation Agreement](http://www.google-melange.com/gsoc/document/show/gsoc_program/google/gsoc2013/student_agreement). For more information on the process, read the [GSoC FAQ](http://www.google-melange.com/gsoc/document/show/gsoc_program/google/gsoc2013/help_page). Reading it is mandatory!
-  5. Get in contact with the mentors listed below, on IRC (irc.freenode.org, #libgdx) or the forums. 
+  5. Get in contact with the mentors listed below, on IRC (irc.freenode.org, #libgdx) or the forums.
   6. Send a pull request for some issue or improvement you made to libGDX on Github, note that in your application. When selecting students, we'll favor those that already demonstrated that they can interact with our community and read the docs on [how to contribute](https://libgdx.com/dev/contributing/)
 
 ## Information for Mentors ##

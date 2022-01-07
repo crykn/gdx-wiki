@@ -1,6 +1,8 @@
 ---
 title: "Extending the Simple Game"
-order: 50
+redirect_from:
+	- /dev/simple-game-extended/
+  - /dev/simple_game_extended/
 ---
 
 In this tutorial we will be **extending the simple game** "Drop", made in [the previous tutorial](/wiki/start/a-simple-game). We will be adding a menu screen and a couple of features to make this game a little more fully featured.
@@ -53,7 +55,7 @@ Next, we set the Screen of the Game to a `MainMenuScreen` object, with a Drop in
 A common mistake is to forget to call `super.render()` with a Game implementation. Without this call, the Screen that you set in the `create()` method will not be rendered if you override the render method in your Game class!
 {: .notice--primary}
 
-Finally, another reminder to dispose of your (heavy) objects! Some further reading on this can be found [here](https://github.com/libgdx/libgdx/wiki/Managing-your-assets).
+Finally, another reminder to dispose of your (heavy) objects! Some further reading on this can be found [here](/wiki/managing-your-assets).
 
 
 ## The Main Menu
@@ -303,8 +305,8 @@ Note that the `dispose()` method of the `GameScreen` class is not called automat
 And that's it, you have the complete game finished. That is all there is to know about the Screen interface and abstract Game Class, and all there is to creating multifaceted games with multiple states. The **full Java code** can be found [here](https://github.com/libgdx/libgdx.github.io/tree/master/assets/downloads/tutorials/extended-game-java). If you are developing in **Kotlin**, take a look [here](https://github.com/libgdx/libgdx.github.io/tree/master/assets/downloads/tutorials/extended-game-kotlin) for the full code.
 
 ## The Future
-After this tutorial you should have a basic understanding how libGDX works and what to expect going forward. Some things can still be improved, like using the [Memory Management](https://github.com/libgdx/libgdx/wiki/Memory-management#object-pooling) classes to recycle all the Rectangles we have the garbage collector clean up each time we delete a raindrop. OpenGL is also not too fond if we hand it too many different images in a batch (in our case it's OK as we only had two images). Usually one would put all those images into a single `Texture`, also known as a `TextureAtlas`. In addition, taking a look at [Viewports](https://github.com/libgdx/libgdx/wiki/Viewports) will most certainly prove useful. Viewports help dealing with different screen sizes/resolutions and decide, whether the screen's content needs to be stretched/should keep its aspect ratio, etc.
+After this tutorial you should have a basic understanding how libGDX works and what to expect going forward. Some things can still be improved, like using the [Memory Management](/wiki/articles/memory-management#object-pooling) classes to recycle all the Rectangles we have the garbage collector clean up each time we delete a raindrop. OpenGL is also not too fond if we hand it too many different images in a batch (in our case it's OK as we only had two images). Usually one would put all those images into a single `Texture`, also known as a `TextureAtlas`. In addition, taking a look at [Viewports](/wiki/graphics/viewports) will most certainly prove useful. Viewports help dealing with different screen sizes/resolutions and decide, whether the screen's content needs to be stretched/should keep its aspect ratio, etc.
 
-To continue learning about libGDX we highly **recommend reading our [wiki](https://github.com/libgdx/libgdx/wiki)** and checking out the demos and tests in our main GitHub repository. If you have any questions, **join our official [Discord server](https://libgdx.com/community/)**, we are always glad to help!
+To continue learning about libGDX we highly **recommend reading our [wiki](/wiki/)** and checking out the demos and tests in our main GitHub repository. If you have any questions, **join our official [Discord server](/community/)**, we are always glad to help!
 
 The best practice is to get out there and do it, so farewell and happy coding!

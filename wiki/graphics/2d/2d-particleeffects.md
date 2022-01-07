@@ -9,7 +9,7 @@ title: 2D ParticleEffects
 * [Video example](#video-example)
 
 # Basic ParticleEffect usage
-Using Particle effects is easy, load up your particle that has been generated in the [ParticleEditor](https://github.com/libgdx/libgdx/wiki/2D-Particle-Editor)
+Using Particle effects is easy, load up your particle that has been generated in the [ParticleEditor](/wiki/tools/2d-particle-editor)
 ```java
 TextureAtlas particleAtlas; //<-load some atlas with your particle assets in
 ParticleEffect effect = new ParticleEffect();
@@ -31,7 +31,7 @@ Rendering particles is great, rendering lots of particles is even better, here i
 ParticleEffects are no different than Sprites, in fact they [ARE](https://github.com/libgdx/libgdx/blob/master/gdx/src/com/badlogic/gdx/graphics/g2d/ParticleEmitter.java#L98) sprites.  Take everything you know already about efficiently rendering sprites and carry them across.  
 
  * Use an atlas!
- 
+
  If your particle effect sprite shares a texture with all of your other gameplay assets, or at least the ones that are being batched together, you wont have to switch
  textures, which causes the Batch to flush.  You don't want the batch to flush too often as its an expensive operation, and you won't get the most out of your Batch.
 
@@ -42,7 +42,7 @@ ParticleEffects are no different than Sprites, in fact they [ARE](https://github
  In simple terms, grab a new object from the Pool, use it, when you are finished, return it so you can use it again.
 
  See [the example below](#pooled-effect-example) for how to implement pooling.
- 
+
 * Batch your effects
   Draw all your ParticleEffects that have the same Textures/blend modes together.  We don't want to interrupt the Batch, which means no texture swapping, no blend state changing. This gets the most out of our Batch, and keeps our device happy.
 
@@ -154,11 +154,11 @@ batch.end();
 
 ## video-example
 
-  
+
   * [Particle Effect Example on LibGDX.info](https://libgdx.info/particleeffect/)
   * [source](https://bitbucket.org/dermetfan/somelibgdxtests/src/207cfc0a6123b48200d5cf721df222cbe7faf1be/src/net/dermetfan/someLibgdxTests/screens/ParticleEffectsTutorial.java?at=default) of the video
   * [source](https://bitbucket.org/dermetfan/somelibgdxtests/src/4582a1bf94bded4f30df47b9195d1ae14728b847/src/net/dermetfan/someLibgdxTests/screens/ParticleEffectsTutorial.java?at=default) of the video using [pooling](https://www.youtube.com/watch?v=3OwIiELYa70)
 
 <a href="http://www.youtube.com/watch?feature=player_embedded&v=LCLa-rgR_MA
-" target="_blank"><img src="http://img.youtube.com/vi/LCLa-rgR_MA/0.jpg" 
+" target="_blank"><img src="http://img.youtube.com/vi/LCLa-rgR_MA/0.jpg"
 alt="libgdx 2D Particle Effects" width="480" height="360" border="10" /></a>

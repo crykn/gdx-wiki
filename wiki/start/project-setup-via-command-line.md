@@ -1,5 +1,6 @@
 ---
 title: Project Setup via Command Line
+# Not listed in ToC
 ---
 ## Creating a libGDX project using the command line
 

@@ -25,7 +25,7 @@ Dependency management with Gradle is easy to understand, and has many different 
 * [Declare your dependencies](http://www.gradle.org/docs/current/userguide/dependency_management.html#sec:how_to_declare_your_dependencies)
 
 ### Guide to build.gradle
-Gradle projects are managed by `build.gradle` files in their root directory. If you have used the gdx-setup.jar to build your libGDX project you will notice the structure: [Structure Example](https://github.com/libgdx/libgdx/wiki/Project-Setup-Gradle#project-layout)
+Gradle projects are managed by `build.gradle` files in their root directory. If you have used the gdx-setup.jar to build your libGDX project you will notice the structure: [Structure Example](/wiki/start/project-generation#project-layout)
 
 The root directory, and each sub directory contains a `build.gradle` file, for clarity we will define the dependencies in the root directory's `build.gradle` file. (Note it can be done in each of the `build.gradle` scripts in the sub directories, it is just cleaner and easier to follow when it is handled all in one place)
 
@@ -132,13 +132,13 @@ project(":core") {
 Dependencies are configured in the **root** `build.gradle` file as shown in the build.gradle guide above.
 In order to add an external dependency to a project, you must declare the dependency correctly under the correct part of the build.script.
 
-(Some) libGDX extensions are mavenized and pushed to the maven repo, which means we can very easily pull them into our projects from the `build.gradle` file.  You can see in the list [below](#libgdx-extensions) of the format that these dependencies take. 
+(Some) libGDX extensions are mavenized and pushed to the maven repo, which means we can very easily pull them into our projects from the `build.gradle` file.  You can see in the list [below](#libgdx-extensions) of the format that these dependencies take.
 If you are familiar with maven, notice the format:
 ```groovy
 compile '<groupId>:<artifactId>:<version>:<classifier>'
 ```
 
-Let's take a quick example to see how this works with the root `build.gradle` file. 
+Let's take a quick example to see how this works with the root `build.gradle` file.
 
 As mentioned earlier, you do not need to  modify the individual `build.gradle` files in each of the different platform-specific folders (e.g., -desktop, -ios, -core). You only need to modify the root `build.gradle` file.
 
@@ -184,7 +184,7 @@ project(":android") {
         natives "com.badlogicgames.gdx:gdx-platform:$gdxVersion:natives-arm64-v8a"
         natives "com.badlogicgames.gdx:gdx-platform:$gdxVersion:natives-x86"
         natives "com.badlogicgames.gdx:gdx-platform:$gdxVersion:natives-x86_64"
-   
+
         implementation "com.badlogicgames.gdx:gdx-freetype:$gdxVersion"        
         natives "com.badlogicgames.gdx:gdx-freetype-platform:$gdxVersion:natives-armeabi-v7a"
         natives "com.badlogicgames.gdx:gdx-freetype-platform:$gdxVersion:natives-arm64-v8a"
@@ -403,14 +403,14 @@ and in `./html/src/yourgamedomain/GdxDefinition*.gwt.xml` add `<inherits name='c
 
 ### External Dependencies
 #### Adding external repositories
-Gradle finds files defined as dependencies by looking through all the repositories defined in the buildscript.  Gradle understands several repository formats, which include Maven and Ivy. 
- 
+Gradle finds files defined as dependencies by looking through all the repositories defined in the buildscript.  Gradle understands several repository formats, which include Maven and Ivy.
+
 Under the `allprojects` stub, you can see how repositories are defined. Here is an example:
 ```groovy
 allprojects {    
     repositories {
         // Remote Maven repo
-        maven { url "https://oss.sonatype.org/content/repositories/snapshots/" } 
+        maven { url "https://oss.sonatype.org/content/repositories/snapshots/" }
         // Maven Central Repo
         mavenCentral()
         // Local Maven repo
@@ -498,7 +498,7 @@ project(":android") {
         natives "com.badlogicgames.gdx:gdx-platform:$gdxVersion:natives-arm64-v8a"
         natives "com.badlogicgames.gdx:gdx-platform:$gdxVersion:natives-x86"
         natives "com.badlogicgames.gdx:gdx-platform:$gdxVersion:natives-x86_64"
-   
+
         implementation "com.badlogicgames.gdx:gdx-freetype:$gdxVersion"        
         natives "com.badlogicgames.gdx:gdx-freetype-platform:$gdxVersion:natives-armeabi-v7a"
         natives "com.badlogicgames.gdx:gdx-freetype-platform:$gdxVersion:natives-arm64-v8a"
@@ -532,7 +532,7 @@ project(":android") {
 }
 ```
 
-This is only required for the android project, all other projects inherit `flat file` dependencies OK. 
+This is only required for the android project, all other projects inherit `flat file` dependencies OK.
 
 
 ### External Dependencies Examples
@@ -604,7 +604,7 @@ This is done in the `gwt.xml` files in the gwt sub directory. You will need to m
 	<inherits name='com.badlogic.gdx.backends.gdx_backends_gwt' />
 	<inherits name='MyGameName' />
 	<entry-point class='com.badlogic.mygame.client.HtmlLauncher' />
-	
+
 	<set-configuration-property name="gdx.assetpath" value="../android/assets" />
 </module>
 ```
@@ -630,7 +630,7 @@ These are the libGDX extensions that are supported in gwt
 	//Let's inherit tween
 	<inherits name='aurelienribon.tweenengine'/>
 	<entry-point class='com.badlogic.mygame.client.GwtLauncher' />
-	
+
 	<set-configuration-property name="gdx.assetpath" value="../android/assets" />
 </module>
 ```
