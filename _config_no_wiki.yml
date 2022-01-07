@@ -1,16 +1,16 @@
 #
-# This is the main config file for this Jekyll blog. _config_no_wiki.yml contains
-# a copy of this file which excludes the wiki pages from the build to reduce build times.
+# PLEASE NOTE THAT this file is a copy of _config.yml with the only difference
+# being that the wiki pages are excluded from the build.
 #
-# ------------------------------------------------------------------------------
-#     ALL CHANGES TO THIS FILE SHOULD BE MIRRORED IN _config_no_wiki.yml!
-# ------------------------------------------------------------------------------
+# This can speed up testing by severly reducing page build times.
+#
+# This config can be used as follows:
+# bundle exec jekyll serve --config _config_no_wiki.yml
+#
+# THIS FILE SHOULD MIRROR ALL CHANGES MADE TO _config.yml!
 #
 # For technical reasons, this file is *NOT* reloaded automatically when you use
 # 'bundle exec jekyll serve'. If you change this file, please restart the server process.
-#
-# The variables herein can be accessed via {{ site.title }}, {{ site.email }},
-# and so on.
 #
 title: "libGDX"
 minimal_mistakes_skin: "default"
@@ -108,8 +108,11 @@ defaults:
       layout: single
       author_profile: false
   # wiki
-  - scope:
-      path: "wiki"
-      type: pages
-    values:
-      layout: wiki
+#  - scope:
+#      path: "wiki"
+#      type: pages
+#    values:
+#      layout: wiki
+
+exclude:
+  - wiki
