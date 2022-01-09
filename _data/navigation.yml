@@ -18,7 +18,7 @@ dev:
   - title: "Documentation"
     children:
       - title: "Getting Started"
-      - url: /wiki/start/setup/
+      - url: /wiki/start/setup
       - title: "Wiki"
         url: /wiki/
       - title: "Javadocs"
