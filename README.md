@@ -8,7 +8,7 @@ This is a first draft of porting the libGDX Wiki to the [main libGDX website](ht
 - The blog uses a modified version of the [Minimal Mistakes](https://github.com/mmistakes/minimal-mistakes) theme; see `_sass/wiki.scss`; `_layouts/default_wiki.html`, `_layouts/wiki.html`
 
 ## ToDo
-Help is very much appreciated! If you are interested in picking up one of the tasks below, just message me on the libGDX Discord.
+Help is very much appreciated! If you are interested in picking up one of the tasks below, I'm happy to accept PRs. If you have any questions, just message me on the libGDX Discord.
 - [ ] **Improve sidebar layout (!) & responsiveness**; the content of the sidebar can be found in `_includes/wiki_sidebar.md`; it is included in `_layouts/wiki.html` (via `{{ sidebar_include | markdownify }}`) so it can be styled there; any corresponding CSS stuff should be located in `_sass/wiki.scss`
 - [ ] **Fix dark mode**; i.e. add a dark style to `_sass/wiki.scss`, utilising `prefers-color-scheme: dark` media queries
 
