@@ -3,10 +3,10 @@ title: Sound effects
 ---
 Sound effects are small audio samples, usually no longer than a few seconds, that are played back on specific game events such as a character jumping or shooting a gun.
 
-Sound effects can be stored in various formats. libGDX supports MP3, OGG and WAV files.
-RoboVM (iOS) currently does not support OGG files.
+Sound effects can be stored in various formats, including MP3, OGG and WAV. Which format you should use, depends on your specific needs, as each format has its own advantages and disadvantages. For example, WAV files are quite large compared to other formats, OGG files don’t work on RoboVM (iOS) nor with Safari (GWT), and MP3 files have issues with seemless looping.
 
-***note:*** On Android, a Sound instance can not be over 1mb in size (uncompressed raw PCM size, not the file size). If you have a bigger file, use  [Music](/wiki/audio/streaming-music)
+**Note:** On Android, a Sound instance can not be over 1mb in size (uncompressed raw PCM size, not the file size). If you have a bigger file, use [Music](/wiki/audio/streaming-music) instead.
+{: .notice--primary}
 
 Sound effects are represented by the [Sound](http://libgdx.badlogicgames.com/nightlies/docs/api/com/badlogic/gdx/audio/Sound.html) interface. Loading a sound effect works as follows:
 
