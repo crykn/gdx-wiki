@@ -1,7 +1,10 @@
-# jekyll-external-links by Ribose Inc. (MIT License)
+# jekyll-external-links by Ribose Inc.
 # https://github.com/riboseinc/jekyll-external-links/blob/master/lib/jekyll-external-links/external_links.rb
 #
-# Modified to only change wiki pages
+# Licensed under the MIT License. You may obtain a copy of the License at
+#   https://opensource.org/licenses/MIT
+#
+# This plugin was modified to only change wiki pages.
 
 require 'nokogiri'
 require 'uri'
