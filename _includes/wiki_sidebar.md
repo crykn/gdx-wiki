@@ -1,11 +1,17 @@
-* Getting Started
-  * [Setting Up a Dev Environment](/wiki/start/setup)
-  * [Creating Your First libGDX Project](/wiki/start/project-generation)
-  * [Importing & Running It](/wiki/start/import-and-running)
-  * [A Simple Game](/wiki/start/a-simple-game)
-  * [Extending the Simple Game](/wiki/start/simple-game-extended)
-  * [Demos & Tutorials](/wiki/start/demos-and-tutorials)
-* [The Application Framework](/wiki/app/the-application-framework)
+# Table of Contents
+
+## Getting Started
+* [Setting Up a Dev Environment](/wiki/start/setup)
+* [Creating Your First libGDX Project](/wiki/start/project-generation)
+* [Importing & Running It](/wiki/start/import-and-running)
+* [A Simple Game](/wiki/start/a-simple-game)
+* [Extending the Simple Game](/wiki/start/simple-game-extended)
+* [Demos & Tutorials](/wiki/start/demos-and-tutorials)
+
+## Developer's Guide
+<details><summary>The Application Framework</summary>
+<div markdown="1">
+  * [The Application Framework](/wiki/app/the-application-framework)
   * [Interfacing with platform specific code](/wiki/app/interfacing-with-platform-specific-code)
   * [Logging](/wiki/app/logging)
   * [Modules overview](/wiki/app/modules-overview)
@@ -13,15 +19,28 @@
   * [Starter classes and configuration](/wiki/app/starter-classes-and-configuration)
   * [The life cycle](/wiki/app/the-life-cycle)
   * [Threading](/wiki/app/threading)
+</div>
+</details>
+
+<details><summary>Audio</summary>
+<div markdown="1">
 * [Audio](/wiki/audio/audio)
-  * [Playing pcm audio](/wiki/audio/playing-pcm-audio)
-  * [Recording pcm audio](/wiki/audio/recording-pcm-audio)
-  * [Sound effects](/wiki/audio/sound-effects)
-  * [Streaming music](/wiki/audio/streaming-music)
-* Deployment
-  * [Deploying Your Application](/wiki/deployment/deploying-your-application)
-  * [Bundling a JRE](/wiki/deployment/bundling-a-jre)
-* Extensions
+* [Playing pcm audio](/wiki/audio/playing-pcm-audio)
+* [Recording pcm audio](/wiki/audio/recording-pcm-audio)
+* [Sound effects](/wiki/audio/sound-effects)
+* [Streaming music](/wiki/audio/streaming-music)
+</div>
+</details>
+
+<details><summary>Deployment</summary>
+<div markdown="1">
+* [Deploying Your Application](/wiki/deployment/deploying-your-application)
+* [Bundling a JRE](/wiki/deployment/bundling-a-jre)
+</div>
+</details>
+
+<details><summary>Extensions</summary>
+<div markdown="1">
   * [Physics](/wiki/extensions/physics/physics)
     * [Bullet Physics](/wiki/extensions/physics/bullet/bullet-physics)
       * [Bullet Wrapper Contact callbacks](/wiki/extensions/physics/bullet/bullet-wrapper-contact-callbacks)
@@ -35,7 +54,14 @@
   * [Gdx freetype](/wiki/extensions/gdx-freetype)
   * [gdx pay](/wiki/extensions/gdx-pay)
   * [Third Party Extension Support](/wiki/extensions/third-party-extension-support)
-* [Graphics](/wiki/graphics/graphics)
+</div>
+</details>
+
+[File handling](/wiki/file-handling)
+
+<details><summary>Graphics</summary>
+<div markdown="1">
+  * [Graphics](/wiki/graphics/graphics)
   * 2D Graphics
     * Bitmap Fonts
       * [Bitmap fonts](/wiki/graphics/2d/fonts/bitmap-fonts)
@@ -60,7 +86,7 @@
     * [Texture Compression](/wiki/graphics/2d/texture-compression)
     * [Tile maps](/wiki/graphics/2d/tile-maps)
     * [Using textureatlases](/wiki/graphics/2d/using-textureatlases)
-  * [3D graphics](/wiki/graphics/3d/3d-graphics)
+  * [3D Graphics](/wiki/graphics/3d/3d-graphics)
     * [3D animations and skinning](/wiki/graphics/3d/3d-animations-and-skinning)
     * [3D Particle Effects](/wiki/graphics/3d/3d-particle-effects)
     * [3D Picking](/wiki/graphics/3d/3d-picking)
@@ -86,7 +112,15 @@
   * [Querying and Configuring Graphics (monitors, display modes, vsync, display cutouts)](/wiki/graphics/querying-and-configuring-graphics)
   * [Taking a Screenshot](/wiki/graphics/taking-a-screenshot)
   * [Viewports](/wiki/graphics/viewports)
-* [Input Handling](/wiki/input/input-handling)
+</div>
+</details>
+
+[HTML5 Backend and GWT Specifics](/wiki/html5-backend-and-gwt-specifics)
+
+
+<details><summary>Input Handling</summary>
+<div markdown="1">
+  * [Input Handling](/wiki/input/input-handling)
   * [Accelerometer](/wiki/input/accelerometer)
   * [Back and menu key catching](/wiki/input/back-and-menu-key-catching)
   * [Compass](/wiki/input/compass)
@@ -101,17 +135,39 @@
   * [Polling](/wiki/input/polling)
   * [Simple text input](/wiki/input/simple-text-input)
   * [Vibrator](/wiki/input/vibrator)
-* [Using libGDX With Other JVM Languages](/wiki/jvm-langs/using-libgdx-with-other-jvm-languages)
+</div>
+</details>
+
+[Internationalization and Localization](/wiki/internationalization-and-localization)
+
+<details><summary>Using libGDX With Other JVM Languages</summary>
+<div markdown="1">
+  * [Using libGDX With Other JVM Languages](/wiki/jvm-langs/using-libgdx-with-other-jvm-languages)
   * [Using libgdx with Clojure](/wiki/jvm-langs/using-libgdx-with-clojure)
   * [Using libGDX with Kotlin](/wiki/jvm-langs/using-libgdx-with-kotlin)
   * [Using libgdx with Python](/wiki/jvm-langs/using-libgdx-with-python)
   * [Using libgdx with Scala](/wiki/jvm-langs/using-libgdx-with-scala)
-* [Math Utilities](/wiki/math-utils/math-utilities)
+</div>
+</details>
+
+[Managing your assets](/wiki/managing-your-assets)
+
+<details><summary>Math Utilities</summary>
+<div markdown="1">
+  * [Math Utilities](/wiki/math-utils/math-utilities)
   * [Circles, planes, rays, etc.](/wiki/math-utils/circles-planes-rays-etc)
   * [Interpolation](/wiki/math-utils/interpolation)
   * [Path interface and Splines](/wiki/math-utils/path-interface-and-splines)
   * [Vectors, matrices, quaternions](/wiki/math-utils/vectors-matrices-quaternions)
-* Third Party Services
+</div>
+</details>
+
+[Networking](/wiki/networking)
+
+[Preferences](/wiki/preferences)
+
+<details><summary>Third Party Services</summary>
+<div markdown="1">
   * [Admob in libgdx](/wiki/third-party/admob-in-libgdx)
   * [Airpush in Libgdx](/wiki/third-party/airpush-in-libgdx)
   * [Firebase in libGDX](/wiki/third-party/firebase-in-libgdx)
@@ -120,33 +176,38 @@
   * [Pollfish in libgdx](/wiki/third-party/pollfish-in-libgdx)
   * [ProGuard DexGuard and libGDX](/wiki/third-party/proguard-dexguard-and-libgdx)
   * [Smaato in libGDX](/wiki/third-party/smaato-in-libgdx)
-* Tools
+</div>
+</details>
+
+<details><summary>Tools</summary>
+<div markdown="1">
   * [2D Particle Editor](/wiki/tools/2d-particle-editor)
   * [Flame](/wiki/graphics/3d/3d-particle-effects)
   * [Hiero](/wiki/tools/hiero)
   * [Overlap2D](/wiki/tools/overlap2d)
   * [Skin Composer](/wiki/tools/skin-composer)
   * [Texture packer](/wiki/tools/texture-packer)
-* Utilities
-  * [Collections](/wiki/utils/collections)
-  * [jnigen](/wiki/utils/jnigen)
-  * [Reading and writing JSON](/wiki/utils/reading-and-writing-json)
-  * [Reading and writing XML](/wiki/utils/reading-and-writing-xml)
-  * [Reflection](/wiki/utils/reflection)
-  * [Saved game serialization](/wiki/utils/saved-game-serialization)
-* [File handling](/wiki/file-handling)
-* [HTML5 Backend and GWT Specifics](/wiki/html5-backend-and-gwt-specifics)
-* [Internationalization and Localization](/wiki/internationalization-and-localization)
-* [Managing your assets](/wiki/managing-your-assets)
-* [Networking](/wiki/networking)
-* [Preferences](/wiki/preferences)
-* Articles
-  * [Getting Help](/wiki/articles/getting-help)
-  * [External Tutorials](/wiki/articles/external-tutorials)
-  * [Coordinate systems](/wiki/articles/coordinate-systems)
-  * [Memory management](/wiki/articles/memory-management)
-  * [Updating Your libGDX Version](/wiki/articles/updating-libgdx)
-  * [Adding Extensions and 3rd Party Libraries](/wiki/articles/dependency-management-with-gradle)
-  * [Improving Your Gradle Workflow](/wiki/articles/improving-workflow-with-gradle)
-  * [Creating Asset Project in Eclipse](/wiki/articles/creating-a-separate-assets-project-in-eclipse)
-  * [Java Development Kit - Selection](/wiki/articles/java-development-kit-selection)
+</div>
+</details>
+
+<details><summary>Utilities</summary>
+<div markdown="1">
+* [Collections](/wiki/utils/collections)
+* [jnigen](/wiki/utils/jnigen)
+* [Reading and writing JSON](/wiki/utils/reading-and-writing-json)
+* [Reading and writing XML](/wiki/utils/reading-and-writing-xml)
+* [Reflection](/wiki/utils/reflection)
+* [Saved game serialization](/wiki/utils/saved-game-serialization)
+</div>
+</details>
+
+## Articles
+* [Getting Help](/wiki/articles/getting-help)
+* [External Tutorials](/wiki/articles/external-tutorials)
+* [Coordinate systems](/wiki/articles/coordinate-systems)
+* [Memory management](/wiki/articles/memory-management)
+* [Updating Your libGDX Version](/wiki/articles/updating-libgdx)
+* [Adding Extensions and 3rd Party Libraries](/wiki/articles/dependency-management-with-gradle)
+* [Improving Your Gradle Workflow](/wiki/articles/improving-workflow-with-gradle)
+* [Creating Asset Project in Eclipse](/wiki/articles/creating-a-separate-assets-project-in-eclipse)
+* [Java Development Kit - Selection](/wiki/articles/java-development-kit-selection)

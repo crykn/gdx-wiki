@@ -1,10 +1,5 @@
 #
-# This is the main config file for this Jekyll blog. _config_no_wiki.yml contains
-# a copy of this file which excludes the wiki pages from the build to reduce build times.
-#
-# ------------------------------------------------------------------------------
-#     ALL CHANGES TO THIS FILE SHOULD BE MIRRORED IN _config_no_wiki.yml!
-# ------------------------------------------------------------------------------
+# This is the config file for this Jekyll blog.
 #
 # For technical reasons, this file is *NOT* reloaded automatically when you use
 # 'bundle exec jekyll serve'. If you change this file, please restart the server process.
@@ -41,16 +36,6 @@ future: false # allow scheduling posts
 # Outputting
 permalink: /:categories/:year/:month/:title
 #timezone: # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
-
-external_links:
-  selector: 'a' # selector: 'main a'
-  ignored_selectors:
-    - a[href*=badlogicgames]
-    - a[href*=githubusercontent]
-    - a[href*=travis]
-    - a[href*=coverity]
-    - a[href*=codecov]
-  marker_html: "<span class='ico-ext'><i class='fas fa-external-link-alt'></i></span>"
 
 # Plugins
 plugins:
