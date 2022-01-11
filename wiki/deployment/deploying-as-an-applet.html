@@ -1,0 +1,648 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.24.0 by Michael Rose
+  Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="en" class="no-js">
+  <head>
+    <!-- overrides: https://github.com/mmistakes/minimal-mistakes/blob/master/_includes/head.html -->
+
+<meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>Deploying as an Applet - libGDX</title>
+<meta name="description" content="libGDX is a cross-platform Java game development framework based on OpenGL (ES) that works on Windows, Linux, macOS, Android, your browser and iOS.">
+
+
+
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="libGDX">
+<meta property="og:title" content="Deploying as an Applet">
+<meta property="og:url" content="https://crykn.github.io/pages/crykn/wiki/deployment/deploying-as-an-applet">
+
+
+  <meta property="og:description" content="libGDX is a cross-platform Java game development framework based on OpenGL (ES) that works on Windows, Linux, macOS, Android, your browser and iOS.">
+
+
+
+  <meta property="og:image" content="https://crykn.github.io/pages/crykn/assets/images/logo.png">
+
+
+
+
+
+
+
+
+
+
+<link rel="canonical" href="https://crykn.github.io/pages/crykn/wiki/deployment/deploying-as-an-applet">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": null,
+      "url": "https://crykn.github.io/pages/crykn/"
+    
+  }
+</script>
+
+
+  <meta name="google-site-verification" content="qc0iys9Aweas1z8EhICO-0Ohwh6Iq1GDV6K75e0ToO8" />
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+
+  <link href="/pages/crykn/feed.xml" type="application/atom+xml" rel="alternate" title="libGDX Feed">
+
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- Light mode -->
+<link rel="stylesheet" href="/pages/crykn/assets/css/main.css">
+
+<!-- Dark mode -->
+
+  <meta name="color-scheme" content="light dark">
+  <style>
+    @import url("/pages/crykn/assets/css/main2.css") (prefers-color-scheme: dark);
+  </style>
+
+
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css"></noscript>
+
+
+
+
+    <!-- Favicons -->
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/icons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/icons/favicon-16x16.png">
+<link rel="manifest" href="/assets/icons/site.webmanifest">
+<link rel="mask-icon" href="/assets/icons/safari-pinned-tab.svg" color="#5bbad5">
+<link rel="shortcut icon" href="/assets/icons/favicon.ico">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="msapplication-config" content="/assets/icons/browserconfig.xml">
+<meta name="theme-color" content="#ffffff">
+
+    <link rel="stylesheet" href="/assets/css/wiki.css">
+  </head>
+
+  <body class="layout--wiki">
+    <nav class="skip-links">
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    <!-- overrides: _includes/masthead.html -->
+
+
+
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+          <a class="site-logo" href="/wiki/">
+            <picture>
+              
+                <!-- dark mode logo -->
+                <source
+                  srcset="/pages/crykn/assets/brand/logo_dark.svg"
+                  media="(prefers-color-scheme: dark)">
+              
+              <img src="/pages/crykn/assets/brand/logo.svg" alt=" ">
+            </picture>
+          </a>
+        
+        <a class="site-title" href="/pages/crykn/">
+           
+          
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a href="/pages/crykn/">Back to Main Site</a>
+            </li><li class="masthead__menu-item">
+              <a href="/pages/crykn/wiki/">Wiki Home</a>
+            </li></ul>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+
+      <div id="main" role="main">
+  <header>
+    <h1 id="page-title" class="page__title" itemprop="headline">Deploying as an Applet
+</h1>
+
+    <div class="header-meta">
+      Last edited on 11 January 2022 • <a href="https://github.com/crykn/crykn.github.io/commits/dev/wiki/deployment/deploying-as-an-applet.md">View revision history</a> • <a href="https://github.com/crykn/crykn.github.io/edit/dev/wiki/deployment/deploying-as-an-applet.md">Edit on GitHub</a>
+    </div>
+  </header>
+  <article class="page h-entry" itemscope itemtype="https://schema.org/CreativeWork">
+    <div class="page__inner-wrap">
+      <section class="page__content e-content markdown-body" itemprop="text">
+          <aside class="sidebar__right">
+            <div class="toc">
+              <div class="wiki_toc__menu">
+                <input id="wiki_ac-toc" name="accordion-toc" type="checkbox" />
+                <label for="wiki_ac-toc">Toggle Menu</label>
+
+                
+                <div class="wiki_nav__items">
+                  <h1 id="table-of-contents">Table of Contents</h1>
+
+<h2 id="getting-started">Getting Started</h2>
+<ul>
+  <li><a href="/wiki/start/setup">Setting Up a Dev Environment</a></li>
+  <li><a href="/wiki/start/project-generation">Creating Your First libGDX Project</a></li>
+  <li><a href="/wiki/start/import-and-running">Importing &amp; Running It</a></li>
+  <li><a href="/wiki/start/a-simple-game">A Simple Game</a></li>
+  <li><a href="/wiki/start/simple-game-extended">Extending the Simple Game</a></li>
+  <li><a href="/wiki/start/demos-and-tutorials">Demos &amp; Tutorials</a></li>
+</ul>
+
+<h2 id="developers-guide">Developer’s Guide</h2>
+<details><summary>The Application Framework</summary>
+<div>
+    <ul>
+      <li><a href="/wiki/app/the-application-framework">The Application Framework</a></li>
+      <li><a href="/wiki/app/interfacing-with-platform-specific-code">Interfacing with platform specific code</a></li>
+      <li><a href="/wiki/app/logging">Logging</a></li>
+      <li><a href="/wiki/app/modules-overview">Modules overview</a></li>
+      <li><a href="/wiki/app/querying">Querying</a></li>
+      <li><a href="/wiki/app/starter-classes-and-configuration">Starter classes and configuration</a></li>
+      <li><a href="/wiki/app/the-life-cycle">The life cycle</a></li>
+      <li><a href="/wiki/app/threading">Threading</a></li>
+    </ul>
+  </div>
+</details>
+
+<details><summary>Audio</summary>
+<div>
+    <ul>
+      <li><a href="/wiki/audio/audio">Audio</a></li>
+      <li><a href="/wiki/audio/playing-pcm-audio">Playing pcm audio</a></li>
+      <li><a href="/wiki/audio/recording-pcm-audio">Recording pcm audio</a></li>
+      <li><a href="/wiki/audio/sound-effects">Sound effects</a></li>
+      <li><a href="/wiki/audio/streaming-music">Streaming music</a></li>
+    </ul>
+  </div>
+</details>
+
+<details><summary>Deployment</summary>
+<div>
+    <ul>
+      <li><a href="/wiki/deployment/deploying-your-application">Deploying Your Application</a></li>
+      <li><a href="/wiki/deployment/bundling-a-jre">Bundling a JRE</a></li>
+    </ul>
+  </div>
+</details>
+
+<details><summary>Extensions</summary>
+<div>
+    <ul>
+      <li><a href="/wiki/extensions/physics/physics">Physics</a>
+        <ul>
+          <li><a href="/wiki/extensions/physics/bullet/bullet-physics">Bullet Physics</a>
+            <ul>
+              <li><a href="/wiki/extensions/physics/bullet/bullet-wrapper-contact-callbacks">Bullet Wrapper Contact callbacks</a></li>
+              <li><a href="/wiki/extensions/physics/bullet/bullet-wrapper-custom-classes">Bullet Wrapper Custom classes</a></li>
+              <li><a href="/wiki/extensions/physics/bullet/bullet-wrapper-debugging">Bullet Wrapper Debugging</a></li>
+              <li><a href="/wiki/extensions/physics/bullet/bullet-wrapper-setup">Bullet Wrapper Setup</a></li>
+              <li><a href="/wiki/extensions/physics/bullet/bullet-wrapper-using-models">Bullet Wrapper Using models</a></li>
+              <li><a href="/wiki/extensions/physics/bullet/bullet-wrapper-using-the-wrapper">Bullet Wrapper Using the wrapper</a></li>
+            </ul>
+          </li>
+          <li><a href="/wiki/extensions/physics/box2d">Box2d</a></li>
+        </ul>
+      </li>
+      <li><a href="/wiki/extensions/artificial-intelligence">Artificial Intelligence</a></li>
+      <li><a href="/wiki/extensions/gdx-freetype">Gdx freetype</a></li>
+      <li><a href="/wiki/extensions/gdx-pay">gdx pay</a></li>
+      <li><a href="/wiki/extensions/third-party-extension-support">Third Party Extension Support</a></li>
+    </ul>
+  </div>
+</details>
+
+<p><a href="/wiki/file-handling">File handling</a></p>
+
+<details><summary>Graphics</summary>
+<div>
+    <ul>
+      <li><a href="/wiki/graphics/graphics">Graphics</a></li>
+      <li>2D Graphics
+        <ul>
+          <li>Bitmap Fonts
+            <ul>
+              <li><a href="/wiki/graphics/2d/fonts/bitmap-fonts">Bitmap fonts</a></li>
+              <li><a href="/wiki/graphics/2d/fonts/color-markup-language">Color Markup Language</a></li>
+              <li><a href="/wiki/graphics/2d/fonts/distance-field-fonts">Distance field fonts</a></li>
+            </ul>
+          </li>
+          <li>Scene2d
+            <ul>
+              <li><a href="/wiki/graphics/2d/scene2d/scene2d-ui">Scene2d.ui</a></li>
+              <li><a href="/wiki/graphics/2d/scene2d/scene2d">Scene2d</a></li>
+              <li><a href="/wiki/graphics/2d/scene2d/skin">Skin</a></li>
+              <li><a href="/wiki/graphics/2d/scene2d/table">Table</a></li>
+            </ul>
+          </li>
+          <li><a href="/wiki/graphics/2d/2d-animation">2D Animation</a></li>
+          <li><a href="/wiki/graphics/2d/2d-particleeffects">2D ParticleEffects</a></li>
+          <li><a href="/wiki/graphics/2d/clipping-with-the-use-of-scissorstack">Clipping, with the use of scissorstack</a></li>
+          <li><a href="/wiki/graphics/2d/imgui">ImGui</a></li>
+          <li><a href="/wiki/graphics/2d/masking">Masking</a></li>
+          <li><a href="/wiki/graphics/2d/ninepatches">Ninepatches</a></li>
+          <li><a href="/wiki/graphics/2d/orthographic-camera">Orthographic camera</a></li>
+          <li><a href="/wiki/graphics/2d/packing-atlases-at-runtime">Packing atlases at runtime</a></li>
+          <li><a href="/wiki/graphics/2d/packing-atlases-offline">Packing atlases offline</a></li>
+          <li><a href="/wiki/graphics/2d/pixmaps">Pixmaps</a></li>
+          <li><a href="/wiki/graphics/2d/spritebatch-textureregions-and-sprites">Spritebatch, Textureregions, and Sprites</a></li>
+          <li><a href="/wiki/graphics/2d/texture-compression">Texture Compression</a></li>
+          <li><a href="/wiki/graphics/2d/tile-maps">Tile maps</a></li>
+          <li><a href="/wiki/graphics/2d/using-textureatlases">Using textureatlases</a></li>
+        </ul>
+      </li>
+      <li><a href="/wiki/graphics/3d/3d-graphics">3D Graphics</a>
+        <ul>
+          <li><a href="/wiki/graphics/3d/3d-animations-and-skinning">3D animations and skinning</a></li>
+          <li><a href="/wiki/graphics/3d/3d-particle-effects">3D Particle Effects</a></li>
+          <li><a href="/wiki/graphics/3d/3d-picking">3D Picking</a></li>
+          <li><a href="/wiki/graphics/3d/decals">Decals</a></li>
+          <li><a href="/wiki/graphics/3d/importing-blender-models-in-libgdx">Importing Blender models in LibGDX</a></li>
+          <li><a href="/wiki/graphics/3d/material-and-environment">Material and environment</a></li>
+          <li><a href="/wiki/graphics/3d/modelbatch">ModelBatch</a></li>
+          <li><a href="/wiki/graphics/3d/modelbuilder-meshbuilder-and-meshpartbuilder">ModelBuilder, MeshBuilder and MeshPartBuilder</a></li>
+          <li><a href="/wiki/graphics/3d/modelcache">ModelCache</a></li>
+          <li><a href="/wiki/graphics/3d/models">Models</a></li>
+          <li><a href="/wiki/graphics/3d/quick-start">Quick start</a></li>
+          <li><a href="/wiki/graphics/3d/virtual-reality">Virtual Reality (VR)</a></li>
+        </ul>
+      </li>
+      <li>OpenGL Utility Classes
+        <ul>
+          <li><a href="/wiki/graphics/opengl-utils/frame-buffer-objects">Frame buffer objects</a></li>
+          <li><a href="/wiki/graphics/opengl-utils/meshes">Meshes</a></li>
+          <li><a href="/wiki/graphics/opengl-utils/rendering-shapes">Rendering shapes</a></li>
+          <li><a href="/wiki/graphics/opengl-utils/shaders">Shaders</a></li>
+        </ul>
+      </li>
+      <li><a href="/wiki/graphics/clearing-the-screen">Clearing the screen</a></li>
+      <li><a href="/wiki/graphics/continuous-and-non-continuous-rendering">Continuous and Non Continuous Rendering</a></li>
+      <li><a href="/wiki/graphics/integrating-libgdx-and-the-device-camera">Integrating libgdx and the device camera</a></li>
+      <li><a href="/wiki/graphics/opengl-es-support">OpenGL (ES) Support</a></li>
+      <li><a href="/wiki/graphics/profiling">Profiling</a></li>
+      <li><a href="/wiki/graphics/querying-and-configuring-graphics">Querying and Configuring Graphics (monitors, display modes, vsync, display cutouts)</a></li>
+      <li><a href="/wiki/graphics/taking-a-screenshot">Taking a Screenshot</a></li>
+      <li><a href="/wiki/graphics/viewports">Viewports</a></li>
+    </ul>
+  </div>
+</details>
+
+<p><a href="/wiki/html5-backend-and-gwt-specifics">HTML5 Backend and GWT Specifics</a></p>
+
+<details><summary>Input Handling</summary>
+<div>
+    <ul>
+      <li><a href="/wiki/input/input-handling">Input Handling</a></li>
+      <li><a href="/wiki/input/accelerometer">Accelerometer</a></li>
+      <li><a href="/wiki/input/back-and-menu-key-catching">Back and menu key catching</a></li>
+      <li><a href="/wiki/input/compass">Compass</a></li>
+      <li><a href="/wiki/input/configuration-and-querying">Configuration and Querying</a></li>
+      <li><a href="/wiki/input/controllers">Controllers</a></li>
+      <li><a href="/wiki/input/cursor-visibility-and-catching">Cursor Visibility and Catching</a></li>
+      <li><a href="/wiki/input/event-handling">Event handling</a></li>
+      <li><a href="/wiki/input/gesture-detection">Gesture detection</a></li>
+      <li><a href="/wiki/input/gyroscope">Gyroscope</a></li>
+      <li><a href="/wiki/input/mouse-touch-and-keyboard">Mouse, Touch and Keyboard</a></li>
+      <li><a href="/wiki/input/on-screen-keyboard">On screen keyboard</a></li>
+      <li><a href="/wiki/input/polling">Polling</a></li>
+      <li><a href="/wiki/input/simple-text-input">Simple text input</a></li>
+      <li><a href="/wiki/input/vibrator">Vibrator</a></li>
+    </ul>
+  </div>
+</details>
+
+<p><a href="/wiki/internationalization-and-localization">Internationalization and Localization</a></p>
+
+<details><summary>Using libGDX With Other JVM Languages</summary>
+<div>
+    <ul>
+      <li><a href="/wiki/jvm-langs/using-libgdx-with-other-jvm-languages">Using libGDX With Other JVM Languages</a></li>
+      <li><a href="/wiki/jvm-langs/using-libgdx-with-clojure">Using libgdx with Clojure</a></li>
+      <li><a href="/wiki/jvm-langs/using-libgdx-with-kotlin">Using libGDX with Kotlin</a></li>
+      <li><a href="/wiki/jvm-langs/using-libgdx-with-python">Using libgdx with Python</a></li>
+      <li><a href="/wiki/jvm-langs/using-libgdx-with-scala">Using libgdx with Scala</a></li>
+    </ul>
+  </div>
+</details>
+
+<p><a href="/wiki/managing-your-assets">Managing your assets</a></p>
+
+<details><summary>Math Utilities</summary>
+<div>
+    <ul>
+      <li><a href="/wiki/math-utils/math-utilities">Math Utilities</a></li>
+      <li><a href="/wiki/math-utils/circles-planes-rays-etc">Circles, planes, rays, etc.</a></li>
+      <li><a href="/wiki/math-utils/interpolation">Interpolation</a></li>
+      <li><a href="/wiki/math-utils/path-interface-and-splines">Path interface and Splines</a></li>
+      <li><a href="/wiki/math-utils/vectors-matrices-quaternions">Vectors, matrices, quaternions</a></li>
+    </ul>
+  </div>
+</details>
+
+<p><a href="/wiki/networking">Networking</a></p>
+
+<p><a href="/wiki/preferences">Preferences</a></p>
+
+<details><summary>Third Party Services</summary>
+<div>
+    <ul>
+      <li><a href="/wiki/third-party/admob-in-libgdx">Admob in libgdx</a></li>
+      <li><a href="/wiki/third-party/airpush-in-libgdx">Airpush in Libgdx</a></li>
+      <li><a href="/wiki/third-party/firebase-in-libgdx">Firebase in libGDX</a></li>
+      <li><a href="/wiki/third-party/google-mobile-ads-in-libgdx">Google Mobile Ads in Libgdx (replaces deprecated AdMob)</a></li>
+      <li><a href="/wiki/third-party/google-play-games-services-in-libgdx">Google Play Games Services in LibGDX</a></li>
+      <li><a href="/wiki/third-party/pollfish-in-libgdx">Pollfish in libgdx</a></li>
+      <li><a href="/wiki/third-party/proguard-dexguard-and-libgdx">ProGuard DexGuard and libGDX</a></li>
+      <li><a href="/wiki/third-party/smaato-in-libgdx">Smaato in libGDX</a></li>
+    </ul>
+  </div>
+</details>
+
+<details><summary>Tools</summary>
+<div>
+    <ul>
+      <li><a href="/wiki/tools/2d-particle-editor">2D Particle Editor</a></li>
+      <li><a href="/wiki/graphics/3d/3d-particle-effects">Flame</a></li>
+      <li><a href="/wiki/tools/hiero">Hiero</a></li>
+      <li><a href="/wiki/tools/overlap2d">Overlap2D</a></li>
+      <li><a href="/wiki/tools/skin-composer">Skin Composer</a></li>
+      <li><a href="/wiki/tools/texture-packer">Texture packer</a></li>
+    </ul>
+  </div>
+</details>
+
+<details><summary>Utilities</summary>
+<div>
+    <ul>
+      <li><a href="/wiki/utils/collections">Collections</a></li>
+      <li><a href="/wiki/utils/jnigen">jnigen</a></li>
+      <li><a href="/wiki/utils/reading-and-writing-json">Reading and writing JSON</a></li>
+      <li><a href="/wiki/utils/reading-and-writing-xml">Reading and writing XML</a></li>
+      <li><a href="/wiki/utils/reflection">Reflection</a></li>
+      <li><a href="/wiki/utils/saved-game-serialization">Saved game serialization</a></li>
+    </ul>
+  </div>
+</details>
+
+<h2 id="articles">Articles</h2>
+<ul>
+  <li><a href="/wiki/articles/getting-help">Getting Help</a></li>
+  <li><a href="/wiki/articles/external-tutorials">External Tutorials</a></li>
+  <li><a href="/wiki/articles/coordinate-systems">Coordinate systems</a></li>
+  <li><a href="/wiki/articles/memory-management">Memory management</a></li>
+  <li><a href="/wiki/articles/updating-libgdx">Updating Your libGDX Version</a></li>
+  <li><a href="/wiki/articles/dependency-management-with-gradle">Adding Extensions and 3rd Party Libraries</a></li>
+  <li><a href="/wiki/articles/improving-workflow-with-gradle">Improving Your Gradle Workflow</a></li>
+  <li><a href="/wiki/articles/creating-a-separate-assets-project-in-eclipse">Creating Asset Project in Eclipse</a></li>
+  <li><a href="/wiki/articles/java-development-kit-selection">Java Development Kit - Selection</a></li>
+</ul>
+
+                </div>
+              </div>
+            </div>
+          </aside>
+
+        <h1 id="deploying-as-an-applet">Deploying as an Applet</h1>
+
+<p><strong>NOTICE:</strong> This page is outdated. Java applets are no longer supported by any major web browser other than Internet Explorer.</p>
+
+<h2 id="rationale">Rationale</h2>
+
+<p>When you are ready to start distributing your game on PC, you will inevitably hit the first problem that many game devs face:  getting users to convert from seeing a trailer or Let’s Play of your game to actually playing it themselves.  Particularly for free / free-to-play games, it can be surprisingly challenging to convince users to download an installer.  Our goal is to make it as easy as possible for users to try our game.</p>
+
+<p>Ultimately, it is good to have both a downloadable installer build of your game as well as a web version of your game.  The web SKU is good because it allows players to try the game easily if they have a JRE installed.  Getting a JRE installed can be a major headache, but still about 90% of users do have a valid JRE.  If they don’t, a downloadable installer can be used which bundles a JRE appropriate to their platform.  It is also quite common for us to see users who discover our game via our applet edition and then later want the downloadable edition so they have an easy desktop shortcut.</p>
+
+<p>In this article, we will explore using applets to embed our game in a web page, however there are <a href="http://blog.gemserk.com/2011/02/09/ways-to-deploy-a-java-game/">multiple alternatives</a>:</p>
+
+<ul>
+  <li>
+    <p>GWT - My (very limited) understanding of GWT is it performs some magic to convert your Java code to Javascript.  The upside is that the end user wouldn’t need a JRE installed.  However, you also don’t have access to many core Java libraries or reflection support.  I’m also not sure how performant the final code is for complex 3D scenes, how stable such dramatic full codebase changes are, or how protected it is from deobfuscation techniques.  However, it is certainly an interesting new technique with a lot of promise.</p>
+  </li>
+  <li>
+    <p><a href="https://github.com/threerings/getdown">Getdown</a> - Allows you to deploy in a way similar to Java Web Start.  It is being used successfully for several MMO titles including Spiral Knights.  As far as I know, this does not allow you to run your game inside an iframe, but instead requires its own popup window.  Distributors generally don’t like this, so you may not be able to get on as many portals with this route.</p>
+  </li>
+</ul>
+
+<h2 id="getting-a-code-signing-cert">Getting a code signing cert</h2>
+
+<p>You will need a code signing certificate in order to run your Java applet.  You <em>might</em> be able to get away just a self-signed cert for testing, but your applet will probably get blocked by every end user’s browser.  I generally get my certs at Tucows Author Resource Center, which resells Comodo certs for ~$75/year (plus occasional sales).</p>
+
+<p>TODO:  How to create a java key store and add certificate to it.</p>
+
+<h2 id="project-setup">Project Setup</h2>
+
+<h3 id="gradle-setup">Gradle Setup</h3>
+
+<p>TODO</p>
+
+<h3 id="custom-build-setup-ant">Custom Build Setup (ant)</h3>
+
+<p>I’m not currently using Gradle, but instead using my own ant build scripts, so I’ll detail how you can replicate my setup if you’re feeling particularly brave/foolish:</p>
+
+<p>You can get started by following <a href="http://www.thesecretpie.com/2011/05/being-like-minecraft-or-how-to-run-your.html">Thotep’s steps</a> – skip the html &amp; signing bits, we’ll customize the build script to do this for us instead.</p>
+
+<h4 id="obfuscation-if-using">Obfuscation (if using)</h4>
+
+<p>First, when obfuscating in proguard, be sure your entry point is accessible:</p>
+
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;keep</span> <span class="na">name=</span><span class="s">"util.MyGDXApplet"</span><span class="nt">&gt;&lt;/keep&gt;</span>
+</code></pre></div></div>
+
+<p>Of course, I recommend while first getting applets working at all, don’t obfuscate.  Once you have it up and running you can start tuning Proguard.</p>
+
+<h4 id="signingmanifest">Signing/Manifest</h4>
+
+<p>Second, each jar file will need to be 1) signed, 2) manifest’ed, 3) packed (we’ll worry about packing later)</p>
+
+<p>First, where will your application be distributed from?  We will define this at the top of our build.xml:</p>
+
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;property</span> <span class="na">name=</span><span class="s">"websource"</span> <span class="na">value=</span><span class="s">"*.mywebsite.net https://s3.amazonaws.com/mystorage/ file:// 127.0.0.1"</span> <span class="nt">/&gt;</span>
+</code></pre></div></div>
+
+<p>When we’re done testing, we should probably remove file:// and 127.0.0.1 from this list and rebuild.</p>
+
+<p>Now let’s create a task that can update the manifest and sign an arbitrary JAR:</p>
+
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code>	<span class="nt">&lt;target</span> <span class="na">name=</span><span class="s">"packandsign-specificfile"</span><span class="nt">&gt;</span>
+    	 <span class="nt">&lt;jar</span> <span class="na">destfile=</span><span class="s">"bin\\applet\\${tosign}"</span> <span class="na">update=</span><span class="s">"true"</span><span class="nt">&gt;</span>
+    	    <span class="nt">&lt;manifest&gt;</span>
+            	<span class="nt">&lt;attribute</span> <span class="na">name=</span><span class="s">"Permissions"</span> 								<span class="na">value=</span><span class="s">"all-permissions"</span> <span class="nt">/&gt;</span>
+        		<span class="nt">&lt;attribute</span> <span class="na">name=</span><span class="s">"Application-Name"</span> 							<span class="na">value=</span><span class="s">"Your Application Name"</span> <span class="nt">/&gt;</span>
+        		<span class="nt">&lt;attribute</span> <span class="na">name=</span><span class="s">"Codebase"</span> 									<span class="na">value=</span><span class="s">"${websource}"</span> <span class="nt">/&gt;</span>
+        		<span class="nt">&lt;attribute</span> <span class="na">name=</span><span class="s">"Application-Library-Allowable-Codebase"</span>	<span class="na">value=</span><span class="s">"${websource}"</span> <span class="nt">/&gt;</span>
+        	<span class="nt">&lt;/manifest&gt;</span>
+    	<span class="nt">&lt;/jar&gt;</span>
+
+    	<span class="nt">&lt;exec</span> <span class="na">command=</span><span class="s">"&amp;quot;C:\\javapath\\jdk1.7.0_25\\bin\\jarsigner&amp;quot; -storepass PASSWORD -storetype pkcs12
+			-keystore &amp;quot;C:\certificatepath\cert.p12&amp;quot; bin\\applet\\${tosign}
+			&amp;quot;certificate name in store&amp;quot;"</span> <span class="nt">/&gt;</span>
+    <span class="nt">&lt;/target&gt;</span>
+</code></pre></div></div>
+
+<p>Neat!  Now at the end of our build, lets sign/manifest each jar:</p>
+
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code>	<span class="c">&lt;!--  Sign everything needed for distribution --&gt;</span>
+    <span class="nt">&lt;target</span> <span class="na">name=</span><span class="s">"packandsign"</span> <span class="na">depends=</span><span class="s">"obfuscate"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;antcall</span> <span class="na">target=</span><span class="s">"packandsign-specificfile"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;param</span> <span class="na">name=</span><span class="s">"tosign"</span> <span class="na">value=</span><span class="s">"gdx-backend-lwjgl.jar"</span> <span class="nt">/&gt;</span>
+        <span class="nt">&lt;/antcall&gt;</span>
+        <span class="nt">&lt;antcall</span> <span class="na">target=</span><span class="s">"packandsign-specificfile"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;param</span> <span class="na">name=</span><span class="s">"tosign"</span> <span class="na">value=</span><span class="s">"gdx-backend-lwjgl-natives.jar"</span> <span class="nt">/&gt;</span>
+        <span class="nt">&lt;/antcall&gt;</span>
+        <span class="nt">&lt;antcall</span> <span class="na">target=</span><span class="s">"packandsign-specificfile"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;param</span> <span class="na">name=</span><span class="s">"tosign"</span> <span class="na">value=</span><span class="s">"gdx-backend-lwjgl-sources.jar"</span> <span class="nt">/&gt;</span>
+        <span class="nt">&lt;/antcall&gt;</span>
+        <span class="nt">&lt;antcall</span> <span class="na">target=</span><span class="s">"packandsign-specificfile"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;param</span> <span class="na">name=</span><span class="s">"tosign"</span> <span class="na">value=</span><span class="s">"gdx-natives.jar"</span> <span class="nt">/&gt;</span>
+        <span class="nt">&lt;/antcall&gt;</span>
+        <span class="nt">&lt;antcall</span> <span class="na">target=</span><span class="s">"packandsign-specificfile"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;param</span> <span class="na">name=</span><span class="s">"tosign"</span> <span class="na">value=</span><span class="s">"MyGame.jar"</span> <span class="nt">/&gt;</span>
+        <span class="nt">&lt;/antcall&gt;</span>
+        <span class="nt">&lt;antcall</span> <span class="na">target=</span><span class="s">"packandsign-specificfile"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;param</span> <span class="na">name=</span><span class="s">"tosign"</span> <span class="na">value=</span><span class="s">"lwjgl_util_applet.jar"</span> <span class="nt">/&gt;</span>
+        <span class="nt">&lt;/antcall&gt;</span>
+        <span class="nt">&lt;antcall</span> <span class="na">target=</span><span class="s">"packandsign-specificfile"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;param</span> <span class="na">name=</span><span class="s">"tosign"</span> <span class="na">value=</span><span class="s">"gdx.jar"</span> <span class="nt">/&gt;</span>
+        <span class="nt">&lt;/antcall&gt;</span>
+    <span class="nt">&lt;/target&gt;</span>
+</code></pre></div></div>
+
+<p>Now when we build, we will have correctly signed and manifested JARs.  In my build setup, the same JARs can either be used for applets or for a desktop build.  Convenient!</p>
+
+<h3 id="foreward-about-applet-caching">Foreward about Applet Caching</h3>
+
+<p>Note that as we iterate on our applet, Java as an applet in browsers has some interesting behaviors.  One of these is its tendencies to stick around silently, even after closing the tab with the applet in it.  Thus I suggest fully closing the browser anytime you update your JARs so the browser is always pulling the latest build.</p>
+
+<p>Also, statics have been known to persist between page refreshes, so be warned (although I’m not sure if this is true for GDX specifically).</p>
+
+<h3 id="html">HTML</h3>
+
+<p>Let’s create a html file that can embed your JARs into a web page.  Thotep’s HTML won’t work anymore because ‘Unable to read file for extraction: gdx.dll’.  Unfortunately this is due to a <a href="https://github.com/libgdx/libgdx/issues/1165">libGDX bug</a> that was closed because ‘Death to applets.’  Sigh.</p>
+
+<p>Fortunately, there’s a workaround, at least for v1.2.0.  If you move your gdx-natives into the jars declaration, then everything will be happy.  Unfortunately that means users downloading gdx libs for platforms they’re not on, but at least it runs.</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;param</span> <span class="na">name=</span><span class="s">"al_jars"</span> <span class="na">value=</span><span class="s">"MyGame.jar, gdx.jar, gdx-backend-lwjgl.jar, gdx-natives.jar"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;param</span> <span class="na">name=</span><span class="s">"al_windows"</span> <span class="na">value=</span><span class="s">"gdx-backend-lwjgl-natives.jar"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;param</span> <span class="na">name=</span><span class="s">"al_linux"</span> <span class="na">value=</span><span class="s">"gdx-backend-lwjgl-natives.jar"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;param</span> <span class="na">name=</span><span class="s">"al_mac"</span> <span class="na">value=</span><span class="s">"gdx-backend-lwjgl-natives.jar"</span><span class="nt">&gt;</span>
+</code></pre></div></div>
+
+<p>If you previously tried the other way, don’t forget to reset your lwjgl cache or you’ll still get that error (as I spent many hours learning the hard way).  On Windows, just delete %TEMP%\lwjglcache*</p>
+
+<h3 id="html-v2---resize">HTML v2 - Resize</h3>
+
+<p>At this point, your applet should work on Firefox, IE, and Safari.  On Chrome, Chrome’s java security warning will cause all sorts of input weirdness unless you click Always Remember For This Site, and then refresh.  You’ll also notice the applet does not resize to the size of the page.</p>
+
+<p>Fortunately, these issues both have the same fix.  Let’s update our HTML so we use the entirety of the window, and can resize as needed:</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;body</span> <span class="na">bgcolor=</span><span class="s">"#484747"</span> <span class="na">leftmargin=</span><span class="s">"0"</span> <span class="na">topmargin=</span><span class="s">"0"</span> <span class="na">marginwidth=</span><span class="s">"0"</span> <span class="na">marginheight=</span><span class="s">"0"</span> <span class="na">style=</span><span class="s">"overflow:hidden"</span> <span class="nt">&gt;</span>
+	<span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"applet_container"</span> <span class="na">style=</span><span class="s">"position:absolute; top:0; bottom:0; left:0; right:0"</span><span class="nt">&gt;</span>
+	<span class="nt">&lt;applet</span> <span class="na">name=</span><span class="s">"myApplet"</span> <span class="na">code=</span><span class="s">"org.lwjgl.util.applet.AppletLoader"</span> <span class="na">archive=</span><span class="s">"lwjgl_util_applet.jar"</span> <span class="na">codebase=</span><span class="s">"."</span> <span class="na">width=</span><span class="s">"100%"</span> <span class="na">height=</span><span class="s">"100%"</span><span class="nt">&gt;</span>
+	<span class="nt">&lt;param</span> <span class="na">name=</span><span class="s">"al_title"</span> <span class="na">value=</span><span class="s">"MyGame"</span><span class="nt">&gt;</span>
+	<span class="nt">&lt;param</span> <span class="na">name=</span><span class="s">"al_main"</span> <span class="na">value=</span><span class="s">"util.MyGDXApplet"</span><span class="nt">&gt;</span>
+	<span class="nt">&lt;param</span> <span class="na">name=</span><span class="s">"al_logo"</span> <span class="na">value=</span><span class="s">"appletlogo.png"</span><span class="nt">&gt;</span>
+	<span class="nt">&lt;param</span> <span class="na">name=</span><span class="s">"al_progressbar"</span> <span class="na">value=</span><span class="s">"appletprogress.gif"</span><span class="nt">&gt;</span>
+	<span class="nt">&lt;param</span> <span class="na">name=</span><span class="s">"al_bgcolor"</span> <span class="na">value=</span><span class="s">"000000"</span><span class="nt">&gt;</span>
+	<span class="nt">&lt;param</span> <span class="na">name=</span><span class="s">"al_fgcolor"</span> <span class="na">value=</span><span class="s">"ffffff"</span><span class="nt">&gt;</span>
+	<span class="nt">&lt;param</span> <span class="na">name=</span><span class="s">"al_jars"</span> <span class="na">value=</span><span class="s">"MyGame.jar, gdx.jar, gdx-backend-lwjgl.jar, gdx-natives.jar"</span><span class="nt">&gt;</span>
+	<span class="nt">&lt;param</span> <span class="na">name=</span><span class="s">"al_windows"</span> <span class="na">value=</span><span class="s">"gdx-backend-lwjgl-natives.jar"</span><span class="nt">&gt;</span>
+	<span class="nt">&lt;param</span> <span class="na">name=</span><span class="s">"al_linux"</span> <span class="na">value=</span><span class="s">"gdx-backend-lwjgl-natives.jar"</span><span class="nt">&gt;</span>
+	<span class="nt">&lt;param</span> <span class="na">name=</span><span class="s">"al_mac"</span> <span class="na">value=</span><span class="s">"gdx-backend-lwjgl-natives.jar"</span><span class="nt">&gt;</span>
+	<span class="nt">&lt;param</span> <span class="na">name=</span><span class="s">"codebase_lookup"</span> <span class="na">value=</span><span class="s">"false"</span><span class="nt">&gt;</span>
+	<span class="nt">&lt;param</span> <span class="na">name=</span><span class="s">"java_arguments"</span> <span class="na">value=</span><span class="s">"-Dsun.java2d.noddraw=true -Dsun.awt.noerasebackground=true
+		-Dsun.java2d.d3d=false -Dsun.java2d.opengl=false -Dsun.java2d.pmoffscreen=false -Xmx800M"</span><span class="nt">&gt;</span>
+	<span class="nt">&lt;param</span> <span class="na">name=</span><span class="s">"lwjgl_arguments"</span> <span class="na">value=</span><span class="s">"-Dorg.lwjgl.input.Mouse.allowNegativeMouseCoords=true"</span><span class="nt">&gt;</span>
+	<span class="nt">&lt;param</span> <span class="na">name=</span><span class="s">"separate_jvm"</span> <span class="na">value=</span><span class="s">"true"</span><span class="nt">&gt;</span>
+	<span class="nt">&lt;param</span> <span class="na">name=</span><span class="s">"codebase_lookup"</span> <span class="na">value=</span><span class="s">"false"</span><span class="nt">&gt;</span>
+	<span class="nt">&lt;/applet&gt;</span>
+<span class="nt">&lt;/body&gt;</span>
+</code></pre></div></div>
+
+<p>Now, we should be able to run in all major browsers with Resize!</p>
+
+<h2 id="todo-checking-jre-to-ensure-is-actually-recent--oracle">TODO: Checking JRE to ensure is actually recent &amp; Oracle</h2>
+<h2 id="todo-display-an-information-box-if-user-does-not-have-jre-installedconfigured-with-a-link-to-the-downloadable-edition-of-the-game">TODO: Display an information box if user does not have JRE installed/configured with a link to the downloadable edition of the game</h2>
+<h2 id="todo--game---browser-js-communication">TODO:  Game -&gt; Browser JS communication</h2>
+<h2 id="todo--browser-js---game-communication">TODO:  Browser JS -&gt; Game communication</h2>
+<h2 id="todo--jar-packing">TODO:  JAR Packing</h2>
+
+
+        <div class="copyright_footer">
+          <p style="font-size: 13px;margin-bottom: 0px !important;">
+            <b>© 2022 libGDX</b> • This wiki is a community effort. If you find information out of date or want to add some more in-depth explanations, you are very welcome to do the necessary changes. Before contributing, please take a look at our <a href="/wiki/misc/wiki-style-guide">Wiki Style Guide</a>.
+            <br/>
+            <br/>
+            <b>If you need additional help, check out our community on <a href="/community/discord/">Discord</a>!</b>
+          </p>
+        </div>
+      </section>
+    </div>
+
+  </article>
+</div>
+
+
+    </div>
+
+    
+  <script src="/pages/crykn/assets/js/main.min.js"></script>
+
+
+
+
+
+
+
+
+
+
+  </body>
+</html>
