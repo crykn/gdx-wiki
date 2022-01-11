@@ -17,8 +17,13 @@ layout: default_wiki
           <aside class="sidebar__right">
             <div class="toc">
               <div class="wiki_toc__menu">
+                <input id="wiki_ac-toc" name="accordion-toc" type="checkbox" />
+                <label for="wiki_ac-toc">{{ site.data.ui-text[site.locale].menu_label | default: "Toggle Menu" }}</label>
+
                 {% capture sidebar_include %}{% include_cached wiki_sidebar.md %}{% endcapture %}
-                {{ sidebar_include | markdownify }}
+                <div class="wiki_nav__items">
+                  {{ sidebar_include | markdownify }}
+                </div>
               </div>
             </div>
           </aside>
